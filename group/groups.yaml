@@ -1,0 +1,13 @@
+#################################################################
+## Groups
+#################################################################
+
+  entertainment:
+    name: Entertainment area
+    view: yes
+    entities:
+      - media_player.reciever
+      - media_player.entertainment_area
+      - light.zithoek
+      - light.eettafel_keuken
+      - light.eettafel_raam

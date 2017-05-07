@@ -1,0 +1,49 @@
+- platform: yr
+
+- platform: rest
+  resource: http://10.0.1.3/api/y3V9y7dyG7cfLhALo38IELKtNQmBRYTlgCyyV7xt/sensors/32
+  value_template: '{{ value_json.state.temperature | float / 100 }}'
+  unit_of_measurement: °C
+  name: 'Kitchen Temperature'
+
+- platform: rest
+  resource: http://10.0.1.3/api/y3V9y7dyG7cfLhALo38IELKtNQmBRYTlgCyyV7xt/sensors/46         
+  value_template: '{{ value_json.state.temperature | float / 100 }}'
+  unit_of_measurement: °C
+  name: 'Hall Frontdoor Temperature'
+
+- platform: rest
+  resource: http://10.0.1.3/api/y3V9y7dyG7cfLhALo38IELKtNQmBRYTlgCyyV7xt/sensors/50         
+  value_template: '{{ value_json.state.temperature | float / 100 }}'
+  unit_of_measurement: °C
+  name: 'Hall Kitchen Temperature'
+
+- platform: rest
+  resource: http://10.0.1.3/api/y3V9y7dyG7cfLhALo38IELKtNQmBRYTlgCyyV7xt/sensors/54         
+  value_template: '{{ value_json.state.temperature | float / 100 }}'
+  unit_of_measurement: °C
+  name: 'Livingroom Temperature'
+
+- platform: rest
+  resource: http://10.0.1.3/api/y3V9y7dyG7cfLhALo38IELKtNQmBRYTlgCyyV7xt/sensors/34
+  value_template: '{{ value_json.state.lightlevel }}'
+  unit_of_measurement: Lux
+  name: 'Kitchen Lux'
+
+- platform: rest
+  resource: http://10.0.1.3/api/y3V9y7dyG7cfLhALo38IELKtNQmBRYTlgCyyV7xt/sensors/48
+  value_template: '{{ value_json.state.lightlevel }}'
+  unit_of_measurement: Lux
+  name: 'Hall Frontdoor Lux'
+
+- platform: rest
+  resource: http://10.0.1.3/api/y3V9y7dyG7cfLhALo38IELKtNQmBRYTlgCyyV7xt/sensors/52
+  value_template: '{{ value_json.state.lightlevel }}'
+  unit_of_measurement: Lux
+  name: 'Hall Kitchen Lux'
+
+- platform: rest
+  resource: http://10.0.1.3/api/y3V9y7dyG7cfLhALo38IELKtNQmBRYTlgCyyV7xt/sensors/56
+  value_template: '{{ value_json.state.lightlevel }}'
+  unit_of_measurement: Lux
+  name: 'Livingroom Lux'
