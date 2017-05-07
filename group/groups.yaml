@@ -2,8 +2,8 @@
 ## Groups
 #################################################################
 
-  entertainment:
-    name: Entertainment area
+  Living:
+    name: Living Room
     view: yes
     entities:
       - media_player.reciever
@@ -11,3 +11,30 @@
       - light.zithoek
       - light.eettafel_keuken
       - light.eettafel_raam
+      - sensor.livingroom_lux
+      - sensor.livingroom_temperature
+
+  Kitchen:
+    name: Kitchen       
+    view: yes
+    entities:
+      - light.keuken
+      - sensor.kitchen_lux
+      - sensor.kitchen_temperature
+
+  Hallway:
+    name: Hallway    
+    view: yes
+    entities:
+      - light.gang_boven_1
+      - light.gang_boven_2
+      - light.gang_boven_3
+      - light.gang_boven_4
+      - light.gang_onder_1
+      - light.gang_onder_2
+      - light.gang_onder_3
+      - light.gang_onder_4
+      - sensor.hall_frontdoor_lux
+      - sensor.hall_frontdoor_temperature
+      - sensor.hall_kitchen_lux
+      - sensor.hall_kitchen_temperature
