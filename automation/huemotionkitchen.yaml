@@ -1,0 +1,23 @@
+#################################################################
+## Automation Hue Kitchen
+#################################################################
+
+- alias: Turn on kitchen light when there is movement
+  trigger:
+    platform: state
+    entity_id: sensor.kitchen_motion
+    state: '1'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.keuken
+
+- alias: Turn off kitchen light 2 minutes after last movement
+  trigger:
+    platform: state
+    entity_id: sensor.kitchen_motion
+    state: '0'
+    for:
+      minutes: 2
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.keuken

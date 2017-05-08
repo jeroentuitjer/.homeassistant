@@ -58,7 +58,7 @@ media_player:
     sources:
       pc: 'HTPC'
 
-group: !include group/groups.yaml
-sensor: !include sensor/sensors.yaml
-automation: !include automation/automations.yaml
-scene: !include scene/scenes.yaml
+group: !include_dir_merge_list group/
+sensor: !include_dir_merge_list sensor/
+automation: !include_dir_merge_list automation/
+scene: !include_dir_merge_list scene/

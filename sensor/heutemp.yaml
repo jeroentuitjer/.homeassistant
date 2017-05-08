@@ -1,0 +1,29 @@
+#################################################################
+## Sensors Temperature
+#################################################################
+
+- platform: yr
+
+- platform: rest
+  resource: !secret kitchen_temp_url
+  value_template: '{{ value_json.state.temperature | float / 100 }}'
+  unit_of_measurement: °C
+  name: 'Kitchen Temperature'
+
+- platform: rest
+  resource: !secret hallfront_temp_url
+  value_template: '{{ value_json.state.temperature | float / 100 }}'
+  unit_of_measurement: °C
+  name: 'Hall Frontdoor Temperature'
+
+- platform: rest
+  resource: !secret hallkitchen_temp_url
+  value_template: '{{ value_json.state.temperature | float / 100 }}'
+  unit_of_measurement: °C
+  name: 'Hall Kitchen Temperature'
+
+- platform: rest
+  resource: !secret living_temp_url
+  value_template: '{{ value_json.state.temperature | float / 100 }}'
+  unit_of_measurement: °C
+  name: 'Livingroom Temperature'
