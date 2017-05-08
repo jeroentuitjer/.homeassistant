@@ -7,19 +7,19 @@
     name: Living
     view: yes
     entities:
-      - living_entertainment_group
-      - living_entertainment_sensor    
+      - group.living_entertainment_group
+      - group.living_entertainment_sensor    
   
   kitchen_view:
     name: Kitchen
     view: yes
     entities:
-      - kitchen_light_group
-      - kitchen_sensor_group
+      - group.kitchen_light_group
+      - group.kitchen_sensor_group
      
   hallway_view:
     name: Hallway
     view: yes
     entities:
-      - hallway_light_group
-      - hallway_sensor_group
+      - group.hallway_light_group
+      - group.hallway_sensor_group
