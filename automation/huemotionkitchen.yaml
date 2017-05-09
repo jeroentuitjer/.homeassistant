@@ -17,7 +17,7 @@
     entity_id: sensor.kitchen_motion
     state: '0'
     for:
-      minutes: 2
+      minutes: 0
   action:
     service: homeassistant.turn_off
     entity_id: light.keuken

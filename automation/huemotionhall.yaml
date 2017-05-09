@@ -1,0 +1,37 @@
+#################################################################
+## Automation Hue Hallway
+#################################################################
+
+- alias: Turn on hallway light when there is movement
+  trigger:
+    - platform: state
+      entity_id: sensor.hall_frontdoor_motion
+      state: '1'
+    - platform: state
+      entity_id: sensor.hall_kitchen_motion
+      state: '1'
+  condition:
+    condition: time
+    after: '07:00:00'
+    before: '23:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.hallway_light_group
+
+- alias: Turn off hall light 5 minutes after last movement
+  trigger:
+    - platform: state
+      entity_id: sensor.hall_frontdoor_motion
+      state: '0'
+      for:
+        minutes: 0
+    - platform: state
+      entity_id: sensor.hall_frontdoor_motion
+      state: '0'
+      for:
+        minutes: 0
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.hallway_light_group
+
+
