@@ -1,7 +1,21 @@
 #################################################################
-## Groups Hall
+## Groups
 #################################################################
-  
+
+  living_entertainment_group:
+    name: Living Entertainment
+    entities:
+      - media_player.reciever
+      - media_player.entertainment_area
+      - light.zithoek
+      - light.eettafel_keuken
+      - light.eettafel_raam
+
+  living_light_group:
+    name: Living Light
+    entities:
+      - sens
+
   hallway_light_group:
     name: Hallway light
     entities:
@@ -17,21 +31,7 @@
   hallway_sensor_group:
     name: Hallway sensor
     entities:
-      - sensor.hall_frontdoor_motion
       - sensor.hall_frontdoor_lux
       - sensor.hall_frontdoor_temperature
-      - sensor.hall_kitchen_motion
       - sensor.hall_kitchen_lux
       - sensor.hall_kitchen_temperature
-
-  hallway_automation_group:
-    name: Hallway automation
-    entities:
-      - automation.turn_on_hallway_light_when_there_is_movement
-      - automation.turn_off_hall_light_5_minutes_after_last_movement  
-
-  hallway_automation_scene:
-    name: Hallway scenes
-    entities:
-      - scene.hallway_normal
-      - scene.hallway_nightwatch

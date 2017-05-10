@@ -16,7 +16,23 @@
     before: '23:00:00'
   action:
     service: homeassistant.turn_on
-    entity_id: group.hallway_light_group
+    entity_id: scene.hallway_normal
+
+- alias: Turn on hallway nightlight when there is movement
+  trigger:
+    - platform: state
+      entity_id: sensor.hall_frontdoor_motion
+      state: '1'
+    - platform: state
+      entity_id: sensor.hall_kitchen_motion
+      state: '1'
+  condition:
+    condition: time
+    after: '23:00:00'
+    before: '07:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.hallway_nightwatch   
 
 - alias: Turn off hall light 5 minutes after last movement
   trigger:
@@ -26,7 +42,7 @@
       for:
         minutes: 0
     - platform: state
-      entity_id: sensor.hall_frontdoor_motion
+      entity_id: sensor.hall_kitchen_motion
       state: '0'
       for:
         minutes: 0

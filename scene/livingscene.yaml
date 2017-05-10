@@ -1,0 +1,57 @@
+#################################################################
+## Scenes Hue Living
+#################################################################
+
+- name: Living Normal
+  entities:
+    light.eettafel_keuken:
+      state: on
+      brightness: 254
+      xy_color: 0.5017,0.4152
+      color_temp: 443
+    light.eettafel_raam:
+      state: on
+      brightness: 254
+      xy_color: 0.5017,0.4152
+      color_temp: 443
+    light.zithoek:
+      state: on
+      brightness: 254
+      xy_color: 0.5017,0.4152
+      color_temp: 443
+
+- name: Living Netflix 
+  entities:
+    light.eettafel_keuken:
+      state: on
+      brightness: 93
+      xy_color: 0.1684,0.0417
+      color_temp: 153
+    light.eettafel_raam:
+      state: on
+      brightness: 93
+      xy_color: 0.1684,0.0417
+      color_temp: 153
+    light.zithoek:
+      state: on
+      brightness: 94
+      xy_color: 0.6736,0.3221
+      color_temp: 153
+
+- name: Living Spotify 
+  entities:
+    light.eettafel_keuken:
+      state: on
+      brightness: 254
+      xy_color: 0.5017,0.4152
+      color_temp: 443
+    light.eettafel_raam:
+      state: on
+      brightness: 217
+      xy_color: 0.5017,0.4152
+      color_temp: 443
+    light.zithoek:
+      state: on
+      brightness: 254
+      xy_color: 0.5017,0.4152
+      color_temp: 443

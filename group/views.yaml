@@ -27,3 +27,4 @@
       - group.hallway_light_group
       - group.hallway_sensor_group
       - group.hallway_automation_group
+      - group.hallway_automation_scene

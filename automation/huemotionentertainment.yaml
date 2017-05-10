@@ -1,0 +1,46 @@
+#################################################################
+## Automations Entertainment area
+#################################################################
+
+# - alias: Entertainment area playing spotify
+#   trigger:
+#     - platform: state
+#       state: 'playing' 
+#       entity_id: media_player.entertainment_area
+#       event_data:
+#         app_name = Spotify
+#   action:
+#     service: homeassistant.turn_on
+#     entity_id: scene.living_spotify
+
+ #- alias: Entertainment area playing netflix
+ #  trigger:
+ #    - platform: state
+ #      state: 'playing'
+ #      entity_id: media_player.entertainment_area
+ #      app_name: Netflix
+ #  condition:
+ #    - condition: state
+ #      entity_id: sun.sun
+ #      state: 'below_horizon'
+ #  action:
+ #    service: homeassistant.turn_on
+ #    entity_id: scene.living_netflix
+#
+# - alias: Entertainment area paused
+#   trigger:
+#     - platform: state
+#       state: 'paused'
+#       entity_id: media_player.entertainment_area
+#   action:
+#     service: homeassistant.turn_on
+#     entity_id: scene.living_normal
+#
+# - alias: Entertainment area off
+#   trigger:
+#     - platform: state
+#       state: 'off'
+#       entity_id: media_player.entertainment_area
+#   action:
+#     service: homeassistant.turn_on
+#     entity_id: scene.living_normal

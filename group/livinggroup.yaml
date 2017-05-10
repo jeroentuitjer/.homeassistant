@@ -19,10 +19,11 @@
     name: Living Light
     entities:
       - sensor.livingroom_lux
+      - sensor.livingroom_lux
       - sensor.livingroom_temperature
 
   living_automation_group:
     name: Living Automation
     entities:
       - automation.turn_on_living_light_when_there_is_movement
-      - automation.turn_off_living_light_5_minutes_after_last_movement
+      - automation.turn_off_living_light_15_minutes_after_last_movement
