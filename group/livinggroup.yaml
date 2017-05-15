@@ -14,11 +14,14 @@
       - light.zithoek
       - light.eettafel_keuken
       - light.eettafel_raam
+      - scene.living_normal
+      - scene.living_netflix
+      - ene.living_spotify
 
   living_sensor:
     name: Living Light
     entities:
-      - sensor.livingroom_lux
+      - sensor.livingroom_motion
       - sensor.livingroom_lux
       - sensor.livingroom_temperature
 

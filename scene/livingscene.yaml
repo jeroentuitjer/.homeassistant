@@ -6,19 +6,19 @@
   entities:
     light.eettafel_keuken:
       state: on
-      brightness: 254
-      xy_color: 0.5017,0.4152
-      color_temp: 443
+      brightness: 144
+#      xy_color: 0.5017,0.4152
+#      color_temp: 443
     light.eettafel_raam:
       state: on
-      brightness: 254
-      xy_color: 0.5017,0.4152
-      color_temp: 443
+      brightness: 144
+#      xy_color: 0.5017,0.4152
+#      color_temp: 443
     light.zithoek:
       state: on
-      brightness: 254
-      xy_color: 0.5017,0.4152
-      color_temp: 443
+      brightness: 144
+#      xy_color: 0.5017,0.4152
+#      color_temp: 443
 
 - name: Living Netflix 
   entities:
