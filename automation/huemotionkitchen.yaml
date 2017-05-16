@@ -10,7 +10,7 @@
   condition:
     condition: numeric_state
     entity_id: sensor.kitchen_lux
-    below: 18
+    below: 120
   action:
     service: homeassistant.turn_on
     entity_id: light.keuken
@@ -26,10 +26,10 @@
     service: homeassistant.turn_off
     entity_id: light.keuken
 
-- alias: If motion continuously active set a timer to check for lux
+- alias: If motion continuously active set a timer to check for lux kitchen
   trigger:
     platform: time
-    minutes: '/5'
+    minutes: '/10'
     seconds: 00
   condition:
     condition: and
@@ -39,7 +39,7 @@
         state: '1'
       - condition: numeric_state
         entity_id: sensor.kitchen_lux
-        below: 18
+        below: 120
       - condition: state
         entity_id: light.keuken
         state: 'off'

@@ -6,52 +6,44 @@
   entities:
     light.eettafel_keuken:
       state: on
-      brightness: 144
-#      xy_color: 0.5017,0.4152
-#      color_temp: 443
+      rgb_color: [255, 189, 86]
+      brightness: 230
     light.eettafel_raam:
       state: on
-      brightness: 144
-#      xy_color: 0.5017,0.4152
-#      color_temp: 443
+      rgb_color: [255, 189, 86]
+      brightness: 230
     light.zithoek:
       state: on
-      brightness: 144
-#      xy_color: 0.5017,0.4152
-#      color_temp: 443
-
+      rgb_color: [255, 189, 86]
+      brightness: 230
+      
 - name: Living Netflix 
   entities:
     light.eettafel_keuken:
       state: on
-      brightness: 93
-      xy_color: 0.1684,0.0417
-      color_temp: 153
+      xy_color: [0.16, 0.04]
+      brightness: 100
     light.eettafel_raam:
       state: on
-      brightness: 93
-      xy_color: 0.1684,0.0417
-      color_temp: 153
+      xy_color: [0.16, 0.04]
+      brightness: 100
     light.zithoek:
       state: on
-      brightness: 94
-      xy_color: 0.6736,0.3221
-      color_temp: 153
-
+      xy_color: [0.67, 0.32]
+      brightness: 100
+      
 - name: Living Spotify 
   entities:
     light.eettafel_keuken:
       state: on
-      brightness: 254
-      xy_color: 0.5017,0.4152
-      color_temp: 443
+      rgb_color: [234, 255, 69]
+      brightness: 200
     light.eettafel_raam:
       state: on
-      brightness: 217
-      xy_color: 0.5017,0.4152
-      color_temp: 443
+      rgb_color: [255, 189, 86]
+      brightness: 200
     light.zithoek:
       state: on
-      brightness: 254
-      xy_color: 0.5017,0.4152
-      color_temp: 443
+      rgb_color: [255, 189, 86]
+      brightness: 200
+     

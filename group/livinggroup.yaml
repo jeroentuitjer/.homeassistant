@@ -16,7 +16,7 @@
       - light.eettafel_raam
       - scene.living_normal
       - scene.living_netflix
-      - ene.living_spotify
+      - scene.living_spotify
 
   living_sensor:
     name: Living Light
