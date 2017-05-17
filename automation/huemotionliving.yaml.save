@@ -1,0 +1,52 @@
+#################################################################
+## Automation Hue Living
+#################################################################
+
+- alias: Turn on living light when there is movement
+  trigger:
+    - platform: state
+      entity_id: sensor.livingroom_motion
+      state: '1'
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.livingroom_lux
+        below: 120
+      - condition: template 
+        value_template: >-
+          {%- if is_s  action:
+    service: homeassistant.turn_on
+    entity_id: scene.living_normal
+
+- alias: Turn off living light 15 minutes after last movement
+  trigger:
+    - platform: state
+      entity_id: sensor.livingroom_motion
+      state: '0'
+      for:
+        minutes: 30
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.living_light_group
+
+- alias: If motion continuously active set a timer to check for lux living
+  trigger:
+    platform: time
+    minutes: '/10'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.livingroom_motion
+        state: '1'
+      - condition: numeric_state
+        entity_id: sensor.livingroom_lux
+        below: 120
+      - condition: state
+        entity_id: group.living_light_group
+        state: 'off'
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.living_normal

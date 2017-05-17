@@ -58,6 +58,8 @@ media_player:
     sources:
       pc: 'HTPC'
 
+ios:
+
 group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
 automation: !include_dir_merge_list automation/

@@ -30,3 +30,5 @@
     entities:
       - automation.turn_on_living_light_when_there_is_movement
       - automation.turn_off_living_light_15_minutes_after_last_movement
+      - automation.entertainment_area_playing_netflix
+      - automation.entertainment_area_playing_spotify
