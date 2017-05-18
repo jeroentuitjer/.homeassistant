@@ -47,3 +47,17 @@
       rgb_color: [255, 189, 86]
       brightness: 200
      
+- name: Living SoundCloud
+  entities:
+    light.eettafel_keuken:
+      state: on
+      rgb_color: [255, 146, 34]
+      brightness: 200
+    light.eettafel_raam:
+      state: on
+      rgb_color: [255, 189, 86]
+      brightness: 200
+    light.zithoek:
+      state: on
+      rgb_color: [255, 189, 86]
+      brightness: 200
