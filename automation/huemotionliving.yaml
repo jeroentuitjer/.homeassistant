@@ -8,9 +8,16 @@
       entity_id: sensor.livingroom_motion
       state: '1'
   condition:
-    - condition: numeric_state
-      entity_id: sensor.livingroom_lux
-      below: 120
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.livingroom_lux
+        below: 120
+      - condition: template
+        value_template: >-
+          {%- if is_state("media_player.entertainment_area", "playing") -%}
+            false
+          {%- endif -%}
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_normal

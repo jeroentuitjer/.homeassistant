@@ -13,7 +13,7 @@
     below: 120
   action:
     service: homeassistant.turn_on
-    entity_id: light.keuken
+    entity_id: scene.kitchen_normal
 
 - alias: Turn off kitchen light 2 minutes after last movement
   trigger:
@@ -45,6 +45,5 @@
         state: 'off'
   action:
     service: homeassistant.turn_on
-    entity_id: light.keuken
-
+    entity_id: scene.kitchen_normal
 

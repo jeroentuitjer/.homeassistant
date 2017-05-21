@@ -6,42 +6,34 @@
   entities:
     light.gang_boven_1:
       state: on
-      transition: 2
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_boven_2:
       state: on
-      transition: 2
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_boven_3:
       state: on
-      transition: 2
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_boven_4:
       state: on
-      transition: 2
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_1:
       state: on
-      transition: 2
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_2:
       state: on
-      transition: 2
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_3:
       state: on
-      transition: 2
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_4:
       state: on
-      transition: 2
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
 
@@ -64,11 +56,9 @@
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_3:
       state: on
-      transition: 2
       brightness: 5
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_4:
       state: on
-      transition: 2
       brightness: 5
       xy_color: [ 0.5119, 0.4147 ]
