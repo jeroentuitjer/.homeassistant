@@ -8,16 +8,16 @@
        state: 'playing'
        entity_id: media_player.entertainment_area
    condition:
-    condition: and
-    conditions:
-      - condition: numeric_state
-        entity_id: sensor.livingroom_lux
-        below: 140
-      - condition: template
-        value_template: >-
-          {%- if is_state_attr("media_player.entertainment_area", "app_name", "Spotify") -%}
-            true
-          {%- endif -%}
+     condition: and
+     conditions:
+       - condition: numeric_state
+         entity_id: sensor.livingroom_lux
+         below: 140
+       - condition: template
+         value_template: >-
+           {%- if is_state_attr("media_player.entertainment_area", "app_name", "Spotify") -%}
+             true
+           {%- endif -%}
    action:
      service: homeassistant.turn_on
      entity_id: scene.living_spotify
@@ -67,20 +67,13 @@
      - platform: state
        state: 'paused'
        entity_id: media_player.entertainment_area
+   condition:
+     - condition: numeric_state
+       entity_id: sensor.livingroom_lux
+       below: 140
    action:
      service: homeassistant.turn_on
      entity_id: scene.living_normal
-
- - alias: Entertainment area off
-   trigger:
-     - platform: state
-       state: 'off'
-       entity_id: media_player.entertainment_area
-   action:
-     - service: homeassistant.turn_on
-       entity_id: scene.living_normal
-     - service: media_player.turn_off
-       entity_id: media_player.receiver
      
  - alias: Entertainment Onkyo BD/DVD Music
    trigger:
