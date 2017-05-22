@@ -1,0 +1,16 @@
+#################################################################
+## Scenes Hue Kitchen
+#################################################################
+
+- name: Kitchen Normal
+  entities:
+    state: on
+    rgb_color: [255, 189, 86]
+    brightness: 230
+
+- name: Kitchen Netflix
+  entities:
+    light.keuken:
+    state: on
+    xy_color: [0.67, 0.32]
+    brightness: 160
