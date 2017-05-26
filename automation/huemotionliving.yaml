@@ -13,11 +13,9 @@
       - condition: numeric_state
         entity_id: sensor.livingroom_lux
         below: 160
-      - condition: template
-        value_template: >-
-          {%- if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") -%}
-            false 
-          {%- endif -%}
+      - condition: state
+        entity_id: media_player.entertainment_area
+        state: 'off'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_normal
@@ -29,27 +27,25 @@
       state: '0'
       for:
         minutes: 30
+  condition:
+    condition: state
+    entity_id: media_player.entertainment_area
+    state: 'off'
   action:
     service: homeassistant.turn_off
     entity_id: group.living_light_group
 
-- alias: If motion continuously active set a timer to check for lux living
+- alias: Turn off corner light 30 minutes after last movement
   trigger:
-    platform: time
-    minutes: '/10'
-    seconds: 00
+    - platform: state
+      entity_id: sensor.livingroom_motion
+      state: '0'
+      for:
+        minutes: 30
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: sensor.livingroom_motion
-        state: '1'
-      - condition: numeric_state
-        entity_id: sensor.livingroom_lux
-        below: 160
-      - condition: state
-        entity_id: group.living_light_group
-        state: 'off'
+    condition: state
+    entity_id: media_player.entertainment_area
+    state: 'off'
   action:
     service: homeassistant.turn_on
-    entity_id: scene.living_normal
+    entity_id: scene.living_corneroff

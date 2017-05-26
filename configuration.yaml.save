@@ -60,15 +60,6 @@ media_player:
 
 ios:
 
-light:
-  - platform: flux_led
-#    automatic_add: True
-    devices: 
-      10.0.1.11:
-        name: cornerlight 
-        mode: "rgbw"
-        protocol: 'ledenet'
-
 group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
 automation: !include_dir_merge_list automation/

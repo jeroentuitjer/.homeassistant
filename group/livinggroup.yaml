@@ -14,6 +14,7 @@
       - light.zithoek
       - light.eettafel_keuken
       - light.eettafel_raam
+      - light.cornerlight
       - scene.living_normal
       - scene.living_netflix
       - scene.living_spotify
