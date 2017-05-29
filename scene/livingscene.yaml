@@ -20,7 +20,8 @@
 - name: Living Corneroff
   entities:
     light.cornerlight:
-      rgbw_color: [0, 0, 0, 0]
+      state: off
+      rgb_color: [0, 0, 0]
   
 - name: Living Netflix 
   entities:
@@ -38,40 +39,16 @@
       brightness: 100
     light.cornerlight:
       state: on
-      rgbw_color: [255, 0, 0, 0]
+      rgb_color: [255, 0, 0]
 
 - name: Living Spotify 
   entities:
-    light.eettafel_keuken:
-      state: on
-      rgb_color: [234, 255, 69]
-      brightness: 200
-    light.eettafel_raam:
-      state: on
-      rgb_color: [255, 189, 86]
-      brightness: 200
-    light.zithoek:
-      state: on
-      rgb_color: [255, 189, 86]
-      brightness: 200
     light.cornerlight:
-      rgb_color: [0, 255, 0] 
-      white_value: 0
-
+      state: on
+      rgb_color: [0, 255, 0]     
+ 
 - name: Living SoundCloud
   entities:
-    light.eettafel_keuken:
-      state: on
-      rgb_color: [255, 146, 34]
-      brightness: 200
-    light.eettafel_raam:
-      state: on
-      rgb_color: [255, 189, 86]
-      brightness: 200
-    light.zithoek:
-      state: on
-      rgb_color: [255, 189, 86]
-      brightness: 200
     light.cornerlight:
-      rgb_color: [255, 55, 0]
-      white_value: 0 
+      state: on
+      rgb_color: [255, 140, 0]
