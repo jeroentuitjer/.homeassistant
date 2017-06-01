@@ -35,7 +35,7 @@
     service: homeassistant.turn_off
     entity_id: group.living_light_group
 
-- alias: Turn off corner light 30 minutes after last movement
+- alias: Turn off living corner light 30 minutes after last movement
   trigger:
     - platform: state
       entity_id: sensor.livingroom_motion
@@ -49,3 +49,4 @@
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corneroff
+

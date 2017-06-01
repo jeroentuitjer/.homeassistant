@@ -4,9 +4,12 @@
 
 - alias: Turn on kitchen light when there is movement
   trigger:
-    platform: state
-    entity_id: sensor.kitchen_motion
-    state: '1'
+    - platform: state
+      entity_id: sensor.kitchen_motion
+      state: '1'
+    - platform: state
+      state: 'paused'
+      entity_id: media_player.entertainment_area
   condition:
     condition: numeric_state
     entity_id: sensor.kitchen_lux
@@ -14,6 +17,7 @@
   action:
     service: homeassistant.turn_on
     entity_id: scene.kitchen_normal
+
 
 - alias: Turn off kitchen light 15 minutes
   trigger:
@@ -30,36 +34,17 @@
     service: homeassistant.turn_off
     entity_id: light.keuken
 
-- alias: Turn off kitchen light 2 minutes after last movement netflix mode
+
+- alias: Entertainment area playing netflix kitchen light plus motion
   trigger:
+    - platform: state
+      state: 'playing'
+      entity_id: media_player.entertainment_area
     - platform: state
       entity_id: sensor.kitchen_motion
       state: '0'
       for:
         minutes: 2
-  condition:
-    condition: and
-    conditions:
-      - condition: numeric_state
-        entity_id: sensor.kitchen_lux
-        below: 160
-      - condition: template
-        value_template: >-
-          {%- if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") -%}
-            true
-          {%- endif -%}
-      - condition: state
-        entity_id: media_player.entertainment_area
-        state: 'playing'
-  action:
-    service: homeassistant.turn_on
-    entity_id: scene.kitchen_netflix
-
-- alias: Entertainment area playing netflix kitchen light 
-  trigger:
-    - platform: state
-      state: 'playing'
-      entity_id: media_player.entertainment_area
   condition:
     condition: and
     conditions:
@@ -71,21 +56,76 @@
           {%- if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") -%}
             true
           {%- endif -%}
+      - condition: state
+        entity_id: media_player.entertainment_area
+        state: 'playing'
+      - condition: state
+        entity_id: light.keuken
+        state: 'off'
   action:
     service: homeassistant.turn_on
     entity_id: scene.kitchen_netflix
 
-- alias: Entertainment area pausing netflix kitchen light
+
+- alias: Entertainment area playing spotify kitchen light plus motion
   trigger:
     - platform: state
-      state: 'paused'
+      state: 'playing'
       entity_id: media_player.entertainment_area
+    - platform: state
+      entity_id: sensor.kitchen_motion
+      state: '0'
+      for:
+        minutes: 2
   condition:
-    - condition: numeric_state
-      entity_id: sensor.livingroom_lux
-      below: 160
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.kitchen_lux
+        below: 160  
+      - condition: template
+        value_template: >-
+          {%- if is_state_attr("media_player.entertainment_area", "app_name", "Spotify") -%}
+            true
+          {%- endif -%}
+      - condition: state
+        entity_id: media_player.entertainment_area
+        state: 'playing'
+      - condition: state
+        entity_id: light.keuken
+        state: 'off'
   action:
     service: homeassistant.turn_on
-    entity_id: scene.kitchen_normal
+    entity_id: scene.kitchen_spotify
 
 
+- alias: Entertainment area playing soundcloud kitchen light plus motion
+  trigger:
+    - platform: state
+      state: 'playing'
+      entity_id: media_player.entertainment_area
+    - platform: state
+      entity_id: sensor.kitchen_motion
+      state: '0'
+      for:
+        minutes: 2
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.kitchen_lux
+        below: 160  
+      - condition: template
+        value_template: >-
+          {%- if is_state_attr("media_player.entertainment_area", "app_name", "SoundCloud") -%}
+            true
+          {%- endif -%}
+      - condition: state
+        entity_id: media_player.entertainment_area
+        state: 'playing'
+      - condition: state
+        entity_id: light.keuken
+        state: 'off'
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.kitchen_soundcloud

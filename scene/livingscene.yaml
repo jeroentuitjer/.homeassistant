@@ -20,7 +20,7 @@
 - name: Living Corneroff
   entities:
     light.cornerlight:
-      state: off
+      state: on
       rgb_color: [0, 0, 0]
   
 - name: Living Netflix 
