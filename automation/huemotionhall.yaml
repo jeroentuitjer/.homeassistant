@@ -11,9 +11,6 @@
       entity_id: sensor.hall_kitchen_motion
       state: '1'
   condition:
-    - condition: numeric_state
-      entity_id: sensor.livingroom_lux
-      below: 120
     - condition: time
       after: '07:00:00'
       before: '23:00:00'
@@ -53,32 +50,3 @@
     service: homeassistant.turn_off
     entity_id: group.hallway_light_group
 
-- alias: If motion continuously active set a timer to check for lux hallway
-  trigger:
-    platform: time
-    minutes: '/10'
-    seconds: 00
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: sensor.hall_frontdoor_motion
-        state: '1'
-      - condition: state
-        entity_id: sensor.hall_kitchen_motion
-        state: '1'
-      - condition: numeric_state
-        entity_id: sensor.hall_frontdoor_lux
-        below: 120
-      - condition: numeric_state
-        entity_id: sensor.hall_kitchen_lux
-        below: 120
-      - condition: state
-        entity_id: group.living_light_group
-        state: 'off'
-      - condition: time
-        after: '07:00:00'
-        before: '23:00:00'
-  action:
-    service: homeassistant.turn_on
-    entity_id: scene.hallway_normal

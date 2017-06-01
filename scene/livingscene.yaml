@@ -52,3 +52,51 @@
     light.cornerlight:
       state: on
       rgb_color: [255, 140, 0]
+
+- name: Living Corner Clear Day
+  entities:
+    light.cornerlight:
+      state: on
+      rgb_color: [255, 255, 0]
+
+
+- name: Living Corner Rain
+  entities:
+    light.cornerlight:
+      state: on
+      rgb_color: [0, 0, 204]
+
+
+- name: Living Corner Snow
+  entities:
+    light.cornerlight:
+      state: on
+      rgb_color: [255, 255, 255]
+
+
+- name: Living Corner Wind
+  entities:
+    light.cornerlight:
+      state: on
+      rgb_color: [0, 255, 255]
+
+
+- name: Living Corner Fog
+  entities:
+    light.cornerlight:
+      state: on
+      rgb_color: [153, 51, 255]
+
+
+- name: Living Corner Cloudy
+  entities:
+    light.cornerlight:
+      state: on
+      rgb_color: [255, 0, 127]
+
+
+- name: Living Corner Partly Cloudy Day
+  entities:
+    light.cornerlight:
+      state: on
+      rgb_color: [0, 255, 0]

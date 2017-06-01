@@ -1,0 +1,186 @@
+#################################################################
+## Automation Living Corner Light
+#################################################################
+
+- alias: Cornerlight Weather prediction clear day
+  trigger:
+    - platform: state
+      entity_id: sensor.livingroom_motion
+      state: '1'
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.livingroom_lux
+        below: 160
+      - condition: state
+        entity_id: media_player.entertainment_area
+        state: 'off'
+      - condition: state
+        entity_id: sensor.dark_sky_icon
+        state: 'clear-day'
+      - condition: or
+        conditions:
+          - condition: numeric_state
+            entity_id: sensor.livingroom_lux
+            below: 160
+          - condition: state
+            entity_id: media_player.entertainment_area
+            state: 'off'
+          - condition: state
+            entity_id: sensor.dark_sky_icon
+            state: 'clear-night' 
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.living_corner_clear_day
+
+
+- alias: Cornerlight Weather prediction rain
+  trigger:
+    - platform: state
+      entity_id: sensor.livingroom_motion
+      state: '1'
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.livingroom_lux
+        below: 160
+      - condition: state
+        entity_id: media_player.entertainment_area
+        state: 'off'
+      - condition: state
+        entity_id: sensor.dark_sky_icon
+        state: 'rain'
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.living_corner_rain
+
+
+- alias: Cornerlight Weather prediction snow and sleet
+  trigger:
+    - platform: state
+      entity_id: sensor.livingroom_motion
+      state: '1'
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.livingroom_lux
+        below: 160
+      - condition: state
+        entity_id: media_player.entertainment_area
+        state: 'off'
+      - condition: state
+        entity_id: sensor.dark_sky_icon
+        state: 'snow'
+      - condition: or
+        conditions:
+          - condition: numeric_state
+            entity_id: sensor.livingroom_lux
+            below: 160
+          - condition: state
+            entity_id: sensor.dark_sky_icon
+            state: 'sleet' 
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.living_corner_snow
+
+
+- alias: Cornerlight Weather prediction wind
+  trigger:
+    - platform: state
+      entity_id: sensor.livingroom_motion
+      state: '1'
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.livingroom_lux
+        below: 160
+      - condition: state
+        entity_id: media_player.entertainment_area
+        state: 'off'
+      - condition: state
+        entity_id: sensor.dark_sky_icon
+        state: 'wind'
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.living_corner_wind
+
+
+- alias: Cornerlight Weather prediction fog
+  trigger:
+    - platform: state
+      entity_id: sensor.livingroom_motion
+      state: '1'
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.livingroom_lux
+        below: 160
+      - condition: state
+        entity_id: media_player.entertainment_area
+        state: 'off'
+      - condition: state
+        entity_id: sensor.dark_sky_icon
+        state: 'fog'
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.living_corner_fog
+
+
+- alias: Cornerlight Weather prediction cloudy
+  trigger:
+    - platform: state
+      entity_id: sensor.livingroom_motion
+      state: '1'
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.livingroom_lux
+        below: 160
+      - condition: state
+        entity_id: media_player.entertainment_area
+        state: 'off'
+      - condition: state
+        entity_id: sensor.dark_sky_icon
+        state: 'cloudy'
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.living_corner_cloudy
+
+
+- alias: Cornerlight Weather prediction partly cloudy day
+  trigger:
+    - platform: state
+      entity_id: sensor.livingroom_motion
+      state: '1'
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.livingroom_lux
+        below: 160
+      - condition: state
+        entity_id: media_player.entertainment_area
+        state: 'off'
+      - condition: state
+        entity_id: sensor.dark_sky_icon
+        state: 'partly-cloudy-day'
+      - condition: or
+        conditions:
+          - condition: numeric_state
+            entity_id: sensor.livingroom_lux
+            below: 160
+          - condition: state
+            entity_id: media_player.entertainment_area
+            state: 'off'
+          - condition: state
+            entity_id: sensor.dark_sky_icon
+            state: 'partly-cloudy-night' 
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.living_corner_partly_cloudy_day

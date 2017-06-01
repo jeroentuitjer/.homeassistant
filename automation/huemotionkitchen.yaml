@@ -25,7 +25,7 @@
       entity_id: sensor.kitchen_motion
       state: '0'
       for:
-        minutes: 15
+        minutes: 5
   condition: 
     condition: state
     entity_id: media_player.entertainment_area

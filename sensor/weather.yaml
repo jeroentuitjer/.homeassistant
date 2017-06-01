@@ -2,4 +2,8 @@
 ## Weather
 #################################################################
 
-  
+  - platform: darksky
+    api_key: !secret darkskyapi
+    update_inverval: '01:00'
+    monitored_conditions:
+      - icon

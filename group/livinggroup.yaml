@@ -18,6 +18,13 @@
       - scene.living_normal
       - scene.living_netflix
       - scene.living_spotify
+      - scene.living_corner_clear_day
+      - scene.living_corner_partly_cloudy_day
+      - scene.living_corner_cloudy
+      - scene.living_corner_wind
+      - scene.living_corner_fog
+      - scene.living_corner_rain
+      - scene.living_corner_snow
 
   living_sensor:
     name: Living Light
