@@ -14,6 +14,9 @@
     - condition: time
       after: '07:00:00'
       before: '23:00:00'
+    - condition: state
+      entity_id: light.gang_onder_4
+      state: 'off' 
   action:
     service: homeassistant.turn_on
     entity_id: scene.hallway_normal
@@ -27,9 +30,12 @@
       entity_id: sensor.hall_kitchen_motion
       state: '1'
   condition:
-    condition: time
-    after: '23:00:00'
-    before: '07:00:00'
+    - condition: time
+      after: '23:00:00'
+      before: '07:00:00'
+    - condition: state
+      entity_id: light.gang_onder_4
+      state: 'off'
   action:
     service: homeassistant.turn_on
     entity_id: scene.hallway_nightwatch   

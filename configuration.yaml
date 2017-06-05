@@ -45,11 +45,16 @@ history:
 logbook:
 
 # Track the sun
-sun:
+#sun:
 
 # Text to speech
 tts:
   platform: google
+
+mqtt:
+  embedded:
+  discovery: true
+  discovery_prefix: homeassistant
 
 media_player:
   - platform: onkyo
@@ -64,7 +69,7 @@ light:
   - platform: flux_led
 #    automatic_add: True
     devices: 
-      10.0.1.11:
+      10.0.1.4:
         name: cornerlight 
         mode: "rgbw"
         protocol: 'ledenet'
@@ -73,3 +78,4 @@ group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
 automation: !include_dir_merge_list automation/
 scene: !include_dir_merge_list scene/
+script: !include_dir_merge_list script/
