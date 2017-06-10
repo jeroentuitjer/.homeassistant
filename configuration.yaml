@@ -52,9 +52,11 @@ tts:
   platform: google
 
 mqtt:
-  embedded:
-  discovery: true
-  discovery_prefix: homeassistant
+
+device_tracker:
+  - platform: mqtt
+    devices:
+      iphone_van_jeroen: /location/jeroentuitjer
 
 media_player:
   - platform: onkyo
