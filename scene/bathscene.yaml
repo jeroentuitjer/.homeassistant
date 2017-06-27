@@ -1,0 +1,21 @@
+#################################################################
+# scenes Hue Bath
+#################################################################
+
+- name: Bath Normal
+  entities:
+    light.badkamer_jeroen:
+      state: on
+      brightness: 254
+    light.badkamer_tobias:
+      state: on
+      brightness: 254
+
+- name: Bath Nightwatch
+  entities:
+    light.badkamer_jeroen:
+      state: on
+      brightness: 5
+    light.badkamer_tobias:
+      state: on
+      brightness: 5

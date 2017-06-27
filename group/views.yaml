@@ -28,3 +28,12 @@
       - group.hallway_sensor_group
       - group.hallway_automation_group
       - group.hallway_automation_scene
+  
+  bathroom_view:
+    name: Bathroom
+    view: yes
+    entities:
+      - group.bathroom_light_group
+      - group.bathroom_sensor_group    
+      - group.bathroom_entertainment_group
+      - group.bathroom_automation_group
