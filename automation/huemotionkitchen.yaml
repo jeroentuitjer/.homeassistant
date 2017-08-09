@@ -57,6 +57,28 @@
     service: homeassistant.turn_on
     entity_id: scene.kitchen_netflix
 
+- alias: Entertainment area playinmovie from mac
+  trigger:
+    - platform: state
+      entity_id: sensor.kitchen_motion
+      state: '0'
+      for:
+        minutes: 1
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.kitchen_lux
+        below: 160  
+      - condition: template
+        value_template: >-
+          {%- if is_state_attr("media_player.entertainment_area", "app_name", "Default Media Receiver") -%}
+            true
+          {%- endif -%}
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.kitchen_netflix
+
 
 - alias: Entertainment area playing netflix kitchen light
   trigger:

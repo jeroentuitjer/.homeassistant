@@ -1,9 +1,9 @@
-#################################################################
+################################################################
 ## Views
 #################################################################
 
 
-  default_view:
+  Living_view:
     name: Living
     view: yes
     entities:
@@ -36,4 +36,3 @@
       - group.bathroom_light_group
       - group.bathroom_sensor_group    
       - group.bathroom_entertainment_group
-      - group.bathroom_automation_group

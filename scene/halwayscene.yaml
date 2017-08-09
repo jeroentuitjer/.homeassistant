@@ -20,12 +20,12 @@
       state: on
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
-    light.gang_onder_1:
+    light.gang_onder_11:
       state: on
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_2:
-      state: on
+      state: o
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_3:
@@ -47,12 +47,11 @@
       state: off
     light.gang_boven_4:
       state: off
-    light.gang_onder_1:
-      state: on
-      brightness: 2
+    light.gang_onder_11:
+      state: off
     light.gang_onder_2:
       state: on
-      brightness: 5
+      brightness: 0
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_3:
       state: on

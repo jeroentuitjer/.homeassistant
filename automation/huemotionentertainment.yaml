@@ -49,6 +49,57 @@
          entity_id: media_player.receiver
          source: cd_tv_cd
 
+ - alias: Entertainment area playing mac
+   trigger:
+     - platform: state
+       state: 'playing'
+       entity_id: media_player.entertainment_area
+   condition:
+     condition: and
+     conditions:
+       - condition: numeric_state
+         entity_id: sensor.livingroom_lux
+         below: 160
+       - condition: template
+         value_template: >-
+           {%- if is_state_attr("media_player.entertainment_area", "app_name", "Default Media Receiver") -%}
+             true
+           {%- endif -%}
+   action:
+     - service: homeassistant.turn_on
+       entity_id: scene.living_netflix
+     - service: media_player.turn_on
+       entity_id: media_player.receiver
+     - service: media_player.select_source
+       data:
+         entity_id: media_player.receiver
+         source: cd_tv_cd
+
+ - alias: Entertainment area playing youtube
+   trigger:
+     - platform: state
+       state: 'playing'
+       entity_id: media_player.entertainment_area
+   condition:
+     condition: and
+     conditions:
+       - condition: numeric_state
+         entity_id: sensor.livingroom_lux
+         below: 160
+       - condition: template
+         value_template: >-
+           {%- if is_state_attr("media_player.entertainment_area", "app_name", "Youtube") -%}
+             true
+           {%- endif -%}
+   action:
+     - service: homeassistant.turn_on
+       entity_id: scene.living_youtube
+     - service: media_player.turn_on
+       entity_id: media_player.receiver
+     - service: media_player.select_source
+       data:
+         entity_id: media_player.receiver
+         source: cd_tv_cd
 
  - alias: Entertainment area playing soundcloud
    trigger:

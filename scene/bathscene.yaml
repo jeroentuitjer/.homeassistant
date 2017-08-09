@@ -6,10 +6,12 @@
   entities:
     light.badkamer_jeroen:
       state: on
-      brightness: 254
+      brightness: 144
+      xy_color: [ 0.5119, 0.4147 ]
     light.badkamer_tobias:
       state: on
-      brightness: 254
+      brightness: 144
+      xy_color: [ 0.5119, 0.4147 ]
 
 - name: Bath Nightwatch
   entities:

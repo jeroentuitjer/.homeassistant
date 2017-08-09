@@ -41,6 +41,24 @@
       state: on
       rgb_color: [255, 0, 0]
 
+- name: Living Youtube
+  entities:
+    light.eettafel_keuken:
+      state: on
+      xy_color: [0.16, 0.04]
+      brightness: 150
+    light.eettafel_raam:
+      state: on
+      xy_color: [0.16, 0.04]
+      brightness: 150
+    light.zithoek:
+      state: on
+      xy_color: [0.67, 0.32]
+      brightness: 150
+    light.cornerlight:
+      state: on
+      rgb_color: [255, 0, 0]
+
 - name: Living Spotify 
   entities:
     light.cornerlight:

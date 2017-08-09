@@ -2,5 +2,8 @@
 ## Sensors 
 #################################################################
 
-- platform: yr
-
+  - platform: speedtest
+    monitored_conditions:
+      - ping
+      - download
+      - upload
