@@ -5,7 +5,7 @@
  - alias: Entertainment area playing spotify
    trigger:
      - platform: state
-       state: 'playing'
+       to: 'playing'
        entity_id: media_player.entertainment_area
    condition:
      condition: template
@@ -26,7 +26,7 @@
  - alias: Entertainment area playing netflix
    trigger:
      - platform: state
-       state: 'playing'
+       to: 'playing'
        entity_id: media_player.entertainment_area
    condition:
      condition: and
@@ -52,7 +52,7 @@
  - alias: Entertainment area playing mac
    trigger:
      - platform: state
-       state: 'playing'
+       to: 'playing'
        entity_id: media_player.entertainment_area
    condition:
      condition: and
@@ -78,7 +78,7 @@
  - alias: Entertainment area playing youtube
    trigger:
      - platform: state
-       state: 'playing'
+       to: 'playing'
        entity_id: media_player.entertainment_area
    condition:
      condition: and
@@ -104,7 +104,7 @@
  - alias: Entertainment area playing soundcloud
    trigger:
      - platform: state
-       state: 'playing'
+       to: 'playing'
        entity_id: media_player.entertainment_area
    condition:
      condition: template
@@ -126,7 +126,7 @@
  - alias: Entertainment area paused 
    trigger:
      - platform: state
-       state: 'paused'
+       to: 'paused'
        entity_id: media_player.entertainment_area
    condition:
      - condition: numeric_state
@@ -140,7 +140,7 @@
  - alias: Entertainment area stopped 
    trigger:
      - platform: state
-       state: 'off'
+       to: 'off'
        entity_id: media_player.entertainment_area
    condition:
      - condition: numeric_state

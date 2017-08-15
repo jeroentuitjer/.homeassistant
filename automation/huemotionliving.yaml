@@ -6,7 +6,7 @@
   trigger:
     - platform: state
       entity_id: sensor.livingroom_motion
-      state: '1'
+      to: '1'
   condition:
     condition: and
     conditions:
@@ -15,7 +15,7 @@
         below: 160
       - condition: state
         entity_id: media_player.entertainment_area
-        state: 'off'
+        to: 'off'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_normal
@@ -24,16 +24,15 @@
   trigger:
     - platform: state
       entity_id: sensor.livingroom_motion
-      state: '0'
+      to: '0'
       for:
         minutes: 30
   condition:
     condition: state
     entity_id: media_player.entertainment_area
-    state: 'off'
+    to: 'off'
   action:
     - service: homeassistant.turn_off
       entity_id: group.living_light_group
     - service: homeassistant.turn_on
       entity_id: scene.living_corneroff
-

@@ -6,9 +6,9 @@
   trigger:
     - platform: state
       entity_id: sensor.kitchen_motion
-      state: '1'
+      to: '1'
     - platform: state
-      state: 'paused'
+      to: 'paused'
       entity_id: media_player.entertainment_area
   condition:
     condition: numeric_state
@@ -22,13 +22,13 @@
   trigger:
     - platform: state
       entity_id: sensor.kitchen_motion
-      state: '0'
+      to: '0'
       for:
         minutes: 10
   condition: 
     condition: state
     entity_id: media_player.entertainment_area
-    state: 'off'
+    to: 'off'
   action:
   #  service: homeassistant.turn_on
   #  entity_id: script.turn_off_with_step
@@ -39,7 +39,7 @@
   trigger:
     - platform: state
       entity_id: sensor.kitchen_motion
-      state: '0'
+      to: '0'
       for:
         minutes: 1
   condition:
@@ -61,7 +61,7 @@
   trigger:
     - platform: state
       entity_id: sensor.kitchen_motion
-      state: '0'
+      to: '0'
       for:
         minutes: 1
   condition:
@@ -83,7 +83,7 @@
 - alias: Entertainment area playing netflix kitchen light
   trigger:
     - platform: state
-      state: 'playing'
+      to: 'playing'
       entity_id: media_player.entertainment_area
   condition:
     condition: and
@@ -93,7 +93,7 @@
         below: 160  
       - condition: state
         entity_id: sensor.kitchen_motion
-        state: '0'
+        to: '0'
       - condition: template
         value_template: >-
           {%- if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") -%}
@@ -108,7 +108,7 @@
   trigger:
     - platform: state
       entity_id: sensor.kitchen_motion
-      state: '0'
+      to: '0'
       for:
         minutes: 1
   condition:
@@ -130,7 +130,7 @@
 - alias: Entertainment area playing spotify kitchen light
   trigger:
     - platform: state
-      state: 'playing'
+      to: 'playing'
       entity_id: media_player.entertainment_area
   condition:
     condition: and
@@ -140,7 +140,7 @@
         below: 160  
       - condition: state
         entity_id: sensor.kitchen_motion
-        state: '0'
+        to: '0'
       - condition: template
         value_template: >-
           {%- if is_state_attr("media_player.entertainment_area", "app_name", "Spotify") -%}
@@ -155,7 +155,7 @@
   trigger:
     - platform: state
       entity_id: sensor.kitchen_motion
-      state: '0'
+      to: '0'
       for:
         minutes: 1
   condition:
@@ -177,7 +177,7 @@
 - alias: Entertainment area playing soundcloud kitchen light
   trigger:
     - platform: state
-      state: 'playing'
+      to: 'playing'
       entity_id: media_player.entertainment_area
   condition:
     condition: and
@@ -187,7 +187,7 @@
         below: 160  
       - condition: state
         entity_id: sensor.kitchen_motion
-        state: '0'
+        to: '0'
       - condition: template
         value_template: >-
           {%- if is_state_attr("media_player.entertainment_area", "app_name", "SoundCloud") -%}

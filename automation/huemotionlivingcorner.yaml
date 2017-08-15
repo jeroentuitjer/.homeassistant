@@ -6,30 +6,30 @@
   trigger:
     - platform: state
       entity_id: sensor.livingroom_motion
-      state: '1'
+      to: '1'
   condition:
     condition: and
     conditions:
       - condition: state
         entity_id: media_player.entertainment_area
-        state: 'off'
+        to: 'off'
       - condition: numeric_state
         entity_id: sensor.livingroom_lux
         below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
-        state: 'clear-day'
+        to: 'clear-day'
       - condition: or
         conditions:
           - condition: state
             entity_id: media_player.entertainment_area
-            state: 'off'
+            to: 'off'
           - condition: numeric_state
             entity_id: sensor.livingroom_lux
             below: 160
           - condition: state
             entity_id: sensor.dark_sky_icon
-            state: 'clear-night' 
+            to: 'clear-night'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_clear_day
@@ -39,19 +39,19 @@
   trigger:
     - platform: state
       entity_id: sensor.livingroom_motion
-      state: '1'
+      to: '1'
   condition:
     condition: and
     conditions:
       - condition: state
         entity_id: media_player.entertainment_area
-        state: 'off'
+        to: 'off'
       - condition: numeric_state
         entity_id: sensor.livingroom_lux
         below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
-        state: 'rain'
+        to: 'rain'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_rain
@@ -61,30 +61,30 @@
   trigger:
     - platform: state
       entity_id: sensor.livingroom_motion
-      state: '1'
+      to: '1'
   condition:
     condition: and
     conditions:
       - condition: state
         entity_id: media_player.entertainment_area
-        state: 'off'
+        to: 'off'
       - condition: numeric_state
         entity_id: sensor.livingroom_lux
         below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
-        state: 'snow'
+        to: 'snow'
       - condition: or
         conditions:
           - condition: state
             entity_id: media_player.entertainment_area
-            state: 'off'
+            to: 'off'
           - condition: numeric_state
             entity_id: sensor.livingroom_lux
             below: 160
           - condition: state
             entity_id: sensor.dark_sky_icon
-            state: 'sleet' 
+            to: 'sleet'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_snow
@@ -94,19 +94,19 @@
   trigger:
     - platform: state
       entity_id: sensor.livingroom_motion
-      state: '1'
+      to: '1'
   condition:
     condition: and
     conditions:
       - condition: state
         entity_id: media_player.entertainment_area
-        state: 'off'
+        to: 'off'
       - condition: numeric_state
         entity_id: sensor.livingroom_lux
         below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
-        state: 'wind'
+        to: 'wind'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_wind
@@ -116,19 +116,19 @@
   trigger:
     - platform: state
       entity_id: sensor.livingroom_motion
-      state: '1'
+      to: '1'
   condition:
     condition: and
     conditions:
       - condition: state
         entity_id: media_player.entertainment_area
-        state: 'off'
+        to: 'off'
       - condition: numeric_state
         entity_id: sensor.livingroom_lux
         below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
-        state: 'fog'
+        to: 'fog'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_fog
@@ -138,19 +138,19 @@
   trigger:
     - platform: state
       entity_id: sensor.livingroom_motion
-      state: '1'
+      to: '1'
   condition:
     condition: and
     conditions:
       - condition: state
         entity_id: media_player.entertainment_area
-        state: 'off'
+        to: 'off'
       - condition: numeric_state
         entity_id: sensor.livingroom_lux
         below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
-        state: 'cloudy'
+        to: 'cloudy'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_cloudy
@@ -160,30 +160,30 @@
   trigger:
     - platform: state
       entity_id: sensor.livingroom_motion
-      state: '1'
+      to: '1'
   condition:
     condition: and
     conditions:
       - condition: state
         entity_id: media_player.entertainment_area
-        state: 'off'
+        to: 'off'
       - condition: numeric_state
         entity_id: sensor.livingroom_lux
         below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
-        state: 'partly-cloudy-day'
+        to: 'partly-cloudy-day'
       - condition: or
         conditions:
           - condition: state
             entity_id: media_player.entertainment_area
-            state: 'off'
+            to: 'off'
           - condition: numeric_state
             entity_id: sensor.livingroom_lux
             below: 160
           - condition: state
             entity_id: sensor.dark_sky_icon
-            state: 'partly-cloudy-night' 
+            to: 'partly-cloudy-night'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_partly_cloudy_day
