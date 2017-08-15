@@ -15,7 +15,7 @@
         below: 160
       - condition: state
         entity_id: media_player.entertainment_area
-        to: 'off'
+        state: 'off'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_normal
@@ -30,7 +30,7 @@
   condition:
     condition: state
     entity_id: media_player.entertainment_area
-    to: 'off'
+    state: 'off'
   action:
     - service: homeassistant.turn_off
       entity_id: group.living_light_group

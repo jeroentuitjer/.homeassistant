@@ -28,7 +28,7 @@
   condition: 
     condition: state
     entity_id: media_player.entertainment_area
-    to: 'off'
+    state: 'off'
   action:
   #  service: homeassistant.turn_on
   #  entity_id: script.turn_off_with_step
@@ -93,7 +93,7 @@
         below: 160  
       - condition: state
         entity_id: sensor.kitchen_motion
-        to: '0'
+        state: '0'
       - condition: template
         value_template: >-
           {%- if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") -%}
@@ -140,7 +140,7 @@
         below: 160  
       - condition: state
         entity_id: sensor.kitchen_motion
-        to: '0'
+        state: '0'
       - condition: template
         value_template: >-
           {%- if is_state_attr("media_player.entertainment_area", "app_name", "Spotify") -%}
@@ -187,7 +187,7 @@
         below: 160  
       - condition: state
         entity_id: sensor.kitchen_motion
-        to: '0'
+        state: '0'
       - condition: template
         value_template: >-
           {%- if is_state_attr("media_player.entertainment_area", "app_name", "SoundCloud") -%}
