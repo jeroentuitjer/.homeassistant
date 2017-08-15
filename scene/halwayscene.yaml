@@ -48,10 +48,12 @@
     light.gang_boven_4:
       state: off
     light.gang_onder_11:
-      state: off
+      state: on
+      brightness: 1
+      xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_2:
       state: on
-      brightness: 0
+      brightness: 5
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_3:
       state: on
