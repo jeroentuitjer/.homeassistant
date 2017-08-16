@@ -160,9 +160,9 @@
    trigger:
      - platform: state
        entity_id: sensor.livingroom_motion
-         to: '0'
-         for:
-           minutes: 30
+       to: '0'
+       for:
+         minutes: 30
    condition:
      condition: state
        entity_id: media_player.entertainment_area
