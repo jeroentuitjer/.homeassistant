@@ -66,4 +66,4 @@
       state: '1'
   action:
     service: homeassistant.turn_on
-    entity_id: scene.hallway_nightwatch   
+    entity_id: scene.hallway_nightwatch
