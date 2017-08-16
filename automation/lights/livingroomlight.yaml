@@ -135,24 +135,40 @@
    action:
      service: homeassistant.turn_on
      entity_id: scene.living_normal
- 
 
- - alias: Entertainment area stopped 
+
+ - alias: Turn on living light when there is movement
    trigger:
      - platform: state
-       to: 'off'
-       entity_id: media_player.entertainment_area
+       entity_id: sensor.livingroom_motion
+       to: '1'
    condition:
-     - condition: numeric_state
-       entity_id: sensor.livingroom_lux
-       below: 160
-     - condition: template
-       value_template: >-
-         {%- if is_state_attr("media_player.reciever", "source", "HTPC") -%}
-           true
-         {%- endif -%}   
+     condition: and
+     conditions:
+       - condition: numeric_state
+         entity_id: sensor.livingroom_lux
+         below: 160
+       - condition: state
+         entity_id: media_player.entertainment_area
+         state: 'off'
+     action:
+       service: homeassistant.turn_on
+       entity_id: scene.living_normal
+
+
+ - alias: Turn off living light 20 minutes after last movement
+   trigger:
+     - platform: state
+       entity_id: sensor.livingroom_motion
+         to: '0'
+         for:
+           minutes: 30
+   condition:
+     condition: state
+       entity_id: media_player.entertainment_area
+       state: 'off'
    action:
-     - service: media_player.turn_off
-       entity_id: media_player.receiver
-     - service: media_player.turn_off
-       entity_id: media_player.ue48ju6500_ue48ju6500
+     - service: homeassistant.turn_off
+       entity_id: group.living_light_group
+     - service: homeassistant.turn_on
+       entity_id: scene.living_corneroff

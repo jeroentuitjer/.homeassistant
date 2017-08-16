@@ -51,9 +51,6 @@ logbook:
 tts:
   platform: google
 
-device_tracker:
-  - platform: owntracks
-
 media_player:
   - platform: onkyo
     host: !secret onkyoip

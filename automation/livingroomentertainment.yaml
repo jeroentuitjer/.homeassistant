@@ -1,0 +1,23 @@
+#################################################################
+## Automations Entertainment area
+#################################################################
+
+ - alias: Entertainment area stopped 
+   trigger:
+     - platform: state
+       to: 'off'
+       entity_id: media_player.entertainment_area
+   condition:
+     - condition: numeric_state
+       entity_id: sensor.livingroom_lux
+       below: 160
+     - condition: template
+       value_template: >-
+         {%- if is_state_attr("media_player.reciever", "source", "HTPC") -%}
+           true
+         {%- endif -%}   
+   action:
+     - service: media_player.turn_off
+       entity_id: media_player.receiver
+     - service: media_player.turn_off
+       entity_id: media_player.ue48ju6500_ue48ju6500
