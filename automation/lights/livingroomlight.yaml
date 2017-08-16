@@ -165,8 +165,8 @@
          minutes: 30
    condition:
      condition: state
-       entity_id: media_player.entertainment_area
-       state: 'off'
+     entity_id: media_player.entertainment_area
+     state: 'off'
    action:
      - service: homeassistant.turn_off
        entity_id: group.living_light_group
