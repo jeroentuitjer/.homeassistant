@@ -2,36 +2,36 @@
 ## Automations Entertainment area
 #################################################################
 
-- alias: Entertainment area paused
-  trigger:
-    - platform: state
-      entity_id: media_player.entertainment_area
-      to: 'paused'
-  condition:
-    - condition: numeric_state
-      entity_id: sensor.livingroom_lux
-      below: 160
-  action:
-    service: homeassistant.turn_on
-    entity_id: scene.living_normal
+ - alias: Entertainment area paused
+   trigger:
+     - platform: state
+       entity_id: media_player.entertainment_area
+       to: 'paused'
+   condition:
+     - condition: numeric_state
+       entity_id: sensor.livingroom_lux
+       below: 160
+   action:
+     service: homeassistant.turn_on
+     entity_id: scene.living_normal
 
-- alias: Turn on living light when there is movement
-  trigger:
-    - platform: state
-      entity_id: sensor.livingroom_motion
-      to: '1'
-  condition:
-    condition: and
-    conditions:
-      - condition: numeric_state
-        entity_id: sensor.livingroom_lux
-        below: 160
-      - condition: state
-        entity_id: media_player.entertainment_area
-        state: 'off'
-    action:
-      service: homeassistant.turn_on
-      entity_id: scene.living_normal
+ - alias: Turn on living light when there is movement
+   trigger:
+     - platform: state
+       entity_id: sensor.livingroom_motion
+       to: '1'
+   condition:
+     condition: and
+     conditions:
+       - condition: numeric_state
+         entity_id: sensor.livingroom_lux
+         below: 160
+       - condition: state
+         entity_id: media_player.entertainment_area
+         state: 'off'
+   action:
+     service: homeassistant.turn_on
+     entity_id: scene.living_normal
 
  - alias: Turn off living light 20 minutes after last movement
    trigger:
