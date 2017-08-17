@@ -161,8 +161,8 @@
      - platform: state
        entity_id: sensor.livingroom_motion
        to: '0'
-         for:
-           minutes: 30
+       for:
+         minutes: 30
    condition:
      condition: state
      entity_id: media_player.entertainment_area
