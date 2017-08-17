@@ -5,8 +5,8 @@
  - alias: Entertainment area playing spotify
    trigger:
      - platform: state
-       to: 'playing'
        entity_id: media_player.entertainment_area
+       to: 'playing'
    condition:
      condition: template
      value_template: >-
@@ -26,8 +26,8 @@
  - alias: Entertainment area playing netflix
    trigger:
      - platform: state
-       to: 'playing'
        entity_id: media_player.entertainment_area
+       to: 'playing'
    condition:
      condition: and
      conditions:
@@ -52,8 +52,8 @@
  - alias: Entertainment area playing mac
    trigger:
      - platform: state
-       to: 'playing'
        entity_id: media_player.entertainment_area
+       to: 'playing'
    condition:
      condition: and
      conditions:
@@ -104,8 +104,8 @@
  - alias: Entertainment area playing soundcloud
    trigger:
      - platform: state
-       to: 'playing'
        entity_id: media_player.entertainment_area
+       to: 'playing'
    condition:
      condition: template
      value_template: >-
@@ -126,8 +126,8 @@
  - alias: Entertainment area paused 
    trigger:
      - platform: state
-       to: 'paused'
        entity_id: media_player.entertainment_area
+       to: 'paused'
    condition:
      - condition: numeric_state
        entity_id: sensor.livingroom_lux
