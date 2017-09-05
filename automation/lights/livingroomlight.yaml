@@ -117,6 +117,8 @@
        entity_id: scene.living_soundcloud
      - service: media_player.turn_on
        entity_id: media_player.receiver
+     - service: media_player.turn_on
+       entity_id: media_player.samsung_tv_remote
      - service: media_player.select_source
        data:
          entity_id: media_player.receiver
