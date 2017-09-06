@@ -153,7 +153,7 @@
        entity_id: group.living_light_group
      - service: homeassistant.turn_on
        entity_id: sensor.livingroom_motion
-       to: '1
+       to: '1'
 
  - alias: Turn on living light when there is movement
    trigger:
