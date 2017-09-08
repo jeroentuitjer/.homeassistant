@@ -34,13 +34,13 @@
     service: homeassistant.turn_on
     entity_id: scene.hallway_nightwatch
 
-- alias: Turn off bathroom light 10 minutes
+- alias: Turn off bathroom light 20 minutes
   trigger:
     - platform: state
       entity_id: sensor.bathroom_motion
       to: '0'
       for:
-        minutes: 10
+        minutes: 20
   action:
     service: homeassistant.turn_off
     entity_id: group.bathroom_light_group
