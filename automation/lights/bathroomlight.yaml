@@ -2,37 +2,37 @@
 # automation Hue Bathroom
 #################################################################
 
-- alias: Turn on bathroom light when there is movement
-  trigger:
-    - platform: state
-      entity_id: sensor.bathroom_motion
-      to: '1'
-  condition:
-    - condition: time
-      after: '07:00:00'
-      before: '23:00:00'
-    - condition: state
-      entity_id: light.badkamer_jeroen
-      state: 'off'
-  action:
-    service: homeassistant.turn_on
-    entity_id: scene.bath_normal
+#- alias: Turn on bathroom light when there is movement
+#  trigger:
+#    - platform: state
+#      entity_id: sensor.bathroom_motion
+#      to: '1'
+#  condition:
+#    - condition: time
+#      after: '07:00:00'
+#      before: '23:00:00'
+#    - condition: state
+#      entity_id: light.badkamer_jeroen
+#      state: 'off'
+#  action:
+#    service: homeassistant.turn_on
+#    entity_id: scene.bath_normal
 
-- alias: Turn on bathroom nightlight when there is movement
-  trigger:
-    - platform: state
-      entity_id: sensor.bathroom_motion
-      to: '1'
-  condition:
-    - condition: time
-      after: '23:00:00'
-      before: '07:00:00'
-    - condition: state
-      entity_id: light.badkamer_jeroen
-      state: 'off'
-  action:
-    service: homeassistant.turn_on
-    entity_id: scene.hallway_nightwatch
+#- alias: Turn on bathroom nightlight when there is movement
+#  trigger:
+#    - platform: state
+#      entity_id: sensor.bathroom_motion
+#      to: '1'
+#  condition:
+#    - condition: time
+#      after: '23:00:00'
+#      before: '07:00:00'
+#    - condition: state
+#      entity_id: light.badkamer_jeroen
+#      state: 'off'
+#  action:
+#    service: homeassistant.turn_on
+#    entity_id: scene.hallway_nightwatch
 
 - alias: Turn off bathroom light 20 minutes
   trigger:
