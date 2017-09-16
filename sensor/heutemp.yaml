@@ -26,8 +26,8 @@
   unit_of_measurement: °C
   name: 'Livingroom Temperature'
 
-- platform: rest
-  resource: !secret bath_temp_url
-  value_template: '{{ value_json.state.temperature | float / 100 }}'
-  unit_of_measurement: °C
-  name: 'Bathroom Temperature'
+#- platform: rest
+#  resource: !secret bath_temp_url
+#  value_template: '{{ value_json.state.temperature | float / 100 }}'
+#  unit_of_measurement: °C
+#  name: 'Bathroom Temperature'
