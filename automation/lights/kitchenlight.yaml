@@ -11,7 +11,7 @@
       to: 'paused'
       entity_id: media_player.entertainment_area
   action:
-    service: homeassistant.turn_on
+    service: scene.turn_on
     entity_id: scene.kitchen_normal
 
 - alias: Turn off kitchen light 10 minutes
@@ -48,7 +48,7 @@
             true
           {%- endif -%}
   action:
-    service: homeassistant.turn_on
+    service: scene.turn_on
     entity_id: scene.kitchen_netflix
 
 - alias: Entertainment area playinmovie from mac
@@ -70,7 +70,7 @@
             true
           {%- endif -%}
   action:
-    service: homeassistant.turn_on
+    service: scene.turn_on
     entity_id: scene.kitchen_netflix
 
 
@@ -94,7 +94,7 @@
             true
           {%- endif -%}
   action:
-    service: homeassistant.turn_on
+    service: scene.turn_on
     entity_id: scene.kitchen_netflix
 
 
@@ -117,7 +117,7 @@
             true
           {%- endif -%}
   action:
-    service: homeassistant.turn_on
+    service: scene.turn_on
     entity_id: scene.kitchen_spotify
 
 
@@ -141,7 +141,7 @@
             true
           {%- endif -%}
   action:
-    service: homeassistant.turn_on
+    service: scene.turn_on
     entity_id: scene.kitchen_spotify
 
 
@@ -164,7 +164,7 @@
             true
           {%- endif -%}
   action:
-    service: homeassistant.turn_on
+    service: scene.turn_on
     entity_id: scene.kitchen_soundcloud
 
 
@@ -188,5 +188,5 @@
             true
           {%- endif -%}
   action:
-    service: homeassistant.turn_on
+    service: scene.turn_on
     entity_id: scene.kitchen_soundcloud
