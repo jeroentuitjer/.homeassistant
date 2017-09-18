@@ -10,10 +10,6 @@
     - platform: state
       to: 'paused'
       entity_id: media_player.entertainment_area
-  condition:
-    condition: numeric_state
-    entity_id: sensor.kitchen_lux
-    below: 160
   action:
     service: homeassistant.turn_on
     entity_id: scene.kitchen_normal
