@@ -25,9 +25,3 @@
   value_template: '{{ (10 ** (float(value_json.state.lightlevel - 1) / 10000))|round(1) }}'
   unit_of_measurement: Lux
   name: 'Livingroom Lux'
-
-#- platform: rest
-#  resource: !secret bath_lux_url
-#  value_template: '{{ (10 ** (float(value_json.state.lightlevel - 1) / 10000))|round(1) }}'
-#  unit_of_measurement: Lux
-#  name: 'Bathroom Lux'
