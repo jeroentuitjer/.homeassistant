@@ -25,7 +25,7 @@
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_2:
-      state: o
+      state: on
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
     light.gang_onder_3:
