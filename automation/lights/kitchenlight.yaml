@@ -11,8 +11,12 @@
       to: 'paused'
       entity_id: media_player.entertainment_area
   action:
-    service: homeassistant.turn_on
-    entity_id: scene.kitchen_normal
+    - service: light.turn_on
+        data:
+          entity_id: light.keuken
+          brightness: 255
+   # service: homeassistant.turn_on
+   # entity_id: scene.kitchen_normal
 
 - alias: Turn off kitchen light 10 minutes
   trigger:
