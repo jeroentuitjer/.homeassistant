@@ -40,47 +40,20 @@
       to: '0'
       for:
         minutes: 1
-  condition:
-    condition: template
-    value_template: >-
-      {%- if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") -%}
-        true
-      {%- endif -%}
-  action:
-    service: homeassistant.turn_on
-    entity_id: scene.kitchen_netflix
-
-- alias: Entertainment area playinmovie from mac
-  trigger:
-    - platform: state
-      entity_id: sensor.kitchen_motion
-      to: '0'
-      for:
-        minutes: 1
-  condition:
-    condition: template
-      value_template: >-
-        {%- if is_state_attr("media_player.entertainment_area", "app_name", "Default Media Receiver") -%}
-          true
-        {%- endif -%}
-  action:
-    service: homeassistant.turn_on
-    entity_id: scene.kitchen_netflix
-
-- alias: Entertainment area playing netflix kitchen light
-  trigger:
     - platform: state
       to: 'playing'
       entity_id: media_player.entertainment_area
   condition:
-    condition: and
+    condition: or
     conditions:
-      - condition: state
-        entity_id: sensor.kitchen_motion
-        state: '0'
       - condition: template
         value_template: >-
           {%- if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") -%}
+            true
+          {%- endif -%}
+      - condition: template
+        value_template: >-
+          {%- if is_state_attr("media_player.entertainment_area", "app_name", "Default Media Receiver") -%}
             true
           {%- endif -%}
   action:
@@ -97,10 +70,10 @@
         minutes: 1
   condition:
     condition: template
-      value_template: >-
-        {%- if is_state_attr("media_player.entertainment_area", "app_name", "Spotify") -%}
-          true
-        {%- endif -%}
+    value_template: >-
+      {%- if is_state_attr("media_player.entertainment_area", "app_name", "Spotify") -%}
+        true
+      {%- endif -%}
   action:
     service: homeassistant.turn_on
     entity_id: scene.kitchen_spotify
@@ -136,10 +109,10 @@
         minutes: 1
   condition:
     condition: template
-      value_template: >-
-        {%- if is_state_attr("media_player.entertainment_area", "app_name", "SoundCloud") -%}
-          true
-        {%- endif -%}
+    value_template: >-
+      {%- if is_state_attr("media_player.entertainment_area", "app_name", "SoundCloud") -%}
+        true
+      {%- endif -%}
   action:
     service: homeassistant.turn_on
     entity_id: scene.kitchen_soundcloud
