@@ -12,9 +12,9 @@
       entity_id: media_player.entertainment_area
   action:
     - service: light.turn_on
-        data:
-          entity_id: light.keuken
-          brightness: 255
+      data:
+        entity_id: light.keuken
+        brightness: 255
    # service: homeassistant.turn_on
    # entity_id: scene.kitchen_normal
 
