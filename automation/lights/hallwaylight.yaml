@@ -2,11 +2,8 @@
 ## Automation Hue Hallway
 #################################################################
 
-- alias: Turn on hallway light when there is movement
+- alias: Turn on door kitchen light when there is movement
   trigger:
-    - platform: state
-      entity_id: sensor.hall_frontdoor_motion
-      to: '1'
     - platform: state
       entity_id: sensor.hall_kitchen_motion
       to: '1'
@@ -18,8 +15,70 @@
       entity_id: light.gang_onder_4
       state: 'off'
   action:
+    - service: light.turn_on
+      data:
+        entity_id: light.gang_onder_4
+        brightness: 160
+        xy_color: [ 0.5119, 0.4147 ]
+    - delay: '00:00:01'
+    - service: light.turn_on
+      data:
+        entity_id: light.gang_boven_4
+        brightness: 160
+        xy_color: [ 0.5119, 0.4147 ]
+    - delay: '00:00:01'
+    - service: light.turn_on
+      data:
+        entity_id: light.gang_onder_3
+        brightness: 160
+        xy_color: [ 0.5119, 0.4147 ]
+    - delay: '00:00:01'
+    - service: light.turn_on
+      data:
+        entity_id: light.gang_boven_3
+        brightness: 160
+        xy_color: [ 0.5119, 0.4147 ]
+    - delay: '00:00:01'
+    - service: light.turn_on
+      data:
+        entity_id: light.gang_onder_2
+        brightness: 160
+        xy_color: [ 0.5119, 0.4147 ]
+    - delay: '00:00:01'
+    - service: light.turn_on
+      data:
+        entity_id: light.gang_boven_2
+        brightness: 160
+        xy_color: [ 0.5119, 0.4147 ]
+    - delay: '00:00:01'
+    - service: light.turn_on
+      data:
+        entity_id: light.gang_onder_11
+        brightness: 160
+        xy_color: [ 0.5119, 0.4147 ]
+    - delay: '00:00:01'
+    - service: light.turn_on
+      data:
+        entity_id: light.gang_boven_1
+        brightness: 160
+        xy_color: [ 0.5119, 0.4147 ]
+
+- alias: Turn on door hallway light when there is movement
+  trigger:
+    - platform: state
+      entity_id: sensor.hall_frontdoor_motion
+      to: '1'
+  condition:
+    - condition: time
+      after: '07:00:00'
+      before: '22:30:00'
+    - condition: state
+      entity_id: light.gang_onder_4
+      state: 'off'
+  action:
     service: homeassistant.turn_on
     entity_id: scene.hallway_normal
+
 
 - alias: Turn on hallway nightlight when there is movement
   trigger:
