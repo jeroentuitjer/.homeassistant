@@ -36,7 +36,7 @@
         entity_id: light.gang_boven_3
         brightness: 160
         xy_color: [ 0.5119, 0.4147 ]
-    - delay: '00:00:02'
+    - delay: '00:00:04'
     - service: light.turn_on
       data:
         entity_id: light.gang_onder_2
@@ -47,7 +47,7 @@
         entity_id: light.gang_boven_2
         brightness: 160
         xy_color: [ 0.5119, 0.4147 ]
-    - delay: '00:00:02'
+    - delay: '00:00:06'
     - service: light.turn_on
       data:
         entity_id: light.gang_onder_11
