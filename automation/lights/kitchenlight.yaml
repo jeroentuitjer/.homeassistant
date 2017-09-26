@@ -42,10 +42,10 @@
         minutes: 1
   condition:
     condition: template
-      value_template: >-
-        {%- if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") -%}
-          true
-        {%- endif -%}
+    value_template: >-
+      {%- if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") -%}
+        true
+      {%- endif -%}
   action:
     service: homeassistant.turn_on
     entity_id: scene.kitchen_netflix
