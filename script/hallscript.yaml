@@ -51,26 +51,3 @@
           entity_id: light.gang_boven_1
           brightness: 160
           xy_color: [ 0.5119, 0.4147 ]
-
-
-
-
-      - alias: Alarm Room1 Start
-        service: homeassistant.turn_on
-        data:
-          entity_id: switch.AlmSnd1
-      - alias: Set Ack Room1
-        service: homeassistant.turn_on
-        data:
-          entity_id: input_boolean.ack1
-      - alias: email_Room1
-        service: notify.email
-        data:
-          message: 'Movement alarm in Room1'
-      - delay:
-          # time interval for alarm sound and light flashing
-          seconds: 60
-      - alias: Alarm Room1 Stop
-        service: homeassistant.turn_off
-        data:
-          entity_id: switch.AlmSnd1
