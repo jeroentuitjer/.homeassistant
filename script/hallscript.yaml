@@ -1,0 +1,76 @@
+#################################################################
+## Scripts Hallway
+#################################################################
+
+  hallkitchenanimation:
+    alias: Hall Kitchen Animation
+    sequence:
+      - service: light.turn_on
+        data:
+          entity_id: light.gang_onder_4
+          brightness: 160
+          xy_color: [ 0.5119, 0.4147 ]
+      - service: light.turn_on
+        data:
+          entity_id: light.gang_boven_4
+          brightness: 160
+          xy_color: [ 0.5119, 0.4147 ]
+      - delay:
+          seconds: 5
+      - service: light.turn_on
+        data:
+          entity_id: light.gang_onder_3
+          brightness: 160
+          xy_color: [ 0.5119, 0.4147 ]
+      - service: light.turn_on
+        data:
+          entity_id: light.gang_boven_3
+          brightness: 160
+          xy_color: [ 0.5119, 0.4147 ]
+      - delay:
+          seconds: 5
+      - service: light.turn_on
+        data:
+          entity_id: light.gang_onder_2
+          brightness: 160
+          xy_color: [ 0.5119, 0.4147 ]
+      - service: light.turn_on
+        data:
+          entity_id: light.gang_boven_2
+          brightness: 160
+          xy_color: [ 0.5119, 0.4147 ]
+      - delay:
+          seconds: 5
+      - service: light.turn_on
+        data:
+          entity_id: light.gang_onder_11
+          brightness: 160
+          xy_color: [ 0.5119, 0.4147 ]
+      - service: light.turn_on
+        data:
+          entity_id: light.gang_boven_1
+          brightness: 160
+          xy_color: [ 0.5119, 0.4147 ]
+
+
+
+
+      - alias: Alarm Room1 Start
+        service: homeassistant.turn_on
+        data:
+          entity_id: switch.AlmSnd1
+      - alias: Set Ack Room1
+        service: homeassistant.turn_on
+        data:
+          entity_id: input_boolean.ack1
+      - alias: email_Room1
+        service: notify.email
+        data:
+          message: 'Movement alarm in Room1'
+      - delay:
+          # time interval for alarm sound and light flashing
+          seconds: 60
+      - alias: Alarm Room1 Stop
+        service: homeassistant.turn_off
+        data:
+          entity_id: switch.AlmSnd1
