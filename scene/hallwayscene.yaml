@@ -8,10 +8,6 @@
       state: on
       brightness: 144
       xy_color: [ 0.5119, 0.4147 ]
-    light.gang_boven_2:
-      state: on
-      brightness: 144
-      xy_color: [ 0.5119, 0.4147 ]
     light.gang_boven_3:
       state: on
       brightness: 144
@@ -40,8 +36,6 @@
 - name: Hallway Nightwatch
   entities:
     light.gang_boven_1:
-      state: off
-    light.gang_boven_2:
       state: off
     light.gang_boven_3:
       state: off
