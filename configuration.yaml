@@ -47,6 +47,9 @@ logbook:
 # Track the sun
 #sun:
 
+device_tracker:
+  - platform: upc_connect
+
 # Text to speech
 tts:
   platform: google

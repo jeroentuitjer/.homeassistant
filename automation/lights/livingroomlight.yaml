@@ -55,6 +55,35 @@
          entity_id: media_player.receiver
          source: cd_tv_cd
 
+ - alias: Entertainment area playing ziggo
+   trigger:
+     - platform: state
+       entity_id: media_player.entertainment_area
+       to: 'playing'
+     - platform: state
+       entity_id: media_player.entertainment_area
+       to: 'idle'
+   condition:
+     condition: and
+     conditions:
+       - condition: numeric_state
+         entity_id: sensor.livingroom_lux
+         below: 160
+       - condition: template
+         value_template: >-
+           {%- if is_state_attr("media_player.entertainment_area", "app_name", "Ziggo GO") -%}
+             true
+           {%- endif -%}
+   action:
+     - service: homeassistant.turn_on
+       entity_id: scene.living_netflix
+     - service: media_player.turn_on
+       entity_id: media_player.receiver
+     - service: media_player.select_source
+       data:
+         entity_id: media_player.receiver
+         source: cd_tv_cd
+
  - alias: Entertainment area playing mac
    trigger:
      - platform: state

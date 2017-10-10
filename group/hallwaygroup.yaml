@@ -6,7 +6,6 @@
     name: Hallway light
     entities:
       - light.gang_boven_1
-      - light.gang_boven_2
       - light.gang_boven_3
       - light.gang_boven_4
       - light.gang_onder_11

@@ -39,6 +39,9 @@
     - platform: state
       to: 'playing'
       entity_id: media_player.entertainment_area
+    - platform: state
+      to: 'idle'
+      entity_id: media_player.entertainment_area
   condition:
     condition: or
     conditions:
@@ -50,6 +53,11 @@
       - condition: template
         value_template: >-
           {%- if is_state_attr("media_player.entertainment_area", "app_name", "Default Media Receiver") -%}
+            true
+          {%- endif -%}
+      - condition: template
+        value_template: >-
+          {%- if is_state_attr("media_player.entertainment_area", "app_name", "Ziggo GO") -%}
             true
           {%- endif -%}
   action:
