@@ -125,6 +125,10 @@
        data:
          group_name: "Woonkamer"
          scene_name: "Helder"
+     - service: light.hue_activate_scene
+       data:
+         group_name: "Keuken"
+         scene_name: "Bright"
 
  - alias: Entertainment area off
    trigger:
