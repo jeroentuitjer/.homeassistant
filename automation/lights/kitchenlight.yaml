@@ -17,9 +17,6 @@
   condition:
     condition: and
     conditions:
-#      - condition: state
-#        entity_id: 'light.keuken'
-#        state: 'off'
       - condition: or
         conditions:
           - condition: template
