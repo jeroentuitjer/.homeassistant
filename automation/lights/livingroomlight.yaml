@@ -77,6 +77,8 @@
        data:
          group_name: "Woonkamer"
          scene_name: "Netflix"
+     - service: homeassistant.turn_on
+       entity_id: scene.living_netflix
      - service: media_player.turn_on
        entity_id: media_player.receiver
      - service: media_player.select_source
@@ -129,6 +131,8 @@
        data:
          group_name: "Keuken"
          scene_name: "Bright"
+     - service: homeassistant.turn_on
+       entity_id: scene.living_netflixoff
 
  - alias: Entertainment area off
    trigger:
@@ -148,6 +152,8 @@
        data:
          group_name: "Keuken"
          scene_name: "Bright"
+     - service: homeassistant.turn_on
+       entity_id: scene.living_netflixoff
 
  - alias: Turn on living light when there is movement
    trigger:
