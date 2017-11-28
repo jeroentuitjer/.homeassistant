@@ -19,12 +19,8 @@
    action:
      - service: homeassistant.turn_on
        entity_id: scene.living_spotify
-     - service: media_player.turn_on
-       entity_id: media_player.receiver
-     - service: media_player.select_source
-       data:
-         entity_id: media_player.receiver
-         source: cd_tv_cd
+     - service: script.turn_on
+       entity_id: living_entertainment_on
 
  - alias: Entertainment area playing video
    trigger:
@@ -75,12 +71,8 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_netflix
-     - service: media_player.turn_on
-       entity_id: media_player.receiver
-     - service: media_player.select_source
-       data:
-         entity_id: media_player.receiver
-         source: cd_tv_cd
+     - service: script.turn_on
+       entity_id: living_entertainment_on
 
 
  - alias: Entertainment area playing soundcloud
@@ -100,14 +92,8 @@
    action:
      - service: homeassistant.turn_on
        entity_id: scene.living_soundcloud
-     - service: media_player.turn_on
-       entity_id: media_player.receiver
-     - service: media_player.turn_on
-       entity_id: media_player.samsung_tv_remote
-     - service: media_player.select_source
-       data:
-         entity_id: media_player.receiver
-         source: cd_tv_cd
+     - service: script.turn_on
+       entity_id: living_entertainment_on
 
  - alias: Entertainment area paused
    trigger:
@@ -119,16 +105,8 @@
        entity_id: sensor.livingroom_lux
        below: 160
    action:
-     - service: light.hue_activate_scene
-       data:
-         group_name: "Woonkamer"
-         scene_name: "Helder"
-     - service: light.hue_activate_scene
-       data:
-         group_name: "Keuken"
-         scene_name: "Bright"
-     - service: homeassistant.turn_on
-       entity_id: scene.living_netflixoff
+     - service: script.turn_on
+       entity_id: script.living_light_netflix_paused
 
  - alias: Entertainment area off
    trigger:
@@ -140,16 +118,10 @@
        entity_id: sensor.livingroom_lux
        below: 160
    action:
-     - service: light.hue_activate_scene
-       data:
-         group_name: "Woonkamer"
-         scene_name: "Helder"
-     - service: light.hue_activate_scene
-       data:
-         group_name: "Keuken"
-         scene_name: "Bright"
-     - service: homeassistant.turn_on
-       entity_id: scene.living_netflixoff
+     - service: script.turn_on
+       entity_id: script.living_light_netflix_paused
+     - service: script.turn_on
+       entity_id: living_entertainment_off
 
  - alias: Turn on living light when there is movement
    trigger:
