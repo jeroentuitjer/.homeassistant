@@ -20,7 +20,7 @@
      - service: homeassistant.turn_on
        entity_id: scene.living_spotify
      - service: script.turn_on
-       entity_id: living_entertainment_on
+       entity_id: script.living_entertainment_on
 
  - alias: Entertainment area playing video
    trigger:
@@ -72,7 +72,7 @@
      - service: script.turn_on
        entity_id: script.living_light_netflix
      - service: script.turn_on
-       entity_id: living_entertainment_on
+       entity_id: script.living_entertainment_on
 
  - alias: Entertainment area playing soundcloud
    trigger:
@@ -92,7 +92,7 @@
      - service: homeassistant.turn_on
        entity_id: scene.living_soundcloud
      - service: script.turn_on
-       entity_id: living_entertainment_on
+       entity_id: script.living_entertainment_on
 
  - alias: Entertainment area paused
    trigger:
