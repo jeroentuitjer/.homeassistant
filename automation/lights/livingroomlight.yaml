@@ -74,7 +74,7 @@
                {%- endif -%}
    action:
      - service: script.turn_on
-       entity_id: script.living-light-netflix
+       entity_id: script.living_light_netflix
      - service: media_player.turn_on
        entity_id: media_player.receiver
      - service: media_player.select_source
@@ -187,7 +187,7 @@
        before: '18:00:00'
    action:
      - service: script.turn_on
-       entity_id: script.living-light-off
+       entity_id: script.living_light_off
 
  - alias: Turn off living light 1 hour after last movement
    trigger:
@@ -205,4 +205,4 @@
        before: '00:00:00'
    action:
      - service: script.turn_on
-       entity_id: script.living-light-off
+       entity_id: script.living_light_off
