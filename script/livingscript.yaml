@@ -16,10 +16,7 @@ living_light_on_standard:
         group_name: "Woonkamer"
         scene_name: "Netflix"
     - service: homeassistant.turn_on
-      data:
-        entity_id: light.cornerlight
-        state: on
-        rgb_color: [255, 0, 0]
+      entity_id: scene.living_corner_clear_day
 
 living_light_netflix:
   sequence:
@@ -28,7 +25,4 @@ living_light_netflix:
         group_name: "Woonkamer"
         scene_name: "Netflix"
     - service: homeassistant.turn_on
-      data:
-        entity_id: light.cornerlight
-        state: on
-        rgb_color: [255, 0, 0]
+      entity_id: scene.living_netflix
