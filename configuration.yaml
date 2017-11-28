@@ -73,7 +73,7 @@ rfxtrx:
 
 switch:
   platform: rfxtrx
- # automatic_add: True
+  automatic_add: True
   devices:
     0b11005b01a3222601000070:
       name: Kerstboom_PW

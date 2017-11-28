@@ -34,14 +34,15 @@ living_light_netflix:
       entity_id: switch.kerstboom_pw
 
 living_light_netflix_paused:
-  - service: light.hue_activate_scene
-    data:
-      group_name: "Woonkamer"
-      scene_name: "Helder"
-  - service: light.hue_activate_scene
-    data:
-      group_name: "Keuken"
-      scene_name: "Bright"
+  sequence:
+    - service: light.hue_activate_scene
+      data:
+        group_name: "Woonkamer"
+        scene_name: "Helder"
+    - service: light.hue_activate_scene
+      data:
+        group_name: "Keuken"
+        scene_name: "Bright"
 
 living_entertainment_on:
   sequence:
