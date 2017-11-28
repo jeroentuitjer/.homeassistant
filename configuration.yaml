@@ -76,11 +76,11 @@ switch:
   automatic_add: True
   devices:
     0b11005b01a3222601000070:
-      name: Kerstboom
+      name: Kerstboom_PW
     0b11005e01a3222602010f70:
-      name: power_socket_two
+      name: TV_PW
     0b11005f01a3222603010f70:
-      name: power_socket_three
+      name: Mug_Slaapkamer_PW
 
 light:
   - platform: flux_led

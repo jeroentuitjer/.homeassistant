@@ -73,12 +73,8 @@
                  true
                {%- endif -%}
    action:
-     - service: light.hue_activate_scene
-       data:
-         group_name: "Woonkamer"
-         scene_name: "Netflix"
-     - service: homeassistant.turn_on
-       entity_id: scene.living_netflix
+     - service: script.turn_on
+       entity_id: script.living-light-netflix
      - service: media_player.turn_on
        entity_id: media_player.receiver
      - service: media_player.select_source
@@ -190,10 +186,8 @@
        after: '00:00:00'
        before: '18:00:00'
    action:
-     - service: homeassistant.turn_off
-       entity_id: group.living_light_group
-     - service: homeassistant.turn_on
-       entity_id: scene.living_corneroff
+     - service: script.turn_on
+       entity_id: script.living-light-off
 
  - alias: Turn off living light 1 hour after last movement
    trigger:
@@ -210,7 +204,5 @@
        after: '18:00:00'
        before: '00:00:00'
    action:
-     - service: homeassistant.turn_off
-       entity_id: group.living_light_group
-     - service: homeassistant.turn_on
-       entity_id: scene.living_corneroff
+     - service: script.turn_on
+       entity_id: script.living-light-off
