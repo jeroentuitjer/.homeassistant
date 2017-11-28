@@ -34,25 +34,25 @@ living_light_netflix:
       entity_id: switch.kerstboom_pw
 
 living_light_netflix_paused:
-    - service: light.hue_activate_scene
-      data:
-        group_name: "Woonkamer"
-        scene_name: "Helder"
-    - service: light.hue_activate_scene
-      data:
-        group_name: "Keuken"
-        scene_name: "Bright"
+  - service: light.hue_activate_scene
+    data:
+      group_name: "Woonkamer"
+      scene_name: "Helder"
+  - service: light.hue_activate_scene
+    data:
+      group_name: "Keuken"
+      scene_name: "Bright"
 
 living_entertainment_on:
   sequence:
-     - service: media_player.turn_on
-       entity_id: media_player.samsung_tv_remote
-     - service: media_player.turn_on
-       entity_id: media_player.receiver
-     - service: media_player.select_source
-       data:
-         entity_id: media_player.receiver
-         source: cd_tv_cd
+    - service: media_player.turn_on
+      entity_id: media_player.samsung_tv_remote
+    - service: media_player.turn_on
+      entity_id: media_player.receiver
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.receiver
+        source: cd_tv_cd
 
 living_entertainment_off:
   sequence:
