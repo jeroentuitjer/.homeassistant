@@ -74,7 +74,6 @@
      - service: script.turn_on
        entity_id: living_entertainment_on
 
-
  - alias: Entertainment area playing soundcloud
    trigger:
      - platform: state
