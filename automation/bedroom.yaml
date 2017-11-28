@@ -2,18 +2,18 @@
 ## Automations Bedroom
 #################################################################
 
-alias: Mosquito bedroom on
-trigger:
-  - platform: time
-    at: '22:45:00'
-action:
-  - service: homeassistant.turn_on
-    entity_id: switch.mug_slaapkamer_pw
+- alias: Mosquito bedroom on
+  trigger:
+    - platform: time
+      at: '22:45:00'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: switch.mug_slaapkamer_pw
 
-alias: Mosquito bedroom off
-trigger:
-  - platform: time
-    at: '06:00:00'
-action:
-  - service: homeassistant.turn_off
-    entity_id: switch.mug_slaapkamer_pw
+- alias: Mosquito bedroom off
+  trigger:
+    - platform: time
+      at: '06:00:00'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: switch.mug_slaapkamer_pw
