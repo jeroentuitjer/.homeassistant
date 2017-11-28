@@ -18,8 +18,8 @@ living-light-on-standard:
     - service: homeassistant.turn_on
       data:
         entity_id: light.cornerlight
-          state: on
-          rgb_color: [255, 0, 0]
+        state: on
+        rgb_color: [255, 0, 0]
 
 living-light-netflix:
   sequence:
@@ -30,5 +30,5 @@ living-light-netflix:
     - service: homeassistant.turn_on
       data:
         entity_id: light.cornerlight
-          state: on
-          rgb_color: [255, 0, 0]
+        state: on
+        rgb_color: [255, 0, 0]
