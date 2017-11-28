@@ -74,13 +74,13 @@ rfxtrx:
 switch:
   platform: rfxtrx
   automatic_add: True
-#  devices:
-#    0b11000102ef9f210010f70:
-#      name: power_socket_one
-#    0b11000a02ef2gf210010f50:
-#      name: power_socket_two
-#    0b11000a02ef2gf210010f50:
-#      name: power_socket_three
+  devices:
+    0b11005b01a3222601000070:
+      name: Kerstboom
+    0b11005e01a3222602010f70:
+      name: power_socket_two
+    0b11005f01a3222603010f70:
+      name: power_socket_three
 
 light:
   - platform: flux_led
