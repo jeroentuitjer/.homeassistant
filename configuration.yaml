@@ -33,10 +33,10 @@ http:
 updater:
 
 # Discover some devices automatically
-#discovery:
+discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
+#conversation:
 
 # Enables support for tracking state changes over time.
 history:
@@ -51,8 +51,8 @@ device_tracker:
   - platform: upc_connect
 
 # Text to speech
-tts:
-  platform: google
+#tts:
+#  platform: google
 
 media_player:
   - platform: onkyo
@@ -63,7 +63,7 @@ media_player:
   - platform: samsungtv
     host: !secret samsungip
 
-ios:
+#ios:
 
 # Rfxtrx
 rfxtrx:
@@ -88,6 +88,8 @@ light:
       10.0.1.4:
         name: cornerlight 
         mode: "rgbw"
+  - platform: hue
+    host: !secret hueip
 
 group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
