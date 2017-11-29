@@ -46,7 +46,7 @@ living_light_netflix_paused:
 
 living_entertainment_on:
   sequence:
-    - service: homeassistant.turn_off
+    - service: homeassistant.turn_on
       entity_id: switch.samsung_pw
     - service: homeassistant.turn_on
       entity_id: media_player.samsung_tv_remote
