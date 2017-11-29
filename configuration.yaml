@@ -1,6 +1,6 @@
 homeassistant:
   # Name of the location where Home Assistant is running
-  name: 4th Floor
+  name: Home
   # Location required to calculate the time the sun rises and sets
   latitude: !secret latitude
   longitude: !secret longitude
@@ -45,10 +45,7 @@ history:
 logbook:
 
 # Track the sun
-#sun:
-
-device_tracker:
-  - platform: upc_connect
+sun:
 
 # Text to speech
 #tts:
@@ -62,6 +59,7 @@ media_player:
       pc: 'HTPC'
   - platform: samsungtv
     host: !secret samsungip
+    port: 8001
 
 #ios:
 
