@@ -1,0 +1,21 @@
+#################################################################
+## Automation Hue Hallway
+#################################################################
+
+- alias: Christmaslights hallway on
+  trigger:
+    - platform: state
+      entity_id: light.gang_onder_4
+      to: 'on'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: switch.overig_pw
+
+- alias: Christmaslights hallway off
+  trigger:
+    - platform: state
+      entity_id: light.gang_onder_4
+      to: 'on'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: switch.overig_pw
