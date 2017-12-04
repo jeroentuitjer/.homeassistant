@@ -30,7 +30,7 @@ living_light_netflix:
         scene_name: "Netflix"
     - service: homeassistant.turn_on
       entity_id: scene.living_netflix
-    - service: homeassistant.turn_on
+    - service: homeassistant.turn_off
       entity_id: switch.kerstboom_pw
 
 living_light_netflix_paused:
@@ -43,6 +43,8 @@ living_light_netflix_paused:
       data:
         group_name: "Keuken"
         scene_name: "Ontspannen"
+    - service: homeassistant.turn_on
+      entity_id: switch.kerstboom_pw
 
 living_entertainment_on:
   sequence:
@@ -63,3 +65,5 @@ living_entertainment_off:
        entity_id: media_player.receiver
      - service: homeassistant.turn_off
        entity_id: switch.samsung_pw
+    - service: homeassistant.turn_on
+      entity_id: switch.kerstboom_pw
