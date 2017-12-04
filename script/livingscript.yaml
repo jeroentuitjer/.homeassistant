@@ -19,6 +19,8 @@ living_light_on_standard:
         scene_name: "Relax"
     - service: homeassistant.turn_on
       entity_id: switch.kerstboom_pw
+    - service: homeassistant.turn_on
+      entity_id: switch.samsung_pw
 
 living_light_netflix:
   sequence:
