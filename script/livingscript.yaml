@@ -65,5 +65,5 @@ living_entertainment_off:
        entity_id: media_player.receiver
      - service: homeassistant.turn_off
        entity_id: switch.samsung_pw
-    - service: homeassistant.turn_on
-      entity_id: switch.kerstboom_pw
+     - service: homeassistant.turn_on
+       entity_id: switch.kerstboom_pw
