@@ -19,8 +19,8 @@ living_light_on_standard:
         scene_name: "Relax"
     - service: homeassistant.turn_on
       entity_id: switch.kerstboom_pw
-    - service: homeassistant.turn_on
-      entity_id: switch.samsung_pw
+ #   - service: homeassistant.turn_on
+ #     entity_id: switch.samsung_pw
 
 living_light_netflix:
   sequence:
@@ -48,8 +48,8 @@ living_light_netflix_paused:
 
 living_entertainment_on:
   sequence:
-    - service: homeassistant.turn_on
-      entity_id: switch.samsung_pw
+ #   - service: homeassistant.turn_on
+ #     entity_id: switch.samsung_pw
     - delay:
         milliseconds: 500
     - service: media_player.turn_on
@@ -63,7 +63,7 @@ living_entertainment_off:
   sequence:
      - service: media_player.turn_off
        entity_id: media_player.receiver
-     - service: homeassistant.turn_off
-       entity_id: switch.samsung_pw
+ #    - service: homeassistant.turn_off
+ #      entity_id: switch.samsung_pw
      - service: homeassistant.turn_on
        entity_id: switch.kerstboom_pw

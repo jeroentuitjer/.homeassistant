@@ -5,7 +5,7 @@
 - alias: Christmaslights hallway on
   trigger:
     - platform: state
-      entity_id: light.gang_onder_4
+      entity_id: light.hall
       to: 'on'
   action:
     - service: homeassistant.turn_on
@@ -14,7 +14,7 @@
 - alias: Christmaslights hallway off
   trigger:
     - platform: state
-      entity_id: light.gang_onder_4
+      entity_id: light.hall
       to: 'on'
   action:
     - service: homeassistant.turn_off
