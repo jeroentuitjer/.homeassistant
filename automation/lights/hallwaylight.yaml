@@ -15,7 +15,7 @@
   trigger:
     - platform: state
       entity_id: light.hall
-      to: 'on'
+      to: 'off'
   action:
     - service: homeassistant.turn_off
       entity_id: switch.overig_pw
