@@ -5,8 +5,11 @@
 - alias: Christmaslights hallway on
   trigger:
     - platform: state
-      entity_id: light.hall
-      to: 'on'
+      entity_id: sensor.hall_frontdoor_motion
+      to: '1'
+    - platform: state
+      entity_id: sensor.hall_kitchen_motion
+      to: '1'
   action:
     - service: homeassistant.turn_on
       entity_id: switch.overig_pw
@@ -14,8 +17,15 @@
 - alias: Christmaslights hallway off
   trigger:
     - platform: state
-      entity_id: light.hall
-      to: 'off'
+      entity_id: sensor.hall_frontdoor_motion
+      to: '0'
+      for:
+        minutes: 5
+    - platform: state
+      entity_id: sensor.hall_kitchen_motion
+      to: '0'
+      for:
+        minutes: 5
   action:
     - service: homeassistant.turn_off
       entity_id: switch.overig_pw
