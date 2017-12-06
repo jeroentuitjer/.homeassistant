@@ -5,6 +5,15 @@
 - alias: Christmaslights hallway on
   trigger:
     - platform: state
+      entity_id: light.gang_onder_1
+      to: 'on'
+    - platform: state
+      entity_id: light.gang_onder_2
+      to: 'on'
+    - platform: state
+      entity_id: light.gang_onder_3
+      to: 'on'
+    - platform: state
       entity_id: light.gang_onder_4
       to: 'on'
   action:
