@@ -3,4 +3,10 @@
 #################################################################
 
 - platform: rfxtrx
-  automatic_add: True
+  devices:
+    085002023f0100cc49:
+      name: Bath
+      fire_event: True
+      data_type:
+       - Humidity
+       - Temperature
