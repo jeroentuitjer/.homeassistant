@@ -6,3 +6,5 @@
   devices:
     085002023f0100cc49:
       name: Bath
+    0b110000008b25e202010f60:
+      name: test
