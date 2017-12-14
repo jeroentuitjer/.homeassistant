@@ -68,8 +68,6 @@ rfxtrx:
   device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11D2ALY-if00-port0
   recv_modes:
   - hideki
-  debug: True
-  dummy: False
 
 switch:
   platform: rfxtrx
