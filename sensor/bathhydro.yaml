@@ -5,4 +5,4 @@
 - platform: rfxtrx
   devices:
     0a5207377d0e00a83e0169_temperature:
-     name: BathHydrometer
+      name: BathHydro
