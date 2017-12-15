@@ -4,5 +4,5 @@
 
 - platform: rfxtrx
   devices:
-    0a5207377d0e00a83e0169_temperature:
+    0a5207377d0e00a83e0169:
       name: BathHydro
