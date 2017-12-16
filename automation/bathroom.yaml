@@ -1,0 +1,23 @@
+#################################################################
+## Automations Bathroom
+#################################################################
+
+- alias: Ventilator en spiegelverwarming aan
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.bathhydro_temperature
+      value_template: '{{ Humidity }}'
+      above: 62
+  action:
+    - service: homeassistant.turn_on
+#      entity_id: switch.mug_slaapkamer_pw
+
+- alias: Ventilator en spiegelverwarming uit
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.bathhydro_temperature
+      value_template: '{{ Humidity }}'
+      below: 62
+  action:
+    - service: homeassistant.turn_on
+#      entity_id: switch.mug_slaapkamer_pw
