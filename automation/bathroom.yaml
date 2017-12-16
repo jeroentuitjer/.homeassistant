@@ -20,4 +20,4 @@
       below: 62
   action:
     - service: homeassistant.turn_off
-      entity_id: switch.switch.douche_ventilatie
+      entity_id: switch.douche_ventilatie
