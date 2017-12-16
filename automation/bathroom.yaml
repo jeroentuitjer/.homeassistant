@@ -5,7 +5,7 @@
 - alias: Ventilator en spiegelverwarming aan
   trigger:
     - platform: state
-      entity_id: sensor.bathhydro_temperature.humidity
+      entity_id: sensor.bathhydro_temperature.attribute.humidity
       above: 60
   action:
     - service: homeassistant.turn_on
