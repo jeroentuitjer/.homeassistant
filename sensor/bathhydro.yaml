@@ -7,3 +7,5 @@
   devices:
     0a5207377d0e00a83e0169:
       name: BathHydro
+      value_template: '{{ value_json.humidity }}'
+      unit_of_measurement: "%"
