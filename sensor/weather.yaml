@@ -7,3 +7,5 @@
     update_inverval: '01:00'
     monitored_conditions:
       - icon
+      - humidity
+      - temperature
