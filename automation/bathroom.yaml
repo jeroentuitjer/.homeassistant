@@ -15,7 +15,7 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.bathhydro_humidity
-      below: '{{ states.sensor.humidity_stats_mean.attributes.min_value + 5 }}'
+      below: 70
   action:
     - service: homeassistant.turn_off
       entity_id: switch.douche_ventilatie
