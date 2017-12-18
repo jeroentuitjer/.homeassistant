@@ -17,11 +17,9 @@
   trigger:
     - platform: template
       value_template: >-
-        {% if states('states.sensor.humidity_stats_mean.attributes.min_value + 5') > states.sensor.bathhydro_humidity') %}
+        {% if states('states.sensor.humidity_stats_mean.attributes.min_value + 5') < states('sensor.bathhydro_humidity') %}
           true
         {%- endif -%}
   action:
     - service: homeassistant.turn_off
       entity_id: switch.douche_ventilatie
-
-
