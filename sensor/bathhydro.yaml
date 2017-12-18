@@ -15,5 +15,7 @@
 - platform: statistics
   name: Humidity_stats
   entity_id: sensor.bathhydro_humidity
+  data_type:
+    - min_value
   max_age:
     minutes: 90
