@@ -19,5 +19,6 @@
     minutes: 90
 
 - platform: template
-  name: Minimal Humidity
-  value_template: '{{ states.sensor.humidity_stats_mean.attributes.min_value + 5 }}'
+  sensors:
+    name: Minimal Humidity
+    value_template: '{{ states.sensor.humidity_stats_mean.attributes.min_value + 5 }}'
