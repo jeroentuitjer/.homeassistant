@@ -17,3 +17,7 @@
   entity_id: sensor.bathhydro_humidity
   max_age:
     minutes: 90
+
+- platform: template
+  name: Humidity_minimal
+  value_template: '{{ states.sensor.bathhydro_humidity.attributes["min_value"] + 5 }}'
