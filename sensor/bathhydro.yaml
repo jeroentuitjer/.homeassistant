@@ -13,5 +13,8 @@
 
 - platform: template
   sensors:
-    friendly_name: "BathHydroMinimalValue"
-    value_template: "{% if as_timestamp(states.sensor.bathhydro_humidity.last_updated) - as_timestamp(states.sensor.bathhydro_humidity.last_updated) > 5*60 %}true{% endif %}"
+    humidity_minimal:
+      friendly_name: humidity_minimal
+      value_template: '{% if states.sensor.bathhydro_humidity.last_updated is undefined %}{{"00:00:00"}}{% else %}{{ ((as_timestamp(states.sensor.humidity_minimal.last_updated)-as_timestamp(states.sensor.bathhydro_humidity.last_updated)).seconds) }}{% endif %}'
+      entity_id:
+        - sensor.humidity_minimal
