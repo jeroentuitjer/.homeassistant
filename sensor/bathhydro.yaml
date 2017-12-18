@@ -10,3 +10,8 @@
       data_type:
         - Humidity
         - Temperature
+
+- platform: template
+  sensors:
+    name: BathHydroMinimalValue
+    value_template: "{% if as_timestamp(states.sensor.bathhydro_humidity.last_updated) - as_timestamp(states.sensor.bathhydro_humidity.last_updated) > 5*60 %}true{% endif %}"
