@@ -20,4 +20,4 @@
 
 - platform: template
   name: Humidity_minimal
-  value_template: '{{ states.sensor.bathhydro_humidity.attributes["min_value"] + 5 }}'
+  value_template: '{{ states.sensor.bathhydro_humidity.attributes.min_value + 5 }}'
