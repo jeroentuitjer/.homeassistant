@@ -6,7 +6,7 @@
   trigger:
     - platform: template
       value_template: >-
-        {% if states('sensor.humidity_stats_mean.attributes.min_value + 5') < states('sensor.bathhydro_humidity') %}
+        {% if states('sensor.humidity_stats_mean.attributes.min_value.state + 5') < states('sensor.bathhydro_humidity.state') %}
           true
         {%- endif -%}
   action:
@@ -17,7 +17,7 @@
   trigger:
     - platform: template
       value_template: >-
-        {% if states('sensor.humidity_stats_mean.attributes.min_value + 5') > states('sensor.bathhydro_humidity') %}
+        {% if states('sensor.humidity_stats_mean.attributes.min_value.state + 5') > states('sensor.bathhydro_humidity.state') %}
           true
         {%- endif -%}
   action:
