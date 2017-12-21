@@ -17,8 +17,8 @@
   trigger:
     - platform: template
       value_template: >-
-        {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "wet") -%}
-          false
+        {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "comfort") -%}
+          true
         {%- endif -%}
   action:
     - service: homeassistant.turn_off
