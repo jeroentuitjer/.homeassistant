@@ -10,6 +10,7 @@
       data_type:
         - Humidity
         - Temperature
+        - Humidity status
 
 
 - platform: statistics
