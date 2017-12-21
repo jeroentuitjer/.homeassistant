@@ -5,7 +5,10 @@
 - alias: Ventilator en spiegelverwarming aan
   trigger:
     - platform: template
-      value_template: '{{ sensor.humidity_stats_mean.attributes.min_value.state + 5 < sensor.bathhydro_humidity.state}}'
+      value_template: >-
+        {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "wet") -%}
+          true
+        {%- endif -%}
   action:
     - service: homeassistant.turn_on
       entity_id: switch.douche_ventilatie
@@ -13,7 +16,10 @@
 - alias: Ventilator en spiegelverwarming uit
   trigger:
     - platform: template
-      value_template: '{{ sensor.humidity_stats_mean.attributes.min_value.state + 5 > sensor.bathhydro_humidity.state}}'
+      value_template: >-
+        {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "wet") -%}
+          false
+        {%- endif -%}
   action:
     - service: homeassistant.turn_off
       entity_id: switch.douche_ventilatie
