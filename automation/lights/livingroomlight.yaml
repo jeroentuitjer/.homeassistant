@@ -7,6 +7,9 @@
      - platform: state
        entity_id: sensor.livingroom_motion
        to: '1'
+     - platform: state
+       entity_id: switch.motion_kaku_living
+       to: 'on'
    condition:
      condition: and
      conditions:
@@ -27,6 +30,11 @@
        to: '0'
        for:
          minutes: 30
+     - platform: state
+       entity_id: switch.motion_kaku_living
+       to: 'off'
+       for:
+         minutes: 30
    condition:
      - condition: state
        entity_id: media_player.entertainment_area
@@ -43,6 +51,11 @@
      - platform: state
        entity_id: sensor.livingroom_motion
        to: '0'
+       for:
+         minutes: 60
+     - platform: state
+       entity_id: switch.motion_kaku_living
+       to: 'off'
        for:
          minutes: 60
    condition:
