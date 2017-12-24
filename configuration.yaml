@@ -74,6 +74,8 @@ switch:
   platform: rfxtrx
   automatic_add: True
   devices:
+    0b11000d0129019e0a010f60:
+      name: Motion_kaku_living
     0b11005b01a3222601000070:
       name: Kerstboom_PW
     0b11005e01a3222602010f70:
