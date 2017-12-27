@@ -72,7 +72,7 @@ rfxtrx:
 
 switch:
   platform: rfxtrx
-  automatic_add: True
+#  automatic_add: True
   devices:
     0b11000d0129019e0a010f60:
       name: Motion_kaku_living
