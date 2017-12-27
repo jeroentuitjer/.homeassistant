@@ -5,9 +5,6 @@
  - alias: Turn on living light when there is movement
    trigger:
      - platform: state
-       entity_id: sensor.livingroom_motion
-       to: '1'
-     - platform: state
        entity_id: switch.motion_kaku_living
        to: 'on'
    condition:
@@ -26,11 +23,6 @@
  - alias: Turn off living light 30 minutes after last movement
    trigger:
      - platform: state
-       entity_id: sensor.livingroom_motion
-       to: '0'
-       for:
-         minutes: 30
-     - platform: state
        entity_id: switch.motion_kaku_living
        to: 'off'
        for:
@@ -48,11 +40,6 @@
 
  - alias: Turn off living light 1 hour after last movement
    trigger:
-     - platform: state
-       entity_id: sensor.livingroom_motion
-       to: '0'
-       for:
-         minutes: 60
      - platform: state
        entity_id: switch.motion_kaku_living
        to: 'off'

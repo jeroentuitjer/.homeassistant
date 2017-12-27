@@ -5,8 +5,8 @@
 - alias: Cornerlight Weather prediction clear day
   trigger:
     - platform: state
-      entity_id: sensor.livingroom_motion
-      to: '1'
+      entity_id: switch.motion_kaku_living
+      to: 'on'
   condition:
     condition: and
     conditions:
@@ -38,8 +38,8 @@
 - alias: Cornerlight Weather prediction rain
   trigger:
     - platform: state
-      entity_id: sensor.livingroom_motion
-      to: '1'
+      entity_id: switch.motion_kaku_living
+      to: 'on'
   condition:
     condition: and
     conditions:
@@ -60,8 +60,8 @@
 - alias: Cornerlight Weather prediction snow and sleet
   trigger:
     - platform: state
-      entity_id: sensor.livingroom_motion
-      to: '1'
+      entity_id: switch.motion_kaku_living
+      to: 'on'
   condition:
     condition: and
     conditions:
@@ -93,8 +93,8 @@
 - alias: Cornerlight Weather prediction wind
   trigger:
     - platform: state
-      entity_id: sensor.livingroom_motion
-      to: '1'
+      entity_id: switch.motion_kaku_living
+      to: 'on'
   condition:
     condition: and
     conditions:
@@ -115,8 +115,8 @@
 - alias: Cornerlight Weather prediction fog
   trigger:
     - platform: state
-      entity_id: sensor.livingroom_motion
-      to: '1'
+      entity_id: switch.motion_kaku_living
+      to: 'on'
   condition:
     condition: and
     conditions:
@@ -137,8 +137,8 @@
 - alias: Cornerlight Weather prediction cloudy
   trigger:
     - platform: state
-      entity_id: sensor.livingroom_motion
-      to: '1'
+      entity_id: switch.motion_kaku_living
+      to: 'on'
   condition:
     condition: and
     conditions:
@@ -159,8 +159,8 @@
 - alias: Cornerlight Weather prediction partly cloudy day
   trigger:
     - platform: state
-      entity_id: sensor.livingroom_motion
-      to: '1'
+      entity_id: switch.motion_kaku_living
+      to: 'on'
   condition:
     condition: and
     conditions:
