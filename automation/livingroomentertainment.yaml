@@ -14,9 +14,6 @@
    condition:
      condition: and
      conditions:
-       - condition: numeric_state
-         entity_id: sensor.livingroom_lux
-         below: 160
        - condition: or
          conditions:
            - condition: template
@@ -100,10 +97,6 @@
      - platform: state
        entity_id: media_player.entertainment_area
        to: 'paused'
-   condition:
-     - condition: numeric_state
-       entity_id: sensor.livingroom_lux
-       below: 160
    action:
      - service: script.turn_on
        entity_id: script.living_light_netflix_paused
@@ -113,10 +106,6 @@
      - platform: state
        entity_id: media_player.entertainment_area
        to: 'off'
-   condition:
-     - condition: numeric_state
-       entity_id: sensor.livingroom_lux
-       below: 160
    action:
      - service: script.turn_on
        entity_id: script.living_light_netflix_paused

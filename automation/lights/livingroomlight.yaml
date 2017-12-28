@@ -10,9 +10,6 @@
    condition:
      condition: and
      conditions:
-       - condition: numeric_state
-         entity_id: sensor.livingroom_lux
-         below: 160
        - condition: state
          entity_id: media_player.entertainment_area
          state: 'off'

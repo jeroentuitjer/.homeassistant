@@ -13,9 +13,6 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: numeric_state
-        entity_id: sensor.livingroom_lux
-        below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
         state: 'clear-day'
@@ -68,9 +65,6 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: numeric_state
-        entity_id: sensor.livingroom_lux
-        below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
         state: 'snow'
@@ -79,9 +73,6 @@
           - condition: state
             entity_id: media_player.entertainment_area
             state: 'off'
-          - condition: numeric_state
-            entity_id: sensor.livingroom_lux
-            below: 160
           - condition: state
             entity_id: sensor.dark_sky_icon
             state: 'sleet'
@@ -101,9 +92,6 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: numeric_state
-        entity_id: sensor.livingroom_lux
-        below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
         state: 'wind'
@@ -123,9 +111,6 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: numeric_state
-        entity_id: sensor.livingroom_lux
-        below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
         state: 'fog'
@@ -145,9 +130,6 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: numeric_state
-        entity_id: sensor.livingroom_lux
-        below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
         state: 'cloudy'
@@ -167,9 +149,6 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: numeric_state
-        entity_id: sensor.livingroom_lux
-        below: 160
       - condition: state
         entity_id: sensor.dark_sky_icon
         state: 'partly-cloudy-day'
