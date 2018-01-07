@@ -13,5 +13,6 @@
   - platform: wunderground
     api_key: !secret wundergroundapi
     monitored_conditions:
-      - relative_humidity
+      - humidity
       - weather_1h
+      - icon

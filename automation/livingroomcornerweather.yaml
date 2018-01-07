@@ -14,19 +14,8 @@
         entity_id: media_player.entertainment_area
         state: 'off'
       - condition: state
-        entity_id: sensor.dark_sky_icon
-        state: 'clear-day'
-      - condition: or
-        conditions:
-          - condition: state
-            entity_id: media_player.entertainment_area
-            state: 'off'
-          - condition: numeric_state
-            entity_id: sensor.livingroom_lux
-            below: 160
-          - condition: state
-            entity_id: sensor.dark_sky_icon
-            state: 'clear-night'
+        entity_id: sensor.pws_weather_1h
+        state: 'Clear'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_clear_day
@@ -43,12 +32,9 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: numeric_state
-        entity_id: sensor.livingroom_lux
-        below: 160
       - condition: state
-        entity_id: sensor.dark_sky_icon
-        state: 'rain'
+        entity_id: sensor.pws_weather_1h
+        state: 'Rain'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_rain
@@ -66,22 +52,14 @@
         entity_id: media_player.entertainment_area
         state: 'off'
       - condition: state
-        entity_id: sensor.dark_sky_icon
-        state: 'snow'
-      - condition: or
-        conditions:
-          - condition: state
-            entity_id: media_player.entertainment_area
-            state: 'off'
-          - condition: state
-            entity_id: sensor.dark_sky_icon
-            state: 'sleet'
+        entity_id: sensor.pws_weather_1h
+        state: 'Snow'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_snow
 
 
-- alias: Cornerlight Weather prediction wind
+- alias: Cornerlight Weather prediction Drizzle
   trigger:
     - platform: state
       entity_id: switch.motion_kaku_living
@@ -93,8 +71,8 @@
         entity_id: media_player.entertainment_area
         state: 'off'
       - condition: state
-        entity_id: sensor.dark_sky_icon
-        state: 'wind'
+        entity_id: sensor.pws_weather_1h
+        state: 'Drizzle'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_wind
@@ -112,14 +90,14 @@
         entity_id: media_player.entertainment_area
         state: 'off'
       - condition: state
-        entity_id: sensor.dark_sky_icon
-        state: 'fog'
+        entity_id: sensor.pws_weather_1h
+        state: 'Fog'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_fog
 
 
-- alias: Cornerlight Weather prediction cloudy
+- alias: Cornerlight Weather prediction partly cloudy
   trigger:
     - platform: state
       entity_id: switch.motion_kaku_living
@@ -131,14 +109,14 @@
         entity_id: media_player.entertainment_area
         state: 'off'
       - condition: state
-        entity_id: sensor.dark_sky_icon
-        state: 'cloudy'
+        entity_id: sensor.pws_weather_1h
+        state: 'Partly Cloudy'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_cloudy
 
 
-- alias: Cornerlight Weather prediction partly cloudy day
+- alias: Cornerlight Weather prediction mostly cloudy day
   trigger:
     - platform: state
       entity_id: switch.motion_kaku_living
@@ -151,18 +129,7 @@
         state: 'off'
       - condition: state
         entity_id: sensor.dark_sky_icon
-        state: 'partly-cloudy-day'
-      - condition: or
-        conditions:
-          - condition: state
-            entity_id: media_player.entertainment_area
-            state: 'off'
-          - condition: numeric_state
-            entity_id: sensor.livingroom_lux
-            below: 160
-          - condition: state
-            entity_id: sensor.dark_sky_icon
-            state: 'partly-cloudy-night'
+        state: 'Mostly Cloudy'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_partly_cloudy_day
