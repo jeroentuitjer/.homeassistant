@@ -11,14 +11,14 @@ living_light_off:
 
 living_light_on_standard:
   sequence:
-    - service: light.hue_activate_scene
+    - service: hue.hue_activate_scene
       data:
         group_name: "Woonkamer"
         scene_name: "Relax"
 
 living_light_netflix:
   sequence:
-    - service: light.hue_activate_scene
+    - service: hue.hue_activate_scene
       data:
         group_name: "Woonkamer"
         scene_name: "Netflix"
@@ -27,11 +27,11 @@ living_light_netflix:
 
 living_light_netflix_paused:
   sequence:
-    - service: light.hue_activate_scene
+    - service: hue.hue_activate_scene
       data:
         group_name: "Woonkamer"
         scene_name: "Relax"
-    - service: light.hue_activate_scene
+    - service: hue.hue_activate_scene
       data:
         group_name: "Keuken"
         scene_name: "Ontspannen"
