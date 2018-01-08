@@ -14,5 +14,5 @@
     api_key: !secret wundergroundapi
     monitored_conditions:
       - relative_humidity
-      - weather_1d
+      - weather_1h
       - precip_today_string
