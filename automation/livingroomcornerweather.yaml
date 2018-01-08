@@ -13,9 +13,17 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: state
-        entity_id: sensor.pws_weather_1h
-        state: 'Clear'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Clear'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Partly Cloudy'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Mostly Cloudy'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_clear_day
@@ -32,9 +40,20 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: state
-        entity_id: sensor.pws_weather_1h
-        state: 'Rain'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Rain'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Chance of Showers'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Showers'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Chance of Rain'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_rain
@@ -51,9 +70,41 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: state
-        entity_id: sensor.pws_weather_1h
-        state: 'Snow'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Blowing Snow'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Very Cold'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'OMITTED'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Flurries'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Chance of Snow Showers'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Chance of Ice Pellets'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Ice Pellets'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Blizard'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Snow Showers'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Chance of Snow'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Snow'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_snow
@@ -70,15 +121,22 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: state
-        entity_id: sensor.pws_weather_1h
-        state: 'Drizzle'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Cloudy'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Hazy'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Foggy'
   action:
     service: homeassistant.turn_on
     entity_id: scene.living_corner_wind
 
-
-- alias: Cornerlight Weather prediction fog
+- alias: Cornerlight Weather prediction thunderstorm
   trigger:
     - platform: state
       entity_id: switch.motion_kaku_living
@@ -89,15 +147,19 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: state
-        entity_id: sensor.pws_weather_1h
-        state: 'Fog'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Chance of a Thunderstorm'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Thunderstorm'
   action:
     service: homeassistant.turn_on
-    entity_id: scene.living_corner_fog
+    entity_id: scene.living_corner_thunderstorm
 
-
-- alias: Cornerlight Weather prediction partly cloudy
+- alias: Cornerlight Weather prediction hot
   trigger:
     - platform: state
       entity_id: switch.motion_kaku_living
@@ -108,28 +170,11 @@
       - condition: state
         entity_id: media_player.entertainment_area
         state: 'off'
-      - condition: state
-        entity_id: sensor.pws_weather_1h
-        state: 'Partly Cloudy'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: sensor.pws_weather_1h
+            state: 'Very Hot'
   action:
     service: homeassistant.turn_on
-    entity_id: scene.living_corner_cloudy
-
-
-- alias: Cornerlight Weather prediction mostly cloudy day
-  trigger:
-    - platform: state
-      entity_id: switch.motion_kaku_living
-      to: 'on'
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: media_player.entertainment_area
-        state: 'off'
-      - condition: state
-        entity_id: sensor.dark_sky_icon
-        state: 'Mostly Cloudy'
-  action:
-    service: homeassistant.turn_on
-    entity_id: scene.living_corner_partly_cloudy_day
+    entity_id: scene.living_corner_hot

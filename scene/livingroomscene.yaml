@@ -107,6 +107,18 @@
       rgb_color: [255, 0, 127]
 
 
+- name: Living Corner Thunderstorm
+  entities:
+    light.cornerlight:
+      state: on
+      effect: rb_cross_fade
+
+- name: Living Corner Thunderstorm
+  entities:
+    light.cornerlight:
+      state: on
+      effect: colorloop
+
 - name: Living Corner Partly Cloudy Day
   entities:
     light.cornerlight:
