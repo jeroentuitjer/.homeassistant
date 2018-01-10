@@ -22,7 +22,6 @@ living_light_netflix:
       data:
         group_name: "Woonkamer"
         scene_name: "Netflix"
-        transition: 10
     - service: homeassistant.turn_on
       entity_id: scene.living_netflix
 
