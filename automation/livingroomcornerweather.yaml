@@ -23,6 +23,9 @@
             state: 'Partly Cloudy'
           - condition: state
             entity_id: sensor.pws_weather_1h
+            state: 'Overcast'
+          - condition: state
+            entity_id: sensor.pws_weather_1h
             state: 'Mostly Cloudy'
   action:
     service: homeassistant.turn_on
