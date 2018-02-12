@@ -8,9 +8,9 @@
      - platform: state
        entity_id: media_player.entertainment_area
        to: 'playing'
-     - platform: state
-       entity_id: media_player.entertainment_area
-       to: 'idle'
+#     - platform: state
+#       entity_id: media_player.entertainment_area
+#       to: 'idle'
    condition:
      condition: and
      conditions:

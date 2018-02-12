@@ -38,8 +38,6 @@ living_light_netflix_paused:
 
 living_entertainment_on:
   sequence:
-    - delay:
-        milliseconds: 500
     - service: media_player.turn_on
       entity_id: media_player.receiver
     - service: media_player.select_source
