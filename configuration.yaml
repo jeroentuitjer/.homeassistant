@@ -44,6 +44,10 @@ recorder:
 
 device_tracker:
   - platform: bluetooth_tracker
+    track_new_devices: yes
+    mac: A0:10:81:B8:3E29
+    interval_seconds: 10
+    consider_home: 180
 
 # View all events in a logbook
 logbook:
@@ -65,11 +69,7 @@ media_player:
     host: !secret samsungip
     port: 8001
 
-#ios:
-
-# Rfxtrx
 rfxtrx:
-#  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11D2ALY-if00-port0
   device: /dev/ttyUSB0
   debug: True
   dummy: False
