@@ -13,16 +13,6 @@
       - light.gang_onder_3
       - light.gang_onder_4
 
-  hallway_sensor_group:
-    name: Hallway sensor
-    entities:
-      - sensor.hall_frontdoor_motion
-      - sensor.hall_frontdoor_lux
-      - sensor.hall_frontdoor_temperature
-      - sensor.hall_kitchen_motion
-      - sensor.hall_kitchen_lux
-      - sensor.hall_kitchen_temperature
-
   hallway_automation_group:
     name: Hallway automation
     entities:
