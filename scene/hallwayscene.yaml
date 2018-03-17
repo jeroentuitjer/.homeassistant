@@ -1,0 +1,59 @@
+#################################################################
+## Scenes Hue Hallway
+#################################################################
+
+- name: Hallway Normal
+  entities:
+    light.gang_boven_1:
+      state: on
+      brightness: 144
+      xy_color: [ 0.5119, 0.4147 ]
+    light.gang_boven_3:
+      state: on
+      brightness: 144
+      xy_color: [ 0.5119, 0.4147 ]
+    light.gang_boven_4:
+      state: on
+      brightness: 144
+      xy_color: [ 0.5119, 0.4147 ]
+    light.gang_onder_11:
+      state: on
+      brightness: 144
+      xy_color: [ 0.5119, 0.4147 ]
+    light.gang_onder_2:
+      state: on
+      brightness: 144
+      xy_color: [ 0.5119, 0.4147 ]
+    light.gang_onder_3:
+      state: on
+      brightness: 144
+      xy_color: [ 0.5119, 0.4147 ]
+    light.gang_onder_4:
+      state: on
+      brightness: 144
+      xy_color: [ 0.5119, 0.4147 ]
+
+- name: Hallway Nightwatch
+  entities:
+    light.gang_boven_1:
+      state: off
+    light.gang_boven_3:
+      state: off
+    light.gang_boven_4:
+      state: off
+    light.gang_onder_11:
+      state: on
+      brightness: 1
+      xy_color: [ 0.5119, 0.4147 ]
+    light.gang_onder_2:
+      state: on
+      brightness: 5
+      xy_color: [ 0.5119, 0.4147 ]
+    light.gang_onder_3:
+      state: on
+      brightness: 5
+      xy_color: [ 0.5119, 0.4147 ]
+    light.gang_onder_4:
+      state: on
+      brightness: 5
+      xy_color: [ 0.5119, 0.4147 ]

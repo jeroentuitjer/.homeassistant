@@ -1,0 +1,31 @@
+#################################################################
+## Scenes Hue Kitchen
+#################################################################
+
+- name: Kitchen Normal
+  entities:
+    light.keuken:
+      state: on
+      rgb_color: [255, 189, 86]
+      brightness: 230
+
+- name: Kitchen Netflix
+  entities:
+    light.keuken:
+      state: on
+      xy_color: [0.67, 0.32]
+      brightness: 160
+
+- name: Kitchen Spotify
+  entities:
+    light.keuken:
+      state: on
+      rgb_color: [138, 255, 11]
+      brightness: 160
+
+- name: Kitchen Soundcloud
+  entities:
+    light.keuken:
+      state: on
+      rgb_color: [138, 255, 11]
+      brightness: 160
