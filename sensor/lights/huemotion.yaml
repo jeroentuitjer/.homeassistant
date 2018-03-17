@@ -2,6 +2,8 @@
 ## Sensors Hue
 #################################################################
 
+- platform: hue
+
 - platform: rest
   resource: !secret kitchen_motion_url
   value_template: '{{ value_json.state.status }}'
