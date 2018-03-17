@@ -19,4 +19,4 @@ living_entertainment_off:
 living_cornerlight_activated:
   sequence:
     - service: homeassistant.turn_on
-      entity_id:
+      entity_id: scene.living_corner_activated
