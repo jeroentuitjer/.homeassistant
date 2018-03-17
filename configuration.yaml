@@ -44,8 +44,13 @@ recorder:
 
 device_tracker:
   - platform: bluetooth_tracker
-    track_new_devices: yes
-    mac: A0:10:81:B8:3E29
+    name: Jeroen
+    mac: !secret mac_jeroen
+    interval_seconds: 10
+    consider_home: 180
+  - platform: bluetooth_tracker
+    name: Tobias
+    mac: !secret mac_tobias
     interval_seconds: 10
     consider_home: 180
 
