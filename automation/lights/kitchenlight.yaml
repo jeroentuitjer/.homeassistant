@@ -11,9 +11,6 @@
     - platform: state
       to: 'playing'
       entity_id: media_player.entertainment_area
-    - platform: state
-      to: 'idle'
-      entity_id: media_player.entertainment_area
   condition:
     condition: and
     conditions:

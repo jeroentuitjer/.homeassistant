@@ -2,38 +2,21 @@
 ## Views
 #################################################################
 
-  Living_view:
-    name: Living
+  light_view:
+    name: Lights
     view: yes
     entities:
-      - group.living_automation_group
-      - group.living_entertainment_group
-      - group.living_sensor
       - group.living_light_group
-
-  kitchen_view:
-    name: Kitchen
-    view: yes
-    entities:
-      - group.kitchen_automation_group
       - group.kitchen_light_group
-      - group.kitchen_sensor_group
-
-     
-  hallway_view:
-    name: Hallway
-    view: yes
-    entities:
-      - group.hallway_automation_group
       - group.hallway_light_group
-      - group.hallway_sensor_group
-      - group.hallway_automation_scene
-  
-  bathroom_view:
-    name: Bathroom
+      - group.bathroom_light_group
+
+  light_view:
+    name: Entertainment
     view: yes
     entities:
-      - group.bathroom_automation_group
-      - group.bathroom_light_group
-      - group.bathroom_sensor_group    
-      - group.bathroom_entertainment_group
+
+  light_view:
+    name: Climate
+    view: yes
+    entities:

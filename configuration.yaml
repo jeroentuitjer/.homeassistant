@@ -53,7 +53,7 @@ device_tracker:
 logbook:
 
 # Track the sun
-sun:
+#sun:
 
 # Text to speech
 #tts:
