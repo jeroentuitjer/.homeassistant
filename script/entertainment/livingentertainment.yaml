@@ -13,5 +13,10 @@ living_entertainment_on:
 
 living_entertainment_off:
   sequence:
-     - service: media_player.turn_off
-       entity_id: media_player.receiver
+    - service: media_player.turn_off
+      entity_id: media_player.receiver
+
+living_cornerlight_activated:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id:

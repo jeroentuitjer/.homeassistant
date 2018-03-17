@@ -1,3 +1,12 @@
 #################################################################
 ## Automation Living Corner Hass Signal
 #################################################################
+
+ - alias: Entertainment area activated
+   trigger:
+     - platform: state
+       entity_id: media_player.entertainment_area
+       to: 'idle'
+   action:
+     - service: script.turn_on
+       entity_id: script.living_cornerlight_activated
