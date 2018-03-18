@@ -2,7 +2,7 @@
 ## Views
 #################################################################
 
-  light_view:
+  default_view:
     name: Lights
     view: yes
     entities:

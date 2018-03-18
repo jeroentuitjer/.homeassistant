@@ -2,7 +2,12 @@
 ## Scripts Living Lights
 #################################################################
 
-living_cornerlight_plantssignal:
+living_cornerlight_plantssignalon:
   sequence:
     - service: homeassistant.turn_on
-      entity_id: scene.living_corner_plants_signal
+      entity_id: scene.living_corner_plants_signalon
+
+living_cornerlight_plantssignaloff:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: scene.living_corner_plants_signaloff

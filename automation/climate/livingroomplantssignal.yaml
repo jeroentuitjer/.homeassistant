@@ -2,11 +2,20 @@
 ## Automations Living Plants Signal
 #################################################################
 
- - alias: Plants Need Water Signal
+ - alias: Plants Need Water Signal On
    trigger:
      - platform: numeric_state
        entity_id: sensor.polyscias_fruticosa_moisture
-       below: 20
+       below: 15
    action:
      - service: script.turn_on
-       entity_id: script.living_cornerlight_plantssignal
+       entity_id: script.living_cornerlight_plantssignalon
+
+ - alias: Plants Need Water Signal Off
+   trigger:
+     - platform: numeric_state
+       entity_id: sensor.polyscias_fruticosa_moisture
+       above: 15
+   action:
+     - service: script.turn_on
+       entity_id: script.living_cornerlight_plantssignaloff

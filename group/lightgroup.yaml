@@ -4,7 +4,7 @@
 
 
 living_light_group:
-  name: Living
+  name: Woonkamer
   entities:
     - light.cornerlight
     - light.eettafel_keuken
@@ -12,7 +12,7 @@ living_light_group:
     - light.zithoek
 
 hallway_light_group:
-  name: Hallway
+  name: Gang
   entities:
     - light.gang_onder_1
     - light.gang_boven_1
