@@ -15,6 +15,12 @@
       state: on
       effect: red_fade
 
+- name: Living Corner Plants Signal
+  entities:
+    light.cornerlight:
+      state: on
+      rgb_color: [0, 0, 255]
+
 - name: Living Netflix 
   entities:
     light.cornerlight:

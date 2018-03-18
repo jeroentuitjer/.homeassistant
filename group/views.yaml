@@ -12,3 +12,16 @@
       - group.keuken_light_group
       - group.badkamer_light_group
       - group.waskamer_light_group
+
+  climate_view:
+    name: Climate
+    view: yes
+    entities:
+      - group.living_plants_group
+      - group.bathroom_humidity_group
+
+  entertainment_view:
+    name: Entertainment
+    view: yes
+    entities:
+      - group.living_entertainment_group

@@ -1,0 +1,8 @@
+#################################################################
+## Scripts Living Lights
+#################################################################
+
+living_cornerlight_plantssignal:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: scene.living_corner_plants_signal

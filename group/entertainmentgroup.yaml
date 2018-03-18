@@ -2,3 +2,7 @@
 ## Groups Entertainment
 #################################################################   
 
+living_entertainment_group:
+  name: Living Entertainment
+  entities:
+    -

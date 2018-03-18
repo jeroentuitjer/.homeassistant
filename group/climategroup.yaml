@@ -1,3 +1,16 @@
 #################################################################
 ## Groups climate
 #################################################################
+
+living_plants_group:
+  name: Living Plants
+  entities:
+    - sensor.polyscias_fruticosa_moisture
+
+bathroom_humidity_group:
+  name: Bathroom Humidity
+  entities:
+    - sensor.bathhydro_humidity
+    - switch.douche_ventilatie
+    - automation.ventilator_en_spiegelverwarming_aan
+    - automation.ventilator_en_spiegelverwarming_uit
