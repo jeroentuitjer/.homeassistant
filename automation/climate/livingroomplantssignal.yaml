@@ -4,9 +4,9 @@
 
  - alias: Plants Need Water Signal
    trigger:
-     - platform: threshold
+     - platform: numeric_state
        entity_id: sensor.polyscias_fruticosa_moisture
-       lower: 20
+       below: 20
    action:
      - service: script.turn_on
        entity_id: script.living_cornerlight_plantssignal
