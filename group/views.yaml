@@ -7,6 +7,8 @@
     view: yes
     entities:
       - group.living_light_group
-      - group.kitchen_light_group
       - group.hallway_light_group
-      - group.bathroom_light_group
+      - group.toilet_light_group
+      - group.keuken_light_group
+      - group.badkamer_light_group
+      - group.waskamer_light_group

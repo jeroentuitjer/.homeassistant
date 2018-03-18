@@ -1,3 +1,45 @@
 #################################################################
 ## Groups Light
 #################################################################
+
+
+living_light_group:
+  name: Living
+  entities:
+    - light.cornerlight
+    - light.eettafel_keuken
+    - light.eettafel_raam
+    - light.zithoek
+
+hallway_light_group:
+  name: Hallway
+  entities:
+    - light.gang_onder_1
+    - light.gang_boven_1
+    - light.gang_onder_2
+    - light.gang_onder_3
+    - light.gang_boven_3
+    - light.gang_onder_4
+    - light.gang_boven_4
+
+toilet_light_group:
+  name: Toilet
+  entities:
+    - light.toilet
+
+keuken_light_group:
+  name: Keuken
+  entities:
+    - light.keuken
+
+waskamer_light_group:
+  name: Waskamer
+  entities:
+    - light.waskamer_1
+    - light.waskamer_2
+
+badkamer_light_group:
+  name: Badkamer
+  entities:
+    - light.badkamer_jeroen
+    - light.badkamer_tobias
