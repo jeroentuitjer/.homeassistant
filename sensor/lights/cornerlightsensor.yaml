@@ -1,0 +1,8 @@
+#################################################################
+## Sensors Cornerlight Sensor
+#################################################################
+
+input_text:
+  cornerstate:
+    name: Normal State
+    initial: normal
