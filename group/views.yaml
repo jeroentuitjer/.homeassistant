@@ -24,4 +24,4 @@
     name: Entertainment
     view: yes
     entities:
-      - group.living_entertainment_group
+      - group.entertainment_light_group
