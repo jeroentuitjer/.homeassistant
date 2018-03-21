@@ -6,3 +6,8 @@ input_text:
   cornerstate:
     name: Normal State
     initial: normal
+
+input_select:
+  living_room_preset:
+    options:
+      - Visitors
