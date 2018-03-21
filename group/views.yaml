@@ -25,3 +25,14 @@
     view: yes
     entities:
       - group.entertainment_light_group
+
+  all_view:
+    name: All
+    view: yes
+    entities:
+      - group.all_switches
+      - group.all_lights
+      - group.all_devices
+      - group.all_scripts
+      - group.all_automations
+
