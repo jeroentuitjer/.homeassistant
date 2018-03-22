@@ -27,7 +27,7 @@
       state: on
       rgb_color: [0, 255, 0]
 
-- name: Living Netflix 
+- name: Living Red
   entities:
     light.cornerlight:
       state: on
@@ -39,14 +39,8 @@
       state: on
       rgb_color: [128, 255, 0]
 
-- name: Living Spotify 
+- name: Living Green
   entities:
     light.cornerlight:
       state: on
-      rgb_color: [0, 255, 0]     
- 
-- name: Living SoundCloud
-  entities:
-    light.cornerlight:
-      state: on
-      rgb_color: [255, 140, 0]
+      rgb_color: [0, 255, 0]

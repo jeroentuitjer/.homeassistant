@@ -2,15 +2,7 @@
 ## Sensors Cornerlight Sensor
 #################################################################
 
-input_text:
-  cornerstate:
-    name: Normal State
-    initial: normal
-
-input_select:
-  living_room_preset:
-    name: test
-    initial: Visitors
-    icon: mdi:water-off
-    options:
-      - Water
+input_boolean:
+  notify_home:
+    name: Overrule Cornerlight
+    initial: off

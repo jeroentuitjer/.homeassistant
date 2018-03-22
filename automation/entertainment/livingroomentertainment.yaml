@@ -49,39 +49,6 @@
      - service: script.turn_on
        entity_id: script.living_entertainment_on
 
- - alias: Entertainment area playing soundcloud
-   trigger:
-     - platform: state
-       entity_id: media_player.entertainment_area
-       to: 'playing'
-   condition:
-     - condition: template
-       value_template: >-
-         {%- if is_state_attr("media_player.entertainment_area", "app_name", "SoundCloud") -%}
-           true
-         {%- endif -%}
-   action:
-     - service: homeassistant.turn_on
-       entity_id: scene.living_soundcloud
-     - service: script.turn_on
-       entity_id: script.living_entertainment_on
-
- - alias: Entertainment area playing spotify
-   trigger:
-     - platform: state
-       entity_id: media_player.entertainment_area
-       to: 'playing'
-   condition:
-     condition: template
-     value_template: >-
-       {%- if is_state_attr("media_player.entertainment_area", "app_name", "Spotify") -%}
-         true
-       {%- endif -%}
-   action:
-     - service: homeassistant.turn_on
-       entity_id: scene.living_spotify
-     - service: script.turn_on
-       entity_id: script.living_entertainment_on
 
  - alias: Entertainment area paused
    trigger:
