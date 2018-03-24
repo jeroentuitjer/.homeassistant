@@ -23,7 +23,7 @@
        entity_id: switch.motion_kaku_living
        to: 'off'
        for:
-         minutes: 30
+         minutes: 15
    condition:
      - condition: state
        entity_id: media_player.entertainment_area
@@ -41,7 +41,7 @@
        entity_id: switch.motion_kaku_living
        to: 'off'
        for:
-         minutes: 60
+         minutes: 30
    condition:
      - condition: state
        entity_id: media_player.entertainment_area
