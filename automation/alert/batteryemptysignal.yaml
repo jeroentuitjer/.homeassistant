@@ -1,0 +1,12 @@
+#################################################################
+## Automations Empty Battery Signal
+#################################################################
+
+ - alias: Plants Empty Battery Signal On
+   trigger:
+     - platform: numeric_state
+       entity_id: sensor.polyscias_fruticosa_battery
+       below: 15
+   action:
+     - service: script.turn_on
+       entity_id: script.living_empty_batterys_signalon
