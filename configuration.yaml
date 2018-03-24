@@ -79,9 +79,6 @@ rfxtrx:
   debug: True
   dummy: False
 
-switch:
-
-
 hue:
   bridges:
     - host: !secret hueip
