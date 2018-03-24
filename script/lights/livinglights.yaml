@@ -18,6 +18,11 @@ living_light_on_standard:
     - service: homeassistant.turn_on
       entity_id: scene.living_green
 
+living_light_on_corner:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: scene.living_green
+
 living_light_netflix:
   sequence:
     - service: hue.hue_activate_scene

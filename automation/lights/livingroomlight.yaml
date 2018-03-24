@@ -17,6 +17,69 @@
      - service: script.turn_on
        entity_id: script.living_light_on_standard
 
+ - alias: Turn on living corner light when there is movement
+   trigger:
+     - platform: state
+       entity_id: switch.motion_kaku_living
+       to: 'on'
+   condition:
+     condition: and
+     conditions:
+       - condition: state
+         entity_id: media_player.entertainment_area
+         state: 'off'
+       - condition: state
+         entity_id: switch.plantsignal
+         state: 'off'
+       - condition: state
+         entity_id: switch.batterysignal
+         state: 'off'
+   action:
+     - service: script.turn_on
+       entity_id: script.living_light_on_corner
+
+ - alias: Turn on battery signal living corner light when there is movement
+   trigger:
+     - platform: state
+       entity_id: switch.motion_kaku_living
+       to: 'on'
+   condition:
+     condition: and
+     conditions:
+       - condition: state
+         entity_id: media_player.entertainment_area
+         state: 'off'
+       - condition: state
+         entity_id: switch.plantsignal
+         state: 'off'
+       - condition: state
+         entity_id: switch.batterysignal
+         state: 'on'
+   action:
+     - service: script.turn_on
+       entity_id: script.empty_batterys_signalon
+
+ - alias: Turn on plant signal living corner light when there is movement
+   trigger:
+     - platform: state
+       entity_id: switch.motion_kaku_living
+       to: 'on'
+   condition:
+     condition: and
+     conditions:
+       - condition: state
+         entity_id: media_player.entertainment_area
+         state: 'off'
+       - condition: state
+         entity_id: switch.plantsignal
+         state: 'on'
+       - condition: state
+         entity_id: switch.batterysignal
+         state: 'off'
+   action:
+     - service: script.turn_on
+       entity_id: script.living_cornerlight_plantssignalon
+
  - alias: Turn off living light 30 minutes after last movement
    trigger:
      - platform: state
