@@ -10,13 +10,3 @@
    action:
      - service: switch.turn_on
        entity_id: switch.plantsignal
-
-
- - alias: Plants Need Water Signal Off
-   trigger:
-     - platform: numeric_state
-       entity_id: sensor.polyscias_fruticosa_moisture
-       above: 15
-   action:
-     - service: switch.turn_off
-       entity_id: switch.plantsignal
