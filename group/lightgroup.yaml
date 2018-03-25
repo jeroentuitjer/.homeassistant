@@ -6,10 +6,11 @@
 living_light_group:
   name: Woonkamer
   entities:
-    - light.cornerlight
+    - light.zithoek
     - light.eettafel_keuken
     - light.eettafel_raam
-    - light.zithoek
+    - light.cornerlight
+    - automation.turn_on_living_light_motion
 
 hallway_light_group:
   name: Gang

@@ -2,7 +2,7 @@
 ## Automations Entertainment area
 #################################################################
 
- - alias: Turn on living light when there is movement
+ - alias: Turn on living light motion
    trigger:
      - platform: state
        entity_id: switch.motion_kaku_living
