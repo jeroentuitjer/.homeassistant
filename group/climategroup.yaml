@@ -6,6 +6,7 @@ living_plants_group:
   name: Woonkamer Planten
   entities:
     - sensor.polyscias_fruticosa_moisture
+    - switch.plantsignal
 
 bathroom_humidity_group:
   name: Badkamer Vochtigheid
