@@ -46,8 +46,6 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_netflix
-     - service: script.turn_on
-       entity_id: script.living_entertainment_on
 
 
  - alias: Entertainment area paused
@@ -67,5 +65,3 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_netflix_paused
-     - service: script.turn_on
-       entity_id: script.living_entertainment_off

@@ -8,8 +8,8 @@
        entity_id: sensor.polyscias_fruticosa_moisture
        below: 15
    action:
-     - service: script.turn_on
-       entity_id: script.living_cornerlight_plantssignalon
+     - service: switch.turn_on
+       entity_id: switch.plantsignal
 
 
  - alias: Plants Need Water Signal Off
@@ -18,5 +18,5 @@
        entity_id: sensor.polyscias_fruticosa_moisture
        above: 15
    action:
-     - service: script.turn_on
-       entity_id: script.living_cornerlight_plantssignaloff
+     - service: switch.turn_off
+       entity_id: switch.plantsignal
