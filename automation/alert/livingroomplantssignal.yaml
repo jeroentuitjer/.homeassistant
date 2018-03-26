@@ -8,5 +8,5 @@
        entity_id: sensor.polyscias_fruticosa_moisture
        below: 15
    action:
-     - service: switch.turn_on
-       entity_id: switch.plantsignal
+     - service: script.turn_on
+       entity_id: script.living_cornerlight_plantssignalon

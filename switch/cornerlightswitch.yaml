@@ -5,7 +5,7 @@
 - platform: template
   switches:
     plantsignal:
-      value_template: "{{ is_state('script.living_cornerlight_plantssignalon', 'on') }}"
+      value_template: "{{ is_state('sensor.living_cornerlight_plantssignalon', 'on') }}"
       turn_on:
         service: switch.turn_on
         data:
@@ -18,7 +18,7 @@
 - platform: template
   switches:
     netflixsignal:
-      value_template: "{{ is_state('script.living_light_netflix', 'on') }}"
+      value_template: "{{ is_state('sensor.living_light_netflix', 'on') }}"
       turn_on:
         service: switch.turn_on
         data:
@@ -31,7 +31,7 @@
 - platform: template
   switches:
     batterysignal:
-      value_template: "{{ is_state('script.empty_batterys_signalon', 'on') }}"
+      value_template: "{{ is_state('sensor.empty_batterys_signalon', 'on') }}"
       turn_on:
         service: switch.turn_on
         data:
