@@ -11,6 +11,8 @@ living_light_group:
     - light.eettafel_raam
     - light.cornerlight
     - automation.turn_on_living_light_motion
+    - automation.turn_off_living_light_15_minutes_after_last_movement
+    - automation.turn_off_living_light_1_hour_after_last_movement
 
 hallway_light_group:
   name: Gang
