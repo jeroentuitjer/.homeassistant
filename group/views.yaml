@@ -5,6 +5,10 @@
   default_view:
     name: Lights
     view: yes
+
+  lights_view:
+    name: Lights
+    view: yes
     entities:
       - group.living_light_group
       - group.hallway_light_group
