@@ -2,10 +2,6 @@
 ## Views
 #################################################################
 
-  default_view:
-    name: Lights
-    view: yes
-
   lights_view:
     name: Lights
     view: yes

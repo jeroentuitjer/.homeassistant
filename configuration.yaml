@@ -92,9 +92,23 @@ light:
         name: cornerlight 
         mode: "rgbw"
 
+switch:
+  platform: rfxtrx
+#  automatic_add: True
+  devices:
+    0b11000d0129019e0a010f60:
+      name: Motion_kaku_living
+    0b11005b01a3222601000070:
+      name: Kerstboom_PW
+    0b11005e01a3222602010f70:
+      name: Overig_PW
+    0b11005f01a3222603010f70:
+      name: Samsung_PW
+    0b1100030155861a02010f70:
+      name: Douche_Ventilatie
+
 group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
-switch: !include_dir_merge_list switch/
 automation: !include_dir_merge_list automation/
 scene: !include_dir_merge_list scene/
 script: !include_dir_merge_named script/
