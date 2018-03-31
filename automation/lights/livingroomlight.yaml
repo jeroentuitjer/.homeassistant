@@ -38,43 +38,8 @@
      - service: script.turn_on
        entity_id: script.living_light_on_corner
 
- - alias: Turn on battery signal living corner light when there is movement
-   trigger:
-     - platform: state
-       entity_id: switch.batterysignal
-       to: 'on'
-   condition:
-     condition: and
-     conditions:
-       - condition: state
-         entity_id: media_player.entertainment_area
-         state: 'off'
-       - condition: state
-         entity_id: switch.plantsignal
-         state: 'off'
-   action:
-     - service: script.turn_on
-       entity_id: script.empty_batterys_signalon
 
- - alias: Turn on plant signal living corner light when there is movement
-   trigger:
-     - platform: state
-       entity_id: switch.plantsignal
-       to: 'on'
-   condition:
-     condition: and
-     conditions:
-       - condition: state
-         entity_id: media_player.entertainment_area
-         state: 'off'
-       - condition: state
-         entity_id: switch.batterysignal
-         state: 'off'
-   action:
-     - service: script.turn_on
-       entity_id: script.living_cornerlight_plantssignalon
-
- - alias: Turn off living light 15 minutes after last movement
+ - alias: Turn off living light 15 min motion
    trigger:
      - platform: state
        entity_id: switch.motion_kaku_living
@@ -82,17 +47,19 @@
        for:
          minutes: 15
    condition:
-     - condition: state
-       entity_id: media_player.entertainment_area
-       state: 'off'
-     - condition: time
-       after: '00:00:00'
-       before: '18:00:00'
+     condition: and
+     conditions:
+       - condition: state
+         entity_id: media_player.entertainment_area
+         state: 'off'
+       - condition: time
+         after: '00:00:00'
+         before: '18:00:00'
    action:
      - service: script.turn_on
        entity_id: script.living_light_off
 
- - alias: Turn off living light 1 hour after last movement
+ - alias: Turn off living light 30 min motion
    trigger:
      - platform: state
        entity_id: switch.motion_kaku_living
@@ -100,12 +67,14 @@
        for:
          minutes: 30
    condition:
-     - condition: state
-       entity_id: media_player.entertainment_area
-       state: 'off'
-     - condition: time
-       after: '18:00:00'
-       before: '00:00:00'
+     condition: and
+     conditions:
+       - condition: state
+         entity_id: media_player.entertainment_area
+         state: 'off'
+       - condition: time
+         after: '18:00:00'
+         before: '00:00:00'
    action:
      - service: script.turn_on
        entity_id: script.living_light_off
