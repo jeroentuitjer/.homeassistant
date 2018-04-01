@@ -7,9 +7,11 @@
     view: yes
     entities:
       - group.living_light_group
+      - group.living_automation_group
       - group.hallway_light_group
       - group.toilet_light_group
       - group.keuken_light_group
+      - group.keuken_automation_group
       - group.badkamer_light_group
       - group.waskamer_light_group
 

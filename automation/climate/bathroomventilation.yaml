@@ -4,6 +4,9 @@
 
 - alias: Ventilator en spiegelverwarming aan
   trigger:
+    - platform: state
+      entity_id: light.badkamer_jeroen
+      to: 'on'
     - platform: template
       value_template: >-
         {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "wet") -%}
@@ -15,6 +18,15 @@
 
 - alias: Ventilator en spiegelverwarming uit
   trigger:
+    - platform: state
+      entity_id: light.badkamer_jeroen
+      to: 'off'
+    - platform: template
+      value_template: >-
+        {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "comfort") -%}
+          true
+        {%- endif -%}
+  condition:
     - platform: template
       value_template: >-
         {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "comfort") -%}

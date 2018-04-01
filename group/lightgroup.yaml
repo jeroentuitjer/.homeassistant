@@ -11,6 +11,14 @@ living_light_group:
     - light.eettafel_raam
     - light.cornerlight
 
+living_automation_group:
+  name: Woonkamer
+  entities:
+    - automation.turn_on_living_light_motion
+    - automation.turn_off_living_light_15_min_motion
+    - automation.turn_off_living_light_30_min_motion
+    - automation.entertainment_area_playing_video
+
 hallway_light_group:
   name: Gang
   entities:
@@ -31,6 +39,11 @@ keuken_light_group:
   name: Keuken
   entities:
     - light.keuken
+
+keuken_automation_group:
+  name: Keuken
+  entities:
+    - automation.kitchen_playing_netflix_motion_sensor
 
 waskamer_light_group:
   name: Waskamer

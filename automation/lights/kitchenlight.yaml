@@ -2,7 +2,7 @@
 ## Automation Hue Kitchen
 #################################################################
 
-- alias: Entertainment area playing netflix motion sensor
+- alias: Kitchen playing netflix motion sensor
   trigger:
     - platform: state
       entity_id: 'light.keuken'
