@@ -14,8 +14,6 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_on_standard
-     - service: script.turn_on
-       entity_id: script.living_light_on_corner
 
 
  - alias: Turn off living light 15 min motion
