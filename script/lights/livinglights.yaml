@@ -35,7 +35,7 @@ living_light_netflix_paused:
     - service: hue.hue_activate_scene
       data:
         group_name: "Woonkamer"
-        scene_name: "Relax"
+        scene_name: "Savanne"
     - service: hue.hue_activate_scene
       data:
         group_name: "Keuken"
