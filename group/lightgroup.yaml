@@ -18,6 +18,8 @@ living_automation_group:
     - automation.turn_off_living_light_15_min_motion
     - automation.turn_off_living_light_30_min_motion
     - automation.entertainment_area_playing_video
+    - automation.entertainment_area_off
+    - automation.entertainment_area_paused
 
 hallway_light_group:
   name: Gang
