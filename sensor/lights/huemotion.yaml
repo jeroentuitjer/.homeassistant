@@ -26,7 +26,7 @@
   scan_interval: 2
   name: 'Livingroom Motion'
 
-  - platform: rest
+- platform: rest
   resource: !secret bathroom_motion_url
   value_template: '{{ value_json.state.status }}'
   scan_interval: 2
