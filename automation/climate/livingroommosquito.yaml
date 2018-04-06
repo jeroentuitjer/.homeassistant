@@ -5,15 +5,15 @@
 - alias: Mosquito bedroom on
   trigger:
     - platform: time
-      at: '22:00:00'
+      at: '17:00:00'
   action:
     - service: homeassistant.turn_on
-      entity_id: switch.overig_pw
+      entity_id: switch.kerstboom_pw
 
 - alias: BedMosquito bedroom off
   trigger:
     - platform: time
-      at: '07:00:00'
+      at: '00:00:00'
   action:
     - service: homeassistant.turn_off
-      entity_id: switch.overig_pw
+      entity_id: switch.kerstboom_pw
