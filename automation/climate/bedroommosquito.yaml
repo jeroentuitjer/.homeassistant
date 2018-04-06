@@ -2,7 +2,7 @@
 ## Automations Bedroom
 #################################################################
 
-- alias: Mosquito bedroom on
+- alias: Mosquito livingroom on
   trigger:
     - platform: time
       at: '22:00:00'
@@ -10,7 +10,7 @@
     - service: homeassistant.turn_on
       entity_id: switch.overig_pw
 
-- alias: BedMosquito bedroom off
+- alias: Mosquito livingroom off
   trigger:
     - platform: time
       at: '07:00:00'
