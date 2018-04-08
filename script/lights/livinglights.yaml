@@ -14,7 +14,7 @@ living_light_on_standard:
     - service: hue.hue_activate_scene
       data:
         group_name: "Woonkamer"
-        scene_name: "Savanne"
+        scene_name: "Ontspannen"
 
 living_light_on_corner:
   sequence:
@@ -30,12 +30,19 @@ living_light_netflix:
     - service: homeassistant.turn_on
       entity_id: scene.living_red
 
+kitchen_netflix:
+  sequence:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Keuken"
+        scene_name: "Netflix"
+
 living_light_netflix_paused:
   sequence:
     - service: hue.hue_activate_scene
       data:
         group_name: "Woonkamer"
-        scene_name: "Savanne"
+        scene_name: "Ontspannen"
     - service: hue.hue_activate_scene
       data:
         group_name: "Keuken"

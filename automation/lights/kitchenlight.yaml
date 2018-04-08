@@ -48,4 +48,4 @@
               {%- endif -%}
   action:
     service: homeassistant.turn_on
-    entity_id: scene.kitchen_netflix
+    entity_id: script.kitchen_netflix
