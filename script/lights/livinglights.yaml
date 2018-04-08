@@ -14,7 +14,7 @@ living_light_on_standard:
     - service: hue.hue_activate_scene
       data:
         group_name: "Woonkamer"
-        scene_name: "Ontspannen"
+        scene_name: "Ontspannenplus"
 
 living_light_on_corner:
   sequence:
@@ -42,10 +42,10 @@ living_light_netflix_paused:
     - service: hue.hue_activate_scene
       data:
         group_name: "Woonkamer"
-        scene_name: "Ontspannen"
+        scene_name: "Ontspannenplus"
     - service: hue.hue_activate_scene
       data:
         group_name: "Keuken"
-        scene_name: "Ontspannen"
+        scene_name: "Ontspannenplus"
     - service: homeassistant.turn_on
       entity_id: scene.living_green
