@@ -10,7 +10,7 @@
           true
         {%- endif -%}
     - platform: state
-      entity_id: light.badkamer_jeroen
+      entity_id: group.badkamer_light_group
       to: 'on'
   action:
     - service: homeassistant.turn_on
@@ -24,7 +24,7 @@
           true
         {%- endif -%}
     - platform: state
-      entity_id: light.badkamer_jeroen
+      entity_id: group.badkamer_light_group
       to: 'off'
   condition:
     - platform: template
