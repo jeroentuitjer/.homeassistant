@@ -9,7 +9,7 @@
         {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "wet") -%}
           true
         {%- endif -%}
-    - platform: state
+    - platform: event
       entity_id: light.badkamer_jeroen
       to: 'on'
   action:
@@ -23,7 +23,7 @@
         {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "comfort") -%}
           true
         {%- endif -%}
-    - platform: state
+    - platform: event
       entity_id: light.badkamer_jeroen
       to: 'off'
   condition:
