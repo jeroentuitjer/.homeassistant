@@ -20,12 +20,6 @@
         {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "comfort") -%}
           true
         {%- endif -%}
-  condition:
-    - platform: template
-      value_template: >-
-        {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "comfort") -%}
-          true
-        {%- endif -%}
   action:
     - service: homeassistant.turn_off
       entity_id: switch.douche_ventilatie
