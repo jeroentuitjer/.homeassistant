@@ -38,3 +38,15 @@
     - temperature
     - conductivity
     - battery
+
+- platform: miflora
+  mac: 'C4:7C:8D:65:D2:F2'
+  name: Musa Banana
+  force_update: true
+  median: 3
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery
