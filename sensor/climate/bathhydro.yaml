@@ -12,7 +12,6 @@
         - Temperature
         - Sensor Status
 
-
 - platform: statistics
   name: Humidity_stats
   entity_id: sensor.bathhydro_humidity
