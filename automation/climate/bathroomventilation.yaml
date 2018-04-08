@@ -11,7 +11,6 @@
         {%- endif -%}
     - platform: state
       entity_id: light.badkamer_jeroen
-      from: 'off'
       to: 'on'
   action:
     - service: homeassistant.turn_on
@@ -26,7 +25,6 @@
         {%- endif -%}
     - platform: state
       entity_id: light.badkamer_jeroen
-      from: 'on'
       to: 'off'
   condition:
     - platform: template
