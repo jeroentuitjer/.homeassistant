@@ -26,3 +26,15 @@
     - temperature
     - conductivity
     - battery
+
+- platform: miflora
+  mac: 'B8:78:2E:34:47:BC'
+  name: Yukka Eliphantipes
+  force_update: true
+  median: 3
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery
