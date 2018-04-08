@@ -28,7 +28,7 @@
     - battery
 
 - platform: miflora
-  mac: 'B8:78:2E:34:47:BC'
+  mac: 'C4:7C:8D:65:D2:7D'
   name: Yukka Eliphantipes
   force_update: true
   median: 3
@@ -42,6 +42,54 @@
 - platform: miflora
   mac: 'C4:7C:8D:65:D2:F2'
   name: Musa Banana
+  force_update: true
+  median: 3
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery
+
+- platform: miflora
+  mac: 'C4:7C:8D:65:D2:F7'
+  name: Ficus Elastica
+  force_update: true
+  median: 3
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery
+
+- platform: miflora
+  mac: 'C4:7C:8D:65:D2:21'
+  name: Aeschynanthus
+  force_update: true
+  median: 3
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery
+
+- platform: miflora
+  mac: 'C4:7C:8D:65:D2:F3'
+  name: Croton
+  force_update: true
+  median: 3
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery
+
+- platform: miflora
+  mac: 'C4:C1:B4:87:62:75'
+  name: Ficus Benjamina
   force_update: true
   median: 3
   monitored_conditions:

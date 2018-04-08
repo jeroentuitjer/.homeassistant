@@ -8,7 +8,11 @@ living_plants_group:
     - sensor.polyscias_fruticosa_moisture
     - sensor.dieffenbachia_moisture
     - sensor.yukka_eliphantipes_moisture
-    - sensor.musa_banana
+    - sensor.musa_banana_moisture
+    - sensor.ficus_elastica_moisture
+    - sensor.aeschynanthus_moisture
+    - sensor.croton_moisture
+    - sensor.ficus_benjamina_moisture
 
 bathroom_humidity_group:
   name: Badkamer Vochtigheid
