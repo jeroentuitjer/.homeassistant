@@ -111,12 +111,12 @@ telegram_bot:
   - platform: polling
     api_key: !secret telegrambot
     allowed_chat_ids:
-      - CHAT_ID_1
+      - Plantneedsbot
 
 notify:
   - name: Plant_Notifications
     platform: telegram
-    chat_id: CHAT_ID_1
+    chat_id: jrntjr
 
 group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
