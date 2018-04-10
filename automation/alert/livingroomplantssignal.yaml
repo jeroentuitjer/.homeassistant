@@ -8,5 +8,7 @@
        entity_id: sensor.polyscias_fruticosa_moisture
        below: 15
    action:
-     - service: script.turn_on
-       entity_id: script.living_cornerlight_plantssignalon
+     service: notify.Plant_Notifications
+     data:
+       title: "Water alsjeblieft!"
+       message: "Ik ben hier langzaam dood aan het gaan!"

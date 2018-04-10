@@ -107,6 +107,24 @@ switch:
     0b1100030155861a02010f70:
       name: Douche_Ventilatie
 
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegrambot
+    allowed_chat_ids:
+      - Polyscias_Fruticosa
+      - Dieffenbachia
+      - Yukka_Eliphantipes
+      - Musa_Banana
+      - Ficus_Elastica
+      - Aeschynanthus
+      - Croton
+      - Ficus_Benjamina
+
+notify:
+  - name: Plant_Notifications
+    platform: telegram
+    chat_id: Polyscias_Fruticosa
+
 group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
 automation: !include_dir_merge_list automation/
