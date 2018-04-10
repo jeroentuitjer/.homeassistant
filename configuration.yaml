@@ -111,19 +111,12 @@ telegram_bot:
   - platform: polling
     api_key: !secret telegrambot
     allowed_chat_ids:
-      - Polyscias_Fruticosa
-      - Dieffenbachia
-      - Yukka_Eliphantipes
-      - Musa_Banana
-      - Ficus_Elastica
-      - Aeschynanthus
-      - Croton
-      - Ficus_Benjamina
+      - CHAT_ID_1
 
 notify:
   - name: Plant_Notifications
     platform: telegram
-    chat_id: Polyscias_Fruticosa
+    chat_id: CHAT_ID_1
 
 group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
