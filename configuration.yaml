@@ -115,6 +115,14 @@ telegram_bot:
       - !secret chatidtobias
       - !secret chatidplants
 
+notify:
+  - name: Plant_Notifications_Jeroen
+    platform: telegram
+    chat_id: !secret chatidjrntjr
+  - name: Plant_Notifications_Tobias
+    platform: telegram
+    chat_id: !secret chatidtobias
+
 group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
 automation: !include_dir_merge_list automation/
