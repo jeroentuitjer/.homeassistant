@@ -1,0 +1,12 @@
+################################################################
+## Notification Plants
+#################################################################
+
+notifify:
+  - name: Plant_Notifications_Jeroen
+    platform: telegram
+    chat_id: !secret chatidjrntjr
+
+  - name: Plant_Notifications_Tobias
+    platform: telegram
+    chat_id: !secret chatidtobias

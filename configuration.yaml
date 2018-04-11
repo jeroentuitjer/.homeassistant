@@ -112,15 +112,12 @@ telegram_bot:
     api_key: !secret telegrambot
     allowed_chat_ids:
       - !secret chatidjrntjr
+      - !secret chatidtobias
       - !secret chatidplants
-
-notify:
-  - name: Plant_Notifications
-    platform: telegram
-    chat_id: 518842578
 
 group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
 automation: !include_dir_merge_list automation/
 scene: !include_dir_merge_list scene/
 script: !include_dir_merge_named script/
+notify: !include_dir_merge_named notify/

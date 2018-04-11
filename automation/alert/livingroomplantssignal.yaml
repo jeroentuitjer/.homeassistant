@@ -2,13 +2,25 @@
 ## Automations Living Plants Signal
 #################################################################
 
- - alias: Plants Need Water Signal On
+ - alias: Polyscias Fruticosa Needs Water
    trigger:
      - platform: numeric_state
        entity_id: sensor.polyscias_fruticosa_moisture
        below: 15
    action:
-     service: notify.Plant_Notifications
-     data:
-       title: "Water alsjeblieft!"
-       message: "Ik ben hier langzaam dood aan het gaan!"
+     - service: notify.Plant_Notifications_Jeroen
+       data:
+         title: "Polyscias Fruticosa :("
+         message: "Hi! Zou je me weer water willen geven?"
+           data:
+             photo:
+               - url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
+                 caption: Dit ben ik!
+     - service: notify.Plant_Notifications_Tobias
+       data:
+         title: "Polyscias Fruticosa :("
+         message: "Hi! Zou je me weer water willen geven?"
+           data:
+             photo:
+               - url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
+                 caption: Dit ben ik!
