@@ -119,6 +119,7 @@ notify:
   - name: Plant_Notifications_Jeroen
     platform: telegram
     chat_id: !secret chatidjrntjr
+
   - name: Plant_Notifications_Tobias
     platform: telegram
     chat_id: !secret chatidtobias
@@ -128,4 +129,3 @@ sensor: !include_dir_merge_list sensor/
 automation: !include_dir_merge_list automation/
 scene: !include_dir_merge_list scene/
 script: !include_dir_merge_named script/
-notify: !include_dir_merge_named notify/
