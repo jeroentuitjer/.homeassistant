@@ -12,15 +12,15 @@
        data:
          title: "Polyscias Fruticosa :("
          message: "Hi! Zou je me weer water willen geven?"
-           data:
-             photo:
-               - url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
-                 caption: Dit ben ik!
+         data:
+           photo:
+             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
+             caption: Dit ben ik!
      - service: notify.Plant_Notifications_Tobias
        data:
          title: "Polyscias Fruticosa :("
          message: "Hi! Zou je me weer water willen geven?"
-           data:
-             photo:
-               - url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
-                 caption: Dit ben ik!
+         data:
+           photo:
+             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
+             caption: Dit ben ik!
