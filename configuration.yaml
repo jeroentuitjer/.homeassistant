@@ -109,7 +109,13 @@ switch:
 
 telegram_bot:
   - platform: broadcast
-    api_key: !secret telegrambot
+    api_key: !secret telegrambotjeroen
+    allowed_chat_ids:
+      - !secret chatidjrntjr
+      - !secret chatidtobias
+      - !secret chatidplants
+  - platform: broadcast
+    api_key: !secret telegrambottobias
     allowed_chat_ids:
       - !secret chatidjrntjr
       - !secret chatidtobias
@@ -119,7 +125,6 @@ notify:
   - name: Plant_Notifications_Jeroen
     platform: telegram
     chat_id: !secret chatidjrntjr
-
   - name: Plant_Notifications_Tobias
     platform: telegram
     chat_id: !secret chatidtobias
