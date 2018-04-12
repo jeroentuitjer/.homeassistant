@@ -112,12 +112,10 @@ telegram_bot:
     api_key: !secret telegrambotjeroen
     allowed_chat_ids:
       - !secret chatidjrntjr
-      - !secret chatidtobias
       - !secret chatidplants
   - platform: broadcast
     api_key: !secret telegrambottobias
     allowed_chat_ids:
-      - !secret chatidjrntjr
       - !secret chatidtobias
       - !secret chatidplants
 
