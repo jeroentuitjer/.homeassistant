@@ -108,7 +108,7 @@ switch:
       name: Douche_Ventilatie
 
 telegram_bot:
-  - platform: polling
+  - platform: broadcast
     api_key: !secret telegrambot
     allowed_chat_ids:
       - !secret chatidjrntjr
