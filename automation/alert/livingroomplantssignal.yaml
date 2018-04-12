@@ -15,7 +15,7 @@
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
-             caption: "Dit ben ik!"
+             caption: "Hi! Zou je me weer water willen geven?"
      - service: notify.Plant_Notifications_Tobias
        data:
          title: "Polyscias Fruticosa :("
@@ -23,7 +23,7 @@
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
-             caption: "Dit ben ik!"
+             caption: "Hi! Zou je me weer water willen geven?"
 
  - alias: Dieffenbachia Needs Water
    trigger:
