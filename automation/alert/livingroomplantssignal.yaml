@@ -10,20 +10,14 @@
    action:
      - service: notify.Plant_Notifications_Jeroen
        data:
-         title: "Polyscias Fruticosa :("
-         message: "Hi! Zou je me weer water willen geven?"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
-             caption: Dit ben ik!
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
+           caption: Hi! Zou je me weer water willen geven?
      - service: notify.Plant_Notifications_Tobias
        data:
-         title: "Polyscias Fruticosa :("
-         message: "Hi! Zou je me weer water willen geven?"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
-             caption: Dit ben ik!
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
+           caption: Hi! Zou je me weer water willen geven?
 
  - alias: Dieffenbachia Needs Water
    trigger:
@@ -33,20 +27,14 @@
    action:
      - service: notify.Plant_Notifications_Jeroen
        data:
-         title: "Dieffenbachia"
-         message: "Hey! Ik ben al zo kaal. Kan je me water geven?"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Dieffenbachia_Maculata.jpg.jpg
-             caption: Selfie!
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Dieffenbachia_Maculata.jpg.jpg
+           caption: Hey! Ik ben al zo kaal. Kan je me water geven?
      - service: notify.Plant_Notifications_Tobias
        data:
-         title: "Dieffenbachia"
-         message: "Hey! Ik ben al zo kaal. Kan je me water geven?"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Dieffenbachia_Maculata.jpg.jpg
-             caption: Selfie!
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Dieffenbachia_Maculata.jpg.jpg
+           caption: Hey! Ik ben al zo kaal. Kan je me water geven?
 
  - alias: Yukka Eliphantipes Needs Water
    trigger:
@@ -56,20 +44,14 @@
    action:
      - service: notify.Plant_Notifications_Jeroen
        data:
-         title: "Yukka Eliphantipes"
-         message: "Yu*ch! Yu*ch! Mag ik wat water?"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Yukka_Elephantipes.jpg
-             caption: Yukkaaa!
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Yukka_Elephantipes.jpg
+           caption: Yu*ch! Yu*ch! Mag ik wat water?
      - service: notify.Plant_Notifications_Tobias
        data:
-         title: "Yukka Eliphantipes"
-         message: "Yu*ch! Yu*ch! Mag ik wat water?"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Yukka_Elephantipes.jpg
-             caption: Yukkaaa!
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Yukka_Elephantipes.jpg
+           caption: Yu*ch! Yu*ch! Mag ik wat water?
 
  - alias: Musa Banana Needs Water
    trigger:
@@ -79,20 +61,14 @@
    action:
      - service: notify.Plant_Notifications_Jeroen
        data:
-         title: "Musa Banana"
-         message: "Jeroen.. Wil jij me wat water geven.. Ik ben bang :("
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Musa_Banana.jpg
-             caption: Sad Banana
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Musa_Banana.jpg
+           caption: Jeroen.. Wil jij me wat water geven.. Ik ben bang :(
      - service: notify.Plant_Notifications_Tobias
        data:
-         title: "Musa Banana"
-         message: "Tobias.. Wil jij me wat water geven.. Ik ben bang :("
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Musa_Banana.jpg
-             caption: Sad Banana
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Musa_Banana.jpg
+           caption: Tobias.. Wil jij me wat water geven.. Ik ben bang :(
 
  - alias: Ficus Elastica Needs Water
    trigger:
@@ -102,20 +78,14 @@
    action:
      - service: notify.Plant_Notifications_Jeroen
        data:
-         title: "Ficus Elastica"
-         message: "De rek is er nu wel uit! Mag ik weer wat water?"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Ficus_Elastica.jpg
-             caption: Elastica Fit
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Ficus_Elastica.jpg
+           caption: De rek is er nu wel uit! Mag ik weer wat water? - Ficus Elastica
      - service: notify.Plant_Notifications_Tobias
        data:
-         title: "Ficus Elastica"
-         message: "De rek is er nu wel uit! Mag ik weer wat water?"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Ficus_Elastica.jpg
-             caption: Elastica Fit
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Ficus_Elastica.jpg
+           caption: De rek is er nu wel uit! Mag ik weer wat water? - Ficus Elastica
 
  - alias: Aeschynanthus Needs Water
    trigger:
@@ -125,20 +95,14 @@
    action:
      - service: notify.Plant_Notifications_Jeroen
        data:
-         title: "Aeschynanthus"
-         message: "loopt een kip tegen de muur..TOK! Misschien moet je me wat water geven"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Codiaeum_Variegatum.jpg
-             caption: Droge humor
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Codiaeum_Variegatum.jpg
+           caption: Droge humor - loopt een kip tegen de muur..TOK! Misschien moet je me wat water geven
      - service: notify.Plant_Notifications_Tobias
        data:
-         title: "Aeschynanthus"
-         message: "loopt een kip tegen de muur..TOK! Misschien moet je me wat water geven"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Codiaeum_Variegatum.jpg
-             caption: Droge humor
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Codiaeum_Variegatum.jpg
+           caption: Droge humor - loopt een kip tegen de muur..TOK! Misschien moet je me wat water geven
 
  - alias: Croton Needs Water
    trigger:
@@ -148,17 +112,11 @@
    action:
      - service: notify.Plant_Notifications_Jeroen
        data:
-         title: "Croton"
-         message: "Crotons houden eigenlijk wel van droogte. Maar iets natter mag wel hoor"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Croton.jpg
-             caption: Soort Cactus
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Croton.jpg
+           caption: Crotons houden eigenlijk wel van droogte. Maar iets natter mag wel hoor
      - service: notify.Plant_Notifications_Tobias
        data:
-         title: "Croton"
-         message: "Crotons houden eigenlijk wel van droogte. Maar iets natter mag wel hoor"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Croton.jpg
-             caption: Soort Cactus
+         photo:
+           url: http://www.tuitjer.net/wp-content/uploads/2018/04/Croton.jpg
+           caption: Crotons houden eigenlijk wel van droogte. Maar iets natter mag wel hoor
