@@ -45,7 +45,7 @@
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Yukka_Elephantipes.jpg
-             caption: "Yukkaaa!"
+             caption: "Yu*ch! Yu*ch! Mag ik wat water?"
 
  - alias: Musa Banana Needs Water
    trigger:
@@ -56,11 +56,11 @@
      - service: notify.Plant_Notifications_Barentszstraat
        data:
          title: "Musa Banana"
-         message: "Jeroen.. Wil jij me wat water geven.. Ik ben bang :("
+         message: ""
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Musa_Banana.jpg
-             caption: "Sad Banana"
+             caption: "Tobias.. Wil jij me wat water geven.. :("
 
  - alias: Ficus Elastica Needs Water
    trigger:
@@ -90,7 +90,7 @@
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Codiaeum_Variegatum.jpg
-             caption: "Droge humor"
+             caption: "loopt een kip tegen de muur..TOK! Misschien moet je me wat water geven, de humor wordt aardig droog."
 
  - alias: Croton Needs Water
    trigger:
@@ -105,4 +105,4 @@
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Croton.jpg
-             caption: "Soort Cactus"
+             caption: "Crotons houden eigenlijk wel van droogte. Maar iets natter mag wel hoor"
