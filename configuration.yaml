@@ -111,21 +111,13 @@ telegram_bot:
   - platform: broadcast
     api_key: !secret telegrambotjeroen
     allowed_chat_ids:
-      - !secret chatidjrntjr
+      - !secret chatidbarentszstraat
       - !secret chatidplantsjeroen
-  - platform: broadcast
-    api_key: !secret telegrambottobias
-    allowed_chat_ids:
-      - !secret chatidtobias
-      - !secret chatidplantstobias
 
 notify:
-  - name: Plant_Notifications_Jeroen
+  - name: Plant_Notifications_Barentszstraat
     platform: telegram
-    chat_id: !secret chatidjrntjr
-  - name: Plant_Notifications_Tobias
-    platform: telegram
-    chat_id: !secret chatidtobias
+    chat_id: !secret chatidbarentszstraat
 
 group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
