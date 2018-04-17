@@ -20,7 +20,7 @@
    trigger:
      - platform: state
        entity_id: switch.motion_toilet
-       to: 'on'
+       to: 'off'
    action:
      - service: homeassistant.turn_off
        entity_id: light.toilet
