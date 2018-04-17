@@ -6,5 +6,3 @@
   devices:
     0b1100b5008b25e202000050:
       name: Toilet Motion
-      data_type:
-        - Sensor Status
