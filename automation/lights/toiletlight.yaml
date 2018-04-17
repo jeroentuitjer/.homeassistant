@@ -2,7 +2,7 @@
 ## Automations Toilet Light
 #################################################################
 
- - alias: Turn off Toilet light motion
+ - alias: Turn on Toilet light motion
    trigger:
      - platform: state
        entity_id: switch.motion_toilet
