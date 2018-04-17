@@ -8,10 +8,12 @@
        entity_id: switch.motion_toilet
        to: 'on'
    action:
-     - service: hue.hue_activate_scene
-       data:
-         group_name: "Toilet"
-         scene_name: "Helder"
+     - service: homeassistant.turn_on
+       entity_id: light.toilet
+#     - service: hue.hue_activate_scene
+#       data:
+#         group_name: "Toilet"
+#         scene_name: "Helder"
 
 
  - alias: Turn off Toilet light motion
