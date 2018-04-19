@@ -28,9 +28,9 @@
       to: 'off'
       for:
         minutes: 5
-  condition:
-    condition: template
-    value_template: '{{ is_state_attr("sensor.bathhydro_temperature", "Humidity status", "wet") }}'
+ # condition:
+ #   condition: template
+ #   value_template: '{{ is_state_attr("sensor.bathhydro_temperature", "Humidity status", "wet") }}'
   action:
     - service: homeassistant.turn_off
       entity_id: switch.douche_ventilatie
