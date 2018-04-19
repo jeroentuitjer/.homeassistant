@@ -30,10 +30,10 @@
          minutes: 5
   condition:
     condition: template
-        value_template: >-
-          {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "wet") -%}
-            true
-          {%- endif -%}
+      value_template: >-
+        {%- if is_state_attr("sensor.bathhydro_temperature", "Humidity status", "wet") -%}
+          true
+        {%- endif -%}
   action:
     - service: homeassistant.turn_off
       entity_id: switch.douche_ventilatie
