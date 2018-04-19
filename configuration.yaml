@@ -109,15 +109,6 @@ switch:
 #    0b1100b5008b25e202000050:
 #      name: Motion_Toilet
 
-binary_sensor:
-  platform: rfxtrx
-  devices:
-    0b1100b5008b25e202000050:
-      name: Toilet Motion
-      device_class: motion
-      off_delay:
-        seconds: 5
-
 telegram_bot:
   - platform: broadcast
     api_key: !secret telegrambotjeroen

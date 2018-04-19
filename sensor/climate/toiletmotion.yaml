@@ -2,3 +2,10 @@
 ## Sensors Toilet Motion
 #################################################################
 
+binary_sensor:
+  platform: rfxtrx
+  automatic_add: True
+  devices:
+    0b1100b5008b25e202000050:
+      name: Toilet Motion
+      device_class: motion
