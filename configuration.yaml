@@ -115,6 +115,7 @@ binary_sensor:
   devices:
     0b1100b5008b25e202000050:
       name: Toilet Motion
+      sensor_class: motion
       off_delay:
         seconds: 1
 
