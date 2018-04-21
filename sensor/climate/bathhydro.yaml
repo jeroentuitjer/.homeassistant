@@ -3,7 +3,7 @@
 #################################################################
 
 - platform: rfxtrx
-#  automatic_add: True
+  automatic_add: True
   devices:
     0a520701720e00ba390159:
       name: BathHydro
