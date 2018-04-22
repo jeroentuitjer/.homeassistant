@@ -118,7 +118,6 @@ binary_sensor:
       device_class: motion
       off_delay:
         seconds: 5
-  devices:
     0a14020107edfe01030070:
       name: Bathroom Motion
       device_class: motion
