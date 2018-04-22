@@ -30,7 +30,7 @@
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Dieffenbachia_Maculata.jpg.jpg
-             caption: "Selfie!"
+             caption: "Hey! Ik ben al zo kaal. Kan je me water geven?"
 
  - alias: Yukka Eliphantipes Needs Water
    trigger:
@@ -75,7 +75,7 @@
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Ficus_Elastica.jpg
-             caption: "Elastica Fit"
+             caption: "De rek is er nu wel uit! Mag ik weer wat water?"
 
  - alias: Aeschynanthus Needs Water
    trigger:
