@@ -5,7 +5,7 @@
 - platform: miflora
   mac: 'C4:7C:8D:66:1F:BE'
   name: Polyscias Fruticosa
-#  force_update: true
+  force_update: true
   median: 3
   monitored_conditions:
     - moisture
@@ -17,7 +17,7 @@
 - platform: miflora
   mac: 'C4:7C:8D:65:D2:FC'
   name: Dieffenbachia
-#  force_update: true
+  force_update: true
   median: 3
   monitored_conditions:
     - moisture
@@ -29,7 +29,7 @@
 - platform: miflora
   mac: 'C4:7C:8D:65:D2:7D'
   name: Yukka Eliphantipes
-#  force_update: true
+  force_update: true
   median: 3
   monitored_conditions:
     - moisture
@@ -41,7 +41,7 @@
 - platform: miflora
   mac: 'C4:7C:8D:65:D2:F2'
   name: Musa Banana
-#  force_update: true
+  force_update: true
   median: 3
   monitored_conditions:
     - moisture
@@ -53,7 +53,7 @@
 - platform: miflora
   mac: 'C4:7C:8D:65:D2:F7'
   name: Ficus Elastica
-#  force_update: true
+  force_update: true
   median: 3
   monitored_conditions:
     - moisture
@@ -65,7 +65,7 @@
 - platform: miflora
   mac: 'C4:7C:8D:65:D2:21'
   name: Aeschynanthus
-#  force_update: true
+  force_update: true
   median: 3
   monitored_conditions:
     - moisture
@@ -77,7 +77,7 @@
 - platform: miflora
   mac: 'C4:7C:8D:65:D2:F3'
   name: Croton
-#  force_update: true
+  force_update: true
   median: 3
   monitored_conditions:
     - moisture
