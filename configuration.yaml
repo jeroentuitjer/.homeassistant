@@ -44,17 +44,17 @@ discovery:
 history:
 recorder:
 
-#device_tracker:
-#  - platform: bluetooth_tracker
-#    name: Jeroen
-#    mac: !secret mac_jeroen
-#    interval_seconds: 10
-#    consider_home: 180
-#  - platform: bluetooth_tracker
-#    name: Tobias
-#    mac: !secret mac_tobias
-#    interval_seconds: 10
-#    consider_home: 180
+device_tracker:
+  - platform: bluetooth_tracker
+    name: Jeroen
+    mac: !secret mac_jeroen
+    interval_seconds: 10
+    consider_home: 180
+  - platform: bluetooth_tracker
+    name: Tobias
+    mac: !secret mac_tobias
+    interval_seconds: 10
+    consider_home: 180
 
 # View all events in a logbook
 logbook:
