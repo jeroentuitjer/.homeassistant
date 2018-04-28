@@ -6,8 +6,8 @@
 - name: Living Corneroff
   entities:
     light.cornerlight:
-      state: on
-      rgb_color: [0, 0, 0, 0]
+      state: off
+      rgb_color: [0, 0, 0]
       color_temp: 154
 
 - name: Living Corner Activated
