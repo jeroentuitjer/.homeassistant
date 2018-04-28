@@ -7,7 +7,7 @@
   entities:
     light.cornerlight:
       state: on
- #     rgb_color: [0, 0, 0]
+      rgb_color: [0, 0, 0, 0]
       color_temp: 154
 
 - name: Living Corner Activated
