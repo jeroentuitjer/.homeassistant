@@ -92,7 +92,7 @@ light:
     devices: 
       10.0.1.4:
         name: cornerlight
-        protocol: 'ledenet’
+        protocol: "ledenet"
         mode: "rgb"
 
 switch:
