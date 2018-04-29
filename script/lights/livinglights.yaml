@@ -37,7 +37,7 @@ kitchen_netflix:
     - service: hue.hue_activate_scene
       data:
         group_name: "Keuken"
-        scene_name: "Netflixtv"
+        scene_name: "filmscene"
 
 living_light_netflix_paused:
   sequence:
