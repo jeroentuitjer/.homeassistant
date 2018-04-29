@@ -34,10 +34,8 @@ living_light_netflix:
 
 kitchen_netflix:
   sequence:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: "Keuken"
-        scene_name: "filmscene"
+    - service: homeassistant.turn_on
+      entity_id: scene.kitchen_netflix
 
 living_light_netflix_paused:
   sequence:
