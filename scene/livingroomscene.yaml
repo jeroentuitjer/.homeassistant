@@ -8,6 +8,7 @@
     light.cornerlight:
       state: off
       rgb_color: [255, 0, 0]
+      brightness: 0
 
 - name: Living Corner Activated
   entities:
