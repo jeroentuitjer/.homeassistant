@@ -7,9 +7,9 @@
     - platform: numeric_state
       entity_id: 'sensor.bathhydro_humidity'
       above: 70
- #   - platform: state
- #     to: 'on'
- #     entity_id: light.gang_onder_1
+    - platform: state
+      to: 'on'
+      entity_id: light.gang_onder_1
   action:
     - service: homeassistant.turn_on
       entity_id: switch.douche_ventilatie

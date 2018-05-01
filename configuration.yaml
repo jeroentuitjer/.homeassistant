@@ -128,6 +128,14 @@ notify:
     platform: telegram
     chat_id: !secret chatidbarentszstraat
 
+input_number:
+  bathroom_humidity_level:
+    name: Humidity Level
+    initial: 100
+    min: 0
+    max: 100
+    step: 1
+
 group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
 automation: !include_dir_merge_list automation/
