@@ -11,7 +11,7 @@
         {%- endif -%}
     - platform: state
       to: 'on'
-      entity_id: light.badkamer_jeroen
+      entity_id: light.gang_onder_1
   action:
     - service: homeassistant.turn_on
       entity_id: switch.douche_ventilatie
@@ -24,7 +24,7 @@
           true
         {%- endif -%}
     - platform: state
-      entity_id: light.badkamer_jeroen
+      entity_id: light.gang_onder_1
       to: 'off'
 #      for:
 #        minutes: 5
