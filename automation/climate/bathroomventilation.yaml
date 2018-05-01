@@ -22,8 +22,6 @@
     - platform: state
       entity_id: light.gang_onder_1
       to: 'off'
-      for:
-        minutes: 5
   condition:
     - condition: numeric_state
       entity_id: 'sensor.bathhydro_humidity'
