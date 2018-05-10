@@ -6,7 +6,7 @@
   trigger:
     - platform: numeric_state
       entity_id: 'sensor.bathhydro_humidity'
-      above: '{{ states.input_number.bathroom_humidity_level.state | int }}'
+      above: '{{ state.input_number.bathroom_humidity_level | int }}'
     - platform: state
       to: 'on'
       entity_id: light.gang_onder_1
@@ -22,14 +22,14 @@
   trigger:
     - platform: numeric_state
       entity_id: 'sensor.bathhydro_humidity'
-      below: '{{ states.input_number.bathroom_humidity_level.state | int }}'
+      below: '{{ state.input_number.bathroom_humidity_level | int }}'
     - platform: state
       entity_id: light.gang_onder_1
       to: 'off'
   condition:
     - condition: numeric_state
       entity_id: 'sensor.bathhydro_humidity'
-      below: '{{ states.input_number.bathroom_humidity_level.state | int }}'
+      below: '{{ state.input_number.bathroom_humidity_level | int }}'
   action:
     - service: homeassistant.turn_off
       entity_id: switch.douche_ventilatie
