@@ -9,6 +9,7 @@
       from: "on"
       to: "off"
     - platform: state
+      from: "idle"
       to: 'playing'
       entity_id: media_player.entertainment_area
   condition:

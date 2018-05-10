@@ -46,6 +46,6 @@ living_light_netflix_paused:
     - service: hue.hue_activate_scene
       data:
         group_name: "Keuken"
-        scene_name: "Ontspannenplus"
+        scene_name: "Helder"
     - service: homeassistant.turn_on
       entity_id: scene.living_green

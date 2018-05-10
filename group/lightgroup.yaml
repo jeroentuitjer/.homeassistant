@@ -15,8 +15,7 @@ living_automation_group:
   name: Woonkamer
   entities:
     - automation.turn_on_living_light_motion
-    - automation.turn_off_living_light_15_min_motion
-    - automation.turn_off_living_light_30_min_motion
+    - automation.turn_off_living_light_motion
     - automation.entertainment_area_playing_video
     - automation.entertainment_area_off
     - automation.entertainment_area_paused
