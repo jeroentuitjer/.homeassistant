@@ -7,6 +7,7 @@
    trigger:
      - platform: state
        entity_id: media_player.entertainment_area
+       from: 'idle'
        to: 'playing'
    condition:
      condition: and
@@ -52,6 +53,7 @@
    trigger:
      - platform: state
        entity_id: media_player.entertainment_area
+       from: 'playing'
        to: 'paused'
    action:
      - service: script.turn_on
@@ -61,6 +63,11 @@
    trigger:
      - platform: state
        entity_id: media_player.entertainment_area
+       from: 'paused'
+       to: 'off'
+     - platform: state
+       entity_id: media_player.entertainment_area
+       from: 'playing'
        to: 'off'
    action:
      - service: script.turn_on

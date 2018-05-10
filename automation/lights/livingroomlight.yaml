@@ -16,42 +16,19 @@
        entity_id: script.living_light_on_standard
 
 
- - alias: Turn off living light 5 min motion
+ - alias: Turn off living light motion
    trigger:
      - platform: state
        entity_id: switch.motion_kaku_living
        to: 'off'
        for:
-         minutes: 5
+         minutes: 10
    condition:
      condition: and
      conditions:
        - condition: state
          entity_id: media_player.entertainment_area
          state: 'off'
-       - condition: time
-         after: '00:00:00'
-         before: '18:00:00'
-   action:
-     - service: script.turn_on
-       entity_id: script.living_light_off
-
- - alias: Turn off living light 15 min motion
-   trigger:
-     - platform: state
-       entity_id: switch.motion_kaku_living
-       to: 'off'
-       for:
-         minutes: 15
-   condition:
-     condition: and
-     conditions:
-       - condition: state
-         entity_id: media_player.entertainment_area
-         state: 'off'
-       - condition: time
-         after: '18:00:00'
-         before: '00:00:00'
    action:
      - service: script.turn_on
        entity_id: script.living_light_off

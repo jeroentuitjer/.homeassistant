@@ -84,7 +84,6 @@ rfxtrx:
 hue:
   bridges:
     - host: !secret hueip
-      allow_unreachable: true
       allow_hue_groups: true
 
 light:
