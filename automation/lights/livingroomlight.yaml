@@ -15,7 +15,7 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_on_standard
-
+<
 
  - alias: Turn off living light motion
    trigger:
@@ -23,6 +23,8 @@
        entity_id: switch.motion_kaku_living
        from: 'on'
        to: 'off'
+       for:
+         minutes: 10
    condition:
      condition: and
      conditions:
