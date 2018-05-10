@@ -15,7 +15,7 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_on_standard
-<
+
 
  - alias: Turn off living light motion
    trigger:
