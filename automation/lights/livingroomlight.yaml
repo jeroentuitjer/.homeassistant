@@ -6,6 +6,7 @@
    trigger:
      - platform: state
        entity_id: switch.motion_kaku_living
+       from: 'off'
        to: 'on'
    condition:
      - condition: state
@@ -20,9 +21,8 @@
    trigger:
      - platform: state
        entity_id: switch.motion_kaku_living
+       from: 'on'
        to: 'off'
-       for:
-         minutes: 10
    condition:
      condition: and
      conditions:
