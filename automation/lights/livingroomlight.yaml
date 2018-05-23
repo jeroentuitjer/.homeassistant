@@ -8,9 +8,14 @@
        entity_id: switch.motion_kaku_living
        to: 'on'
    condition:
-     - condition: state
-       entity_id: media_player.entertainment_area
-       state: 'off'
+     condition: or
+     conditions:
+       - condition: state
+         entity_id: media_player.entertainment_area
+         state: 'off'
+       - condition: numeric_state
+         entity_id: 'sensor.yukka_eliphantipes_light_intensity'
+         below: 300
    action:
      - service: script.turn_on
        entity_id: script.living_light_on_standard
