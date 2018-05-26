@@ -35,7 +35,7 @@ http:
 updater:
 
 # Discover some devices automatically
-discovery:
+#discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
@@ -95,7 +95,7 @@ light:
 
 switch:
   platform: rfxtrx
-  automatic_add: True
+#  automatic_add: True
   devices:
     0b11000d0129019e0a010f60:
       name: Motion_kaku_living
