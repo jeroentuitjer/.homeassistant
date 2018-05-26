@@ -56,3 +56,4 @@
       state: on
       brightness: 100
       rgb_color: [0, 255, 0]
+      white_value: 255

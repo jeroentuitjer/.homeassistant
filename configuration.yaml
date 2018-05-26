@@ -91,7 +91,7 @@ light:
     devices: 
       10.0.1.4:
         name: cornerlight
-        mode: "rgbw"
+#        mode: "rgbw"
 
 switch:
   platform: rfxtrx
