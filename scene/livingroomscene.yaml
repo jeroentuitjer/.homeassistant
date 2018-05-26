@@ -32,7 +32,7 @@
   entities:
     light.cornerlight:
       state: on
-      brightness: 70
+      brightness: 80
       rgb_color: [255, 0, 0]
 
 - name: Battery Empty
@@ -44,6 +44,7 @@
 - name: Living Netflix Off
   entities:
     light.cornerlight:
+      brightness: 100
       state: on
       rgb_color: [128, 255, 0]
 
