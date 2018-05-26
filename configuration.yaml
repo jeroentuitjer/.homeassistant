@@ -107,13 +107,6 @@ switch:
       name: Samsung_PW
     0b1100030155861a02010f70:
       name: Douche_Ventilatie
-    0b1100b5008b25e202000050:
-      name: Motion_Toilet
-
-#binary_sensor:
-#  platform: rfxtrx
-#  automatic_add: True
-
 
 telegram_bot:
   - platform: broadcast
