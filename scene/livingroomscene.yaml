@@ -19,6 +19,7 @@
   entities:
     light.cornerlight:
       state: on
+      brightness: 100
       rgb_color: [0, 0, 255]
 
 - name: Living Corner Plants Signal Off
@@ -31,6 +32,7 @@
   entities:
     light.cornerlight:
       state: on
+      brightness: 70
       rgb_color: [255, 0, 0]
 
 - name: Battery Empty
@@ -49,4 +51,5 @@
   entities:
     light.cornerlight:
       state: on
+      brightness: 100
       rgb_color: [0, 255, 0]
