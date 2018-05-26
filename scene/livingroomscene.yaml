@@ -7,7 +7,7 @@
   entities:
     light.cornerlight:
       state: on
-      brightness: 1
+      brightness: 0
       white_value: 0
 
 - name: Living Corner Activated
@@ -36,6 +36,7 @@
       state: on
       brightness: 80
       rgb_color: [255, 0, 0]
+      white_value: 0
 
 - name: Battery Empty
   entities:
@@ -54,6 +55,6 @@
   entities:
     light.cornerlight:
       state: on
-      brightness: 100
+      brightness: 250
       rgb_color: [0, 255, 0]
-      white_value: 255
+      white_value: 0
