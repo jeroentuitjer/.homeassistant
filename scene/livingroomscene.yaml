@@ -56,5 +56,5 @@
     light.cornerlight:
       state: on
       brightness: 250
-      rgb_color: [0, 255, 0]
       white_value: 0
+      rgb_color: [0, 255, 0]
