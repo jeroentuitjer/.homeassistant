@@ -13,8 +13,8 @@
 - name: Living Corneroff
   entities:
     light.cornerlight:
-      state: off
-      rgb_color: [0, 0, 255]
+      state: on
+ #     rgb_color: [0, 0, 255]
       brightness: 0
       white_value: 0
 
