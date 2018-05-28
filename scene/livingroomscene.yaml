@@ -2,6 +2,13 @@
 ## Scenes Hue Living
 #################################################################
 
+- name: Living Green
+  entities:
+    light.cornerlight:
+      state: on
+      brightness: 100
+      white_value: 0
+      rgb_color: [0, 255, 0]
 
 - name: Living Corneroff
   entities:
@@ -9,12 +16,7 @@
       state: on
       brightness: 0
       white_value: 0
-
-- name: Living Corner Activated
-  entities:
-    light.cornerlight:
-      state: on
-      effect: red_fade
+      rgb_color: [0, 0, 255]
 
 - name: Living Corner Plants Signal On
   entities:
@@ -34,7 +36,7 @@
   entities:
     light.cornerlight:
       state: on
-      brightness: 80
+      brightness: 100
       rgb_color: [255, 0, 0]
       white_value: 0
 
@@ -50,11 +52,3 @@
       brightness: 100
       state: on
       rgb_color: [128, 255, 0]
-
-- name: Living Green
-  entities:
-    light.cornerlight:
-      state: on
-      brightness: 250
-      white_value: 0
-      rgb_color: [0, 255, 0]
