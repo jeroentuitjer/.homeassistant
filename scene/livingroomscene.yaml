@@ -7,7 +7,7 @@
     light.cornerlight:
       state: on
       rgb_color: [0, 255, 0]
-      brightness_pct: 100
+      brightness_pct: 95
       white_value: 0
 
 - name: Living Corneroff
@@ -22,7 +22,7 @@
   entities:
     light.cornerlight:
       state: on
-      brightness_pct: 100
+      brightness_pct: 95
       rgb_color: [0, 0, 255]
       white_value: 100
 
