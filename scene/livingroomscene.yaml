@@ -6,17 +6,17 @@
   entities:
     light.cornerlight:
       state: on
+      rgb_color: [0, 255, 0]
       brightness: 100
       white_value: 0
-      rgb_color: [0, 255, 0]
 
 - name: Living Corneroff
   entities:
     light.cornerlight:
       state: on
+      rgb_color: [0, 0, 255]
       brightness: 0
       white_value: 0
-      rgb_color: [0, 0, 255]
 
 - name: Living Corner Plants Signal On
   entities:
