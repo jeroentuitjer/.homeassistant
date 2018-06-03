@@ -19,6 +19,8 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_on_standard
+     - service: homeassistant.turn_on
+       entity_id: light.eettafel_raam
 
 
  - alias: Turn off living light motion
