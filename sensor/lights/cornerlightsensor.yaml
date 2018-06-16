@@ -2,7 +2,9 @@
 ## Sensors Cornerlight Sensor
 #################################################################
 
-input_boolean:
-  notify_home:
-    name: Overrule Cornerlight
-    initial: off
+cornerlight_netflix:
+  friendly_name: "cornerlight_netflix"
+    value_template: >-
+      {%- if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") -%}
+         true
+      {%- endif -%}
