@@ -35,9 +35,9 @@
          entity_id: >-
            {% if is_state('sensor.cornerlight_color_status', 'video') %}
              script.corner_light_video
-           {% if is_state('sensor.cornerlight_color_status', 'music') %}
+           {% elif is_state('sensor.cornerlight_color_status', 'music') %}
              script.corner_light_music
-           {% if is_state('sensor.cornerlight_color_status', 'main') %}
+           {% elif is_state('sensor.cornerlight_color_status', 'main') %}
              script.corner_light_main
            {% endif %}
 
