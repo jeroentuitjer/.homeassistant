@@ -6,7 +6,7 @@ cornerlight_netflix:
   friendly_name: "cornerlight_netflix"
     value_template: >-
       {% if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") %}
-         netflix
+         video
       {% elif is_state_attr("media_player.entertainment_area", "app_name", "Default Media Receiver") %}
-         default
+         video
       {% endif %}
