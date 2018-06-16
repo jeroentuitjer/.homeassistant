@@ -8,7 +8,21 @@
       friendly_name: "cornerlight_netflix"
       value_template: >-
         {% if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") %}
-           video
+          video
         {% elif is_state_attr("media_player.entertainment_area", "app_name", "Default Media Receiver") %}
-           video
+          video
+        {% elif is_state_attr("media_player.entertainment_area", "app_name", "Ziggo GO") %}
+          video
+        {% elif is_state_attr("media_player.entertainment_area", "app_name", "Pathé Thuis") %}
+          video
+        {% elif is_state_attr("media_player.entertainment_area", "app_name", "Youtube") %}
+          video
+        {% elif is_state_attr("media_player.entertainment_area", "app_name", "Videostream'") %}
+          video
+        {% elif is_state_attr("media_player.entertainment_area", "app_name", "Spotify") %}
+          music
+        {% elif is_state_attr("media_player.entertainment_area", "app_name", "SoundCloud") %}
+          music
+        {% else %}
+          main
         {% endif %}

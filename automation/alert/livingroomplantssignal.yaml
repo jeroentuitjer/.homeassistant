@@ -6,103 +6,103 @@
    trigger:
      - platform: numeric_state
        entity_id: sensor.polyscias_fruticosa_moisture
-       below: 15
+       below: 18
    action:
      - service: notify.Plant_Notifications_Barentszstraat
        data:
-         title: "Polyscias Fruticosa :("
-         message: "Hi! Zou je me weer water willen geven?"
+         title: "Polyscias Fruticosa"
+         message: "18% water reached"
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
-             caption: "Hi! Zou je me weer water willen geven?"
+             caption: "18% water reached"
 
  - alias: Dieffenbachia Needs Water
    trigger:
      - platform: numeric_state
        entity_id: sensor.dieffenbachia_moisture
-       below: 15
+       below: 18
    action:
      - service: notify.Plant_Notifications_Barentszstraat
        data:
          title: "Dieffenbachia"
-         message: "Hey! Ik ben al zo kaal. Kan je me water geven?"
+         message: "18% water reached"
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Dieffenbachia_Maculata.jpg.jpg
-             caption: "Hey! Ik ben al zo kaal. Kan je me water geven?"
+             caption: "18% water reached"
 
  - alias: Yukka Eliphantipes Needs Water
    trigger:
      - platform: numeric_state
        entity_id: sensor.yukka_eliphantipes_moisture
-       below: 15
+       below: 18
    action:
      - service: notify.Plant_Notifications_Barentszstraat
        data:
          title: "Yukka Eliphantipes"
-         message: "Yu*ch! Yu*ch! Mag ik wat water?"
+         message: "18% water reached"
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Yukka_Elephantipes.jpg
-             caption: "Yu*ch! Yu*ch! Mag ik wat water?"
+             caption: "18% water reached"
 
  - alias: Musa Banana Needs Water
    trigger:
      - platform: numeric_state
        entity_id: sensor.musa_banana_moisture
-       below: 15
+       below: 18
    action:
      - service: notify.Plant_Notifications_Barentszstraat
        data:
          title: "Musa Banana"
-         message: ""
+         message: "18% water reached"
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Musa_Banana.jpg
-             caption: "Tobias.. Wil jij me wat water geven.. :("
+             caption: "18% water reached"
 
  - alias: Ficus Elastica Needs Water
    trigger:
      - platform: numeric_state
        entity_id: sensor.ficus_elastica_moisture
-       below: 15
+       below: 18
    action:
      - service: notify.Plant_Notifications_Barentszstraat
        data:
          title: "Ficus Elastica"
-         message: "De rek is er nu wel uit! Mag ik weer wat water?"
+         message: "18% water reached"
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Ficus_Elastica.jpg
-             caption: "De rek is er nu wel uit! Mag ik weer wat water?"
+             caption: "18% water reached"
 
  - alias: Aeschynanthus Needs Water
    trigger:
      - platform: numeric_state
        entity_id: sensor.ficus_elastica_moisture
-       below: 15
+       below: 18
    action:
      - service: notify.Plant_Notifications_Barentszstraat
        data:
          title: "Aeschynanthus"
-         message: "loopt een kip tegen de muur..TOK! Misschien moet je me wat water geven"
+         message: "18% water reached"
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Codiaeum_Variegatum.jpg
-             caption: "loopt een kip tegen de muur..TOK! Misschien moet je me wat water geven, de humor wordt aardig droog."
+             caption: "18% water reached"
 
  - alias: Croton Needs Water
    trigger:
      - platform: numeric_state
        entity_id: sensor.croton_moisture
-       below: 15
+       below: 18
    action:
      - service: notify.Plant_Notifications_Barentszstraat
        data:
          title: "Croton"
-         message: "Crotons houden eigenlijk wel van droogte. Maar iets natter mag wel hoor"
+         message: "18% water reached"
          data:
            photo:
              url: http://www.tuitjer.net/wp-content/uploads/2018/04/Croton.jpg
-             caption: "Crotons houden eigenlijk wel van droogte. Maar iets natter mag wel hoor"
+             caption: "18% water reached"
