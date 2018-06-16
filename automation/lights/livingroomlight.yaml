@@ -17,15 +17,27 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_on_standard
-#     - service: mqtt.publish
-#       data_template:
-#       topic: "bed/rgb1/rgb/set"
-#       payload: >
-#       {% if is_state(“sensor.openw_forecast”, “Clear”) %} {“color”: { 0, 0, 255}}
-#       {%-elif is_state(“sensor.openw_forecast”, “Clouds”) %} {“color”: { 0, 255, 0}}
-#       {%-elif is_state(“sensor.openw_forecast”, “Rain”) %} {“color”: {255, 0, 0}}
-#       {%-elif is_state(“sensor.openw_forecast”, “Snow”) %} {“color”: {"0, 255, 255}}
-#       {% endif %}
+
+ - alias: Turn on corner light motion
+   trigger:
+     - platform: state
+       entity_id: switch.motion_kaku_living
+       to: 'on'
+   condition:
+     - condition: numeric_state
+       entity_id: 'sensor.yukka_eliphantipes_light_intensity'
+       below: 1000
+   action:
+     - service: script.turn_on
+       data_template:
+       entity_id: >-
+         {% if is_state('sensor.cornerlight_color_status', 'video') %}
+           script.corner_light_video
+         {% if is_state('sensor.cornerlight_color_status', 'music') %}
+           script.corner_light_music
+         {% if is_state('sensor.cornerlight_color_status', 'main') %}
+           script.corner_light_main
+         {% endif %}
 
  - alias: Turn off living light motion evening
    trigger:
@@ -44,6 +56,8 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_off
+     - service: script.turn_on
+       entity_id: script.corner_light_off
 
  - alias: Turn off living light motion day
    trigger:
@@ -62,3 +76,5 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_off
+     - service: script.turn_on
+       entity_id: script.corner_light_off

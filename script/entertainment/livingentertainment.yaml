@@ -16,7 +16,22 @@ living_entertainment_off:
     - service: media_player.turn_off
       entity_id: media_player.receiver
 
-living_cornerlight_activated:
+corner_light_video:
   sequence:
     - service: homeassistant.turn_on
-      entity_id: scene.living_corner_activated
+      entity_id: scene.living_red
+
+corner_light_music:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: scene.living_green
+
+corner_light_main:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: scene.living_main
+
+corner_light_off:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: scene.living_corneroff

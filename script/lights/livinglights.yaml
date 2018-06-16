@@ -6,8 +6,6 @@ living_light_off:
   sequence:
     - service: homeassistant.turn_off
       entity_id: group.living_light_group
-    - service: homeassistant.turn_on
-      entity_id: scene.living_corneroff
 
 living_light_on_standard:
   sequence:
@@ -15,13 +13,6 @@ living_light_on_standard:
       data:
         group_name: "Woonkamer"
         scene_name: "Ontspannenplus1"
-    - service: homeassistant.turn_on
-      entity_id: scene.living_green
-
-living_light_on_corner:
-  sequence:
-    - service: homeassistant.turn_on
-      entity_id: scene.living_green
 
 living_light_netflix:
   sequence:
@@ -47,5 +38,3 @@ living_light_netflix_paused:
       data:
         group_name: "Keuken"
         scene_name: "Helder"
-    - service: homeassistant.turn_on
-      entity_id: scene.living_green
