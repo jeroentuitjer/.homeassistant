@@ -23,6 +23,8 @@
      - platform: state
        entity_id: switch.motion_kaku_living
        to: 'on'
+     - platform: state
+       entity_id: media_player.entertainment_area
    condition:
      - condition: numeric_state
        entity_id: 'sensor.yukka_eliphantipes_light_intensity'
