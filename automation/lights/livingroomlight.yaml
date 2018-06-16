@@ -32,14 +32,14 @@
    action:
      - service: script.turn_on
        data_template:
-       entity_id: >-
-         {% if is_state('sensor.cornerlight_color_status', 'video') %}
-           script.corner_light_video
-         {% if is_state('sensor.cornerlight_color_status', 'music') %}
-           script.corner_light_music
-         {% if is_state('sensor.cornerlight_color_status', 'main') %}
-           script.corner_light_main
-         {% endif %}
+         entity_id: >-
+           {% if is_state('sensor.cornerlight_color_status', 'video') %}
+             script.corner_light_video
+           {% if is_state('sensor.cornerlight_color_status', 'music') %}
+             script.corner_light_music
+           {% if is_state('sensor.cornerlight_color_status', 'main') %}
+             script.corner_light_main
+           {% endif %}
 
  - alias: Turn off living light motion evening
    trigger:
