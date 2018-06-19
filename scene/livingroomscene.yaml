@@ -14,9 +14,6 @@
     light.cornerlight:
       state: on
       brightness: 0
-      min_mireds: 153
-      max_mireds: 500
-      hs_color: 0,0
       white_value: 252
 
 - name: Living Corneroff
