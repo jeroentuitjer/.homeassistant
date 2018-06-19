@@ -14,7 +14,7 @@
     light.cornerlight:
       state: on
       brightness: 0
-      white_value: 252
+      white_value: 110
 
 - name: Living Corneroff
   entities:
