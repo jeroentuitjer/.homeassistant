@@ -13,8 +13,11 @@
   entities:
     light.cornerlight:
       state: on
-      rgb_color: [255, 255, 255]
-      brightness_pct: '95'
+      brightness: 0
+      min_mireds: 153
+      max_mireds: 500
+      hs_color: 0,0
+      white_value: 252
 
 - name: Living Corneroff
   entities:
