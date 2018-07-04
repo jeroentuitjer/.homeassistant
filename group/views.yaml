@@ -21,6 +21,8 @@
     entities:
       - group.living_plants_group
       - group.bathroom_humidity_group
+      - group.living_plants_group_temperature
+      - group.living_plants_group_conductivity
 
   entertainment_view:
     name: Entertainment

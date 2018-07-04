@@ -7,14 +7,13 @@
     light.cornerlight:
       state: on
       rgb_color: [0, 255, 0]
-      brightness_pct: '95'
+      brightness_pct: 95
 
 - name: Living Main
   entities:
     light.cornerlight:
       state: on
-      brightness: 0
-      white_value: 110
+      brightness_pct: 95
 
 - name: Living Corneroff
   entities:
