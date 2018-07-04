@@ -17,6 +17,10 @@ homeassistant:
 # Show links to resources in log and frontend
 # introduction:
 
+sensor:
+  - platform: season
+    type: astronomical
+
 hassio:
 
 # Enables the frontend
