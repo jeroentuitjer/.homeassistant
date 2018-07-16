@@ -10,9 +10,9 @@ homeassistant:
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Amsterdam
-  customize:
-    media_player.receiver:
-      friendly_name: Onkyo | Reciever
+#  customize:
+#    media_player.receiver:
+#      friendly_name: Onkyo | Reciever
 
 # Show links to resources in log and frontend
 # introduction:
