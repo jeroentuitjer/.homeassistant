@@ -2,6 +2,9 @@
 ## Sensors Bath Temperature and Hydro
 #################################################################
 
+- platform: season
+  type: astronomical
+
 - platform: rfxtrx
 #  automatic_add: True
   devices:
