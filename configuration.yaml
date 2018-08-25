@@ -66,15 +66,15 @@ sun:
 #tts:
 #  platform: google
 
-media_player:
-  - platform: onkyo
-    host: !secret onkyoip
-    name: receiver
-    sources:
-      pc: 'HTPC'
-  - platform: samsungtv
-    host: !secret samsungip
-    port: 8001
+#media_player:
+#  - platform: onkyo
+#    host: !secret onkyoip
+#    name: receiver
+#    sources:
+#      pc: 'HTPC'
+#  - platform: samsungtv
+#    host: !secret samsungip
+#    port: 8001
 
 rfxtrx:
   device: /dev/ttyUSB0
