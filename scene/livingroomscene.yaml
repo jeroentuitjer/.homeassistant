@@ -13,6 +13,7 @@
   entities:
     light.cornerlight:
       state: on
+      rgb_color: [0, 255, 0]
       brightness_pct: 95
 
 - name: Living Corneroff
@@ -39,7 +40,7 @@
     light.cornerlight:
       state: on
       rgb_color: [255, 0, 0]
-      brightness: 100
+      brightness: 95
 
 - name: Battery Empty
   entities:
