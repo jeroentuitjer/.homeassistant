@@ -14,32 +14,32 @@
          conditions:
            - condition: template
              value_template: >-
-               {%- if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") -%}
+               {%- if is_state_attr("media_player.chromecastultra8714", "app_name", "Netflix") -%}
                  true
                {%- endif -%}
            - condition: template
              value_template: >-
-               {%- if is_state_attr("media_player.entertainment_area", "app_name", "Default Media Receiver") -%}
+               {%- if is_state_attr("media_player.chromecastultra8714", "app_name", "Default Media Receiver") -%}
                  true
                {%- endif -%}
            - condition: template
              value_template: >-
-               {%- if is_state_attr("media_player.entertainment_area", "app_name", "Ziggo GO") -%}
+               {%- if is_state_attr("media_player.chromecastultra8714", "app_name", "Ziggo GO") -%}
                  true
                {%- endif -%}
            - condition: template
              value_template: >-
-               {%- if is_state_attr("media_player.entertainment_area", "app_name", "Pathé Thuis") -%}
+               {%- if is_state_attr("media_player.chromecastultra8714", "app_name", "Pathé Thuis") -%}
                  true
                {%- endif -%}
            - condition: template
              value_template: >-
-               {%- if is_state_attr("media_player.entertainment_area", "app_name", "Youtube") -%}
+               {%- if is_state_attr("media_player.chromecastultra8714", "app_name", "Youtube") -%}
                  true
                {%- endif -%}
            - condition: template
              value_template: >-
-               {%- if is_state_attr("media_player.entertainment_area", "app_name", "Videostream'") -%}
+               {%- if is_state_attr("media_player.chromecastultra8714", "app_name", "Videostream'") -%}
                  true
                {%- endif -%}
    action:
@@ -49,7 +49,7 @@
  - alias: Entertainment area paused
    trigger:
      - platform: state
-       entity_id: media_player.entertainment_area
+       entity_id: media_player.chromecastultra8714
        from: 'playing'
        to: 'paused'
    action:
@@ -59,11 +59,11 @@
  - alias: Entertainment area off
    trigger:
      - platform: state
-       entity_id: media_player.entertainment_area
+       entity_id: media_player.chromecastultra8714
        from: 'paused'
        to: 'off'
      - platform: state
-       entity_id: media_player.entertainment_area
+       entity_id: media_player.chromecastultra8714
        from: 'playing'
        to: 'off'
    action:
