@@ -7,6 +7,8 @@
      - platform: state
        entity_id: switch.motion_kaku_living
        to: 'on'
+     - platform: time
+       at: '06:40:00'
    condition:
      - condition: state
        entity_id: media_player.chromecastultra8714
@@ -14,6 +16,9 @@
      - condition: numeric_state
        entity_id: 'sensor.yukka_eliphantipes_light_intensity'
        below: 1000
+     - condition: time
+       after: '06:40:00'
+       before: '06:25:00'
    action:
      - service: script.turn_on
        entity_id: script.living_light_on_standard
@@ -25,10 +30,15 @@
        to: 'on'
      - platform: state
        entity_id: sensor.cornerlight_color_status
+     - platform: time
+       at: '06:40:00'
    condition:
      - condition: numeric_state
        entity_id: 'sensor.yukka_eliphantipes_light_intensity'
        below: 1000
+     - condition: time
+       after: '06:40:00'
+       before: '06:25:00'
    action:
      - service: script.turn_on
        data_template:
@@ -48,6 +58,8 @@
        to: 'off'
        for:
          minutes: 30
+     - platform: time
+       at: '06:25:00'
    condition:
      - condition: state
        entity_id: media_player.chromecastultra8714
