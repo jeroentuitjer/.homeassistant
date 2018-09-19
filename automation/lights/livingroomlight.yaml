@@ -80,6 +80,8 @@
        to: 'off'
        for:
          minutes: 15
+     - platform: time
+       at: '06:25:00'  
    condition:
      - condition: state
        entity_id: media_player.chromecastultra8714
