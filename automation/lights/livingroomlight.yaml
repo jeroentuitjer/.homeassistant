@@ -17,7 +17,7 @@
        entity_id: 'sensor.yukka_eliphantipes_light_intensity'
        below: 1000
      - condition: time
-       after: '06:40:00'
+       after: '06:39:00'
        before: '06:25:00'
    action:
      - service: script.turn_on
@@ -37,7 +37,7 @@
        entity_id: 'sensor.yukka_eliphantipes_light_intensity'
        below: 1000
      - condition: time
-       after: '06:40:00'
+       after: '06:39:00'
        before: '06:25:00'
    action:
      - service: script.turn_on
@@ -58,8 +58,6 @@
        to: 'off'
        for:
          minutes: 30
-     - platform: time
-       at: '06:25:00'
    condition:
      - condition: state
        entity_id: media_player.chromecastultra8714
