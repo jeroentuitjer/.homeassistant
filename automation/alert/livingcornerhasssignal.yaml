@@ -5,7 +5,7 @@
  - alias: Entertainment area activated
    trigger:
      - platform: state
-       entity_id: media_player.chromecastultra8714
+       entity_id: media_player.entertainment_area
        to: 'idle'
    action:
      - service: script.turn_on

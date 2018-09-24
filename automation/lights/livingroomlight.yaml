@@ -11,7 +11,7 @@
        at: '06:40:00'
    condition:
      - condition: state
-       entity_id: media_player.chromecastultra8714
+       entity_id: media_player.entertainment_area
        state: 'off'
      - condition: numeric_state
        entity_id: 'sensor.yukka_eliphantipes_light_intensity'
@@ -60,7 +60,7 @@
          minutes: 30
    condition:
      - condition: state
-       entity_id: media_player.chromecastultra8714
+       entity_id: media_player.entertainment_area
        state: 'off'
      - condition: time
        after: '17:00:00'
@@ -82,7 +82,7 @@
        at: '06:25:00'  
    condition:
      - condition: state
-       entity_id: media_player.chromecastultra8714
+       entity_id: media_player.entertainment_area
        state: 'off'
      - condition: time
        after: '00:00:00'
