@@ -7,39 +7,16 @@
      - platform: state
        entity_id: switch.motion_kaku_living
        to: 'on'
-     - platform: time
-       at: '06:40:00'
    condition:
      - condition: state
        entity_id: media_player.entertainment_area
        state: 'off'
      - condition: numeric_state
-       entity_id: 'sensor.yukka_eliphantipes_light_intensity'
-       below: 1000
-     - condition: time
-       after: '06:39:00'
-       before: '06:25:00'
+       entity_id: sensor.yukka_eliphantipes_light_intensity
+       below: 200
    action:
      - service: script.turn_on
        entity_id: script.living_light_on_standard
-
- - alias: Turn on corner light motion
-   trigger:
-     - platform: state
-       entity_id: switch.motion_kaku_living
-       to: 'on'
-     - platform: state
-       entity_id: sensor.cornerlight_color_status
-     - platform: time
-       at: '06:40:00'
-   condition:
-     - condition: numeric_state
-       entity_id: 'sensor.yukka_eliphantipes_light_intensity'
-       below: 1000
-     - condition: time
-       after: '06:39:00'
-       before: '06:25:00'
-   action:
      - service: script.turn_on
        data_template:
          entity_id: >-
@@ -51,6 +28,7 @@
              script.corner_light_main
            {% endif %}
 
+
  - alias: Turn off living light motion evening
    trigger:
      - platform: state
@@ -58,37 +36,15 @@
        to: 'off'
        for:
          minutes: 30
-   condition:
-     - condition: state
-       entity_id: media_player.entertainment_area
-       state: 'off'
-     - condition: time
-       after: '17:00:00'
-       before: '00:00:00'
-   action:
-     - service: script.turn_on
-       entity_id: script.living_light_off
-     - service: script.turn_on
-       entity_id: script.corner_light_off
-
- - alias: Turn off living light motion day
-   trigger:
-     - platform: state
-       entity_id: switch.motion_kaku_living
-       to: 'off'
-       for:
-         minutes: 15
      - platform: time
        at: '06:25:00'  
    condition:
      - condition: state
        entity_id: media_player.entertainment_area
        state: 'off'
-     - condition: time
-       after: '00:00:00'
-       before: '17:00:00'
    action:
      - service: script.turn_on
        entity_id: script.living_light_off
      - service: script.turn_on
        entity_id: script.corner_light_off
+
