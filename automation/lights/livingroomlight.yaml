@@ -11,9 +11,15 @@
      - condition: state
        entity_id: media_player.entertainment_area
        state: 'off'
-#     - condition: numeric_state
-#       entity_id: sensor.yukka_eliphantipes_light_intensity
-#       below: 200
+     - condition: time
+       before: '06:25:00'
+       after: '06:40:00'
+       weekday:
+         - mon
+         - tue
+         - wed
+         - thu
+         - fri
    action:
      - service: script.turn_on
        entity_id: script.living_light_on_standard
@@ -35,7 +41,7 @@
        entity_id: switch.motion_kaku_living
        to: 'off'
        for:
-         minutes: 30
+         minutes: 20
      - platform: time
        at: '06:25:00'  
    condition:
