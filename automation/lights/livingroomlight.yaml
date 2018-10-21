@@ -26,6 +26,8 @@
        to: 'on'
      - platform: state
        entity_id: sensor.cornerlight_color_status
+     - platform: state
+       entity_id: media_player.entertainment_area
    condition:
      - condition: state
        entity_id: media_player.entertainment_area
