@@ -38,10 +38,10 @@
     day_night:
       friendly_name: "day and night"
       value_template: >-
-      {% if now().hour >= 18 and now().hour < 22 %}
-        evening
-      {% elif now().hour >= 0 and now().hour < 7 %}
-        night
-      {% else %}
-        day
-      {% endif %}
+        {% if now().hour >= 18 and now().hour < 22 %}
+          evening
+        {% elif now().hour >= 0 and now().hour < 7 %}
+          night
+        {% else %}
+          day
+        {% endif %}
