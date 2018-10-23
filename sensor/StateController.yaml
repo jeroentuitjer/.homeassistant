@@ -23,11 +23,11 @@
           music  
         {% elif is_state_attr("media_player.entertainment_area", "app_name", "Spotify") %}
           music
-        {%- elif now().strftime("%m-%d") == "02-01" %}
+        {% elif now().strftime("%m-%d") == "02-01" %}
           birthday
-        {%- elif now().strftime("%m-%d") == "04-05" %}
+        {% elif now().strftime("%m-%d") == "04-05" %}
           birthday
-        {%- elif  %}
+        {% elif  %}
           guests
         {% else %} 
           normal
@@ -38,10 +38,10 @@
     day_night:
       friendly_name: "day and night"
       value_template: >-
-      {%- if now().hour >= 18 and now().hour < 22 %}
+      {% if now().hour >= 18 and now().hour < 22 %}
         evening
       {% elif now().hour >= 0 and now().hour < 7 %}
         night
       {% else %}
         day
-      {%- endif %}
+      {% endif %}
