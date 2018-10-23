@@ -25,7 +25,7 @@
           birthday
         {% elif now().strftime("%m-%d") == "04-05" %}
           birthday
-        {% elif  %}
+        {% elif %}
           guests
         {% else %} 
           normal
