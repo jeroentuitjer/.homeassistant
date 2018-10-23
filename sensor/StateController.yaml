@@ -20,8 +20,6 @@
         {% elif is_state_attr("media_player.entertainment_area", "app_name", "Videostream'") %}
           video
         {% elif is_state_attr("media_player.entertainment_area", "app_name", "Spotify") %}
-          music  
-        {% elif is_state_attr("media_player.entertainment_area", "app_name", "Spotify") %}
           music
         {% elif now().strftime("%m-%d") == "02-01" %}
           birthday
