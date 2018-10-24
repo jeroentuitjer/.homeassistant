@@ -5,7 +5,7 @@
 - platform: template
   sensors:
     home_state_control:
-      friendly_name: "Home_State_Control"
+      friendly_name: "Home State Control"
       value_template: >-
         {% if is_state_attr("media_player.entertainment_area", "app_name", "Netflix") %}
           video
@@ -21,12 +21,12 @@
           video
         {% elif is_state_attr("media_player.entertainment_area", "app_name", "Spotify") %}
           music
-        {% elif now().strftime("%m-%d") == "02-01" %}
-          birthday
-        {% elif now().strftime("%m-%d") == "04-05" %}
-          birthday
-        {% elif %}
-          guests
+ #       {% elif now().strftime("%m-%d") == "02-01" %}
+ #         birthday
+ #       {% elif now().strftime("%m-%d") == "04-05" %}
+ #         birthday
+ #       {% elif %}
+ #         guests
         {% else %} 
           normal
         {% endif %}
