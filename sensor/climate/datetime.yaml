@@ -3,7 +3,6 @@
 #################################################################
 
 - platform: template
-  sensors:
     day_night:
       friendly_name: "day and night"
       value_template: >-
