@@ -37,7 +37,7 @@
        entity_id: switch.motion_kaku_living
        to: 'off'
        for:
-         minutes: 30
+         minutes: 40
      - platform: time
        at: '06:25:00'  
    condition:
