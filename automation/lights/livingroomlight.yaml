@@ -37,7 +37,7 @@
        entity_id: switch.motion_kaku_living
        to: 'off'
        for:
-         minutes: 20
+         minutes: 30
      - platform: time
        at: '06:25:00'  
    condition:
@@ -45,7 +45,7 @@
        entity_id: media_player.entertainment_area
        state: 'off'
    action:
-     - service: homeassistant.turn_on
+     - service: homeassistant.turn_off
        entity_id: switch.kerstboom_pw
      - service: script.turn_on
        entity_id: script.living_light_off
