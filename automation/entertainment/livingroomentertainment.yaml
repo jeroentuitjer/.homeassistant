@@ -45,6 +45,8 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_netflix
+     - service: homeassistant.turn_off
+       entity_id: switch.kerstboom_pw
 
  - alias: Entertainment area paused
    trigger:
@@ -55,6 +57,8 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_netflix_paused
+     - service: homeassistant.turn_off
+       entity_id: switch.kerstboom_pw
 
  - alias: Entertainment area off
    trigger:
@@ -69,3 +73,5 @@
    action:
      - service: script.turn_on
        entity_id: script.living_light_netflix_paused
+     - service: homeassistant.turn_off
+       entity_id: switch.kerstboom_pw
