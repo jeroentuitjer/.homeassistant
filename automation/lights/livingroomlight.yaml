@@ -4,6 +4,9 @@
 
  - alias: Turn on living light motion
    trigger:
+     - platform: state
+       entity_id: media_player.entertainment_area
+       to: 'playing'
      - platform: time
        at: '18:00:00'
    condition:
@@ -34,6 +37,14 @@
 
  - alias: Turn off living light motion evening
    trigger:
+     - platform: state
+       entity_id: media_player.entertainment_area
+       from: 'playing'
+       to: 'paused'
+     - platform: state
+       entity_id: media_player.entertainment_area
+       from: 'paused'
+       to: 'off'
  #    - platform: state
  #      entity_id: switch.motion_kaku_living
  #      to: 'off'
