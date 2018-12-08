@@ -6,7 +6,6 @@
   type: astronomical
 
 - platform: rfxtrx
-#  automatic_add: True
   devices:
     0a520701720e00ba390159:
       name: BathHydro
@@ -14,8 +13,8 @@
         - Humidity
         - Temperature
         - Sensor Status
-#    0b1100b5008b25e202000050:
-#      name: chineese sensor
+    0b1100030155861a02010f70:
+      name: Douche_Ventilatie
 
 - platform: statistics
   name: Humidity_stats
