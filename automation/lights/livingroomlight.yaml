@@ -8,21 +8,18 @@
        entity_id: media_player.entertainment_area
        to: 'playing'
      - platform: time
+       at: '06:00:00'
+     - platform: time
        at: '18:00:00'
    condition:
      - condition: state
        entity_id: media_player.entertainment_area
        state: 'off'
- #    - condition: time
- #      before: '06:24:00'
- #      after: '06:40:00'
    action:
      - service: homeassistant.turn_on
        entity_id: switch.kerstboom_pw
      - service: homeassistant.turn_on
        entity_id: switch.overig_pw
- #    - service: script.turn_on
- #      entity_id: script.living_light_on_standard
      - service: script.turn_on
        data_template:
          entity_id: >-
@@ -51,7 +48,9 @@
  #      for:
  #        minutes: 40
      - platform: time
-       at: '23:30:00'  
+       at: '23:30:00'
+     - platform: time
+       at: '09:00:00'
    condition:
      - condition: state
        entity_id: media_player.entertainment_area
@@ -61,8 +60,6 @@
        entity_id: switch.kerstboom_pw
      - service: homeassistant.turn_on
        entity_id: switch.overig_pw
-#     - service: script.turn_on
-#       entity_id: script.living_light_off
      - service: script.turn_on
        entity_id: script.corner_light_off
 
