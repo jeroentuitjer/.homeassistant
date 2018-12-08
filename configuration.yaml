@@ -17,6 +17,10 @@ homeassistant:
 # Show links to resources in log and frontend
 # introduction:
 
+homekit:
+
+ios:
+
 hassio:
 
 # Enables the frontend
