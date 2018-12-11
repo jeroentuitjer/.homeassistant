@@ -112,17 +112,17 @@ switch:
     "0b1100030155861a02010f70":
       name: Douche_Ventilatie
 
-telegram_bot:
-  - platform: broadcast
-    api_key: !secret telegrambotjeroen
-    allowed_chat_ids:
-      - !secret chatidbarentszstraat
-      - !secret chatidplantsjeroen
+#telegram_bot:
+#  - platform: broadcast
+#    api_key: !secret telegrambotjeroen
+#    allowed_chat_ids:
+#      - !secret chatidbarentszstraat
+#      - !secret chatidplantsjeroen
 
-notify:
-  - name: Plant_Notifications_Barentszstraat
-    platform: telegram
-    chat_id: !secret chatidbarentszstraat
+#notify:
+#  - name: Plant_Notifications_Barentszstraat
+#    platform: telegram
+#    chat_id: !secret chatidbarentszstraat
 
 input_number:
   bathroom_humidity_level:
