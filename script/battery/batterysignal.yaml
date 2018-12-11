@@ -1,8 +1,0 @@
-#################################################################
-## Scripts Empty Battery
-#################################################################
-
-empty_batterys_signalon:
-  sequence:
-    - service: homeassistant.turn_on
-      entity_id: scene.battery_empty
