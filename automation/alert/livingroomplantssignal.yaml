@@ -2,107 +2,107 @@
 ## Automations Living Plants Signal
 #################################################################
 
- - alias: Polyscias Fruticosa Needs Water
-   trigger:
-     - platform: numeric_state
-       entity_id: sensor.polyscias_fruticosa_moisture
-       below: 18
-   action:
-     - service: notify.Plant_Notifications_Barentszstraat
-       data:
-         title: "Polyscias Fruticosa"
-         message: "18% water reached"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
-             caption: "18% water reached"
+# - alias: Polyscias Fruticosa Needs Water
+#   trigger:
+#     - platform: numeric_state
+#       entity_id: sensor.polyscias_fruticosa_moisture
+#       below: 18
+#   action:
+#     - service: notify.Plant_Notifications_Barentszstraat
+#       data:
+#         title: "Polyscias Fruticosa"
+#         message: "18% water reached"
+#         data:
+#           photo:
+#             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Polyscias_Fruticosa.jpg
+#             caption: "18% water reached"
 
- - alias: Dieffenbachia Needs Water
-   trigger:
-     - platform: numeric_state
-       entity_id: sensor.dieffenbachia_moisture
-       below: 18
-   action:
-     - service: notify.Plant_Notifications_Barentszstraat
-       data:
-         title: "Dieffenbachia"
-         message: "18% water reached"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Dieffenbachia_Maculata.jpg.jpg
-             caption: "18% water reached"
+# - alias: Dieffenbachia Needs Water
+#   trigger:
+#     - platform: numeric_state
+#       entity_id: sensor.dieffenbachia_moisture
+#       below: 18
+#   action:
+#     - service: notify.Plant_Notifications_Barentszstraat
+#       data:
+#         title: "Dieffenbachia"
+#         message: "18% water reached"
+#         data:
+#           photo:
+#             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Dieffenbachia_Maculata.jpg.jpg
+#             caption: "18% water reached"
 
- - alias: Yukka Eliphantipes Needs Water
-   trigger:
-     - platform: numeric_state
-       entity_id: sensor.yukka_eliphantipes_moisture
-       below: 18
-   action:
-     - service: notify.Plant_Notifications_Barentszstraat
-       data:
-         title: "Yukka Eliphantipes"
-         message: "18% water reached"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Yukka_Elephantipes.jpg
-             caption: "18% water reached"
+# - alias: Yukka Eliphantipes Needs Water
+#   trigger:
+#     - platform: numeric_state
+#       entity_id: sensor.yukka_eliphantipes_moisture
+#       below: 18
+#   action:
+#     - service: notify.Plant_Notifications_Barentszstraat
+#       data:
+#         title: "Yukka Eliphantipes"
+#         message: "18% water reached"
+#         data:
+#           photo:
+#             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Yukka_Elephantipes.jpg
+#             caption: "18% water reached"
 
- - alias: Musa Banana Needs Water
-   trigger:
-     - platform: numeric_state
-       entity_id: sensor.musa_banana_moisture
-       below: 18
-   action:
-     - service: notify.Plant_Notifications_Barentszstraat
-       data:
-         title: "Musa Banana"
-         message: "18% water reached"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Musa_Banana.jpg
-             caption: "18% water reached"
+# - alias: Musa Banana Needs Water
+#   trigger:
+#     - platform: numeric_state
+#       entity_id: sensor.musa_banana_moisture
+#       below: 18
+#   action:
+#     - service: notify.Plant_Notifications_Barentszstraat
+#       data:
+#         title: "Musa Banana"
+#         message: "18% water reached"
+#         data:
+#           photo:
+#             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Musa_Banana.jpg
+#             caption: "18% water reached"
 
- - alias: Ficus Elastica Needs Water
-   trigger:
-     - platform: numeric_state
-       entity_id: sensor.ficus_elastica_moisture
-       below: 18
-   action:
-     - service: notify.Plant_Notifications_Barentszstraat
-       data:
-         title: "Ficus Elastica"
-         message: "18% water reached"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Ficus_Elastica.jpg
-             caption: "18% water reached"
+# - alias: Ficus Elastica Needs Water
+#   trigger:
+#     - platform: numeric_state
+#       entity_id: sensor.ficus_elastica_moisture
+#       below: 18
+#   action:
+#     - service: notify.Plant_Notifications_Barentszstraat
+#       data:
+#         title: "Ficus Elastica"
+#         message: "18% water reached"
+#         data:
+#           photo:
+#             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Ficus_Elastica.jpg
+#             caption: "18% water reached"
 
- - alias: Aeschynanthus Needs Water
-   trigger:
-     - platform: numeric_state
-       entity_id: sensor.ficus_elastica_moisture
-       below: 18
-   action:
-     - service: notify.Plant_Notifications_Barentszstraat
-       data:
-         title: "Aeschynanthus"
-         message: "18% water reached"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Codiaeum_Variegatum.jpg
-             caption: "18% water reached"
+# - alias: Aeschynanthus Needs Water
+#   trigger:
+#     - platform: numeric_state
+#       entity_id: sensor.ficus_elastica_moisture
+#       below: 18
+#   action:
+#     - service: notify.Plant_Notifications_Barentszstraat
+#       data:
+#         title: "Aeschynanthus"
+#         message: "18% water reached"
+#         data:
+#           photo:
+#             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Codiaeum_Variegatum.jpg
+#             caption: "18% water reached"
 
- - alias: Croton Needs Water
-   trigger:
-     - platform: numeric_state
-       entity_id: sensor.croton_moisture
-       below: 18
-   action:
-     - service: notify.Plant_Notifications_Barentszstraat
-       data:
-         title: "Croton"
-         message: "18% water reached"
-         data:
-           photo:
-             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Croton.jpg
-             caption: "18% water reached"
+# - alias: Croton Needs Water
+#   trigger:
+#     - platform: numeric_state
+#       entity_id: sensor.croton_moisture
+#       below: 18
+#   action:
+#     - service: notify.Plant_Notifications_Barentszstraat
+#       data:
+#         title: "Croton"
+#         message: "18% water reached"
+#         data:
+#           photo:
+#             url: http://www.tuitjer.net/wp-content/uploads/2018/04/Croton.jpg
+#             caption: "18% water reached"

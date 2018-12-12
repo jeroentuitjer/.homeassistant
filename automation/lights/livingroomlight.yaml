@@ -2,64 +2,59 @@
 ## Automations Entertainment area
 #################################################################
 
- - alias: Turn on living light motion
-   trigger:
-     - platform: state
-       entity_id: media_player.entertainment_area
-       to: 'playing'
-     - platform: time
-       at: '06:00:00'
-     - platform: time
-       at: '18:00:00'
-   condition:
-     - condition: state
-       entity_id: media_player.entertainment_area
-       state: 'off'
-   action:
-     - service: homeassistant.turn_on
-       entity_id: switch.kerstboom_pw
-     - service: homeassistant.turn_on
-       entity_id: switch.overig_pw
-     - service: script.turn_on
-       data_template:
-         entity_id: >-
-           {% if is_state('sensor.cornerlight_color_status', 'video') %}
-             script.corner_light_video
-           {% elif is_state('sensor.cornerlight_color_status', 'music') %}
-             script.corner_light_music
-           {% elif is_state('sensor.cornerlight_color_status', 'main') %}
-             script.corner_light_main
-           {% endif %}
+# - alias: Turn on living light
+#   trigger:
+#     - platform: state
+#       entity_id: media_player.entertainment_area
+#       to: 'playing'
+#     - platform: time
+#       at: '06:00:00'
+#     - platform: time
+#       at: '18:00:00'
+#   condition:
+#     - condition: state
+#       entity_id: media_player.entertainment_area
+#       state: 'off'
+#   action:
+#     - service: homeassistant.turn_on
+#       entity_id: switch.kerstboom_pw
+#     - service: homeassistant.turn_on
+#       entity_id: switch.overig_pw
+#     - service: script.turn_on
+#       data_template:
+#         entity_id: >-
+#           {% if is_state('sensor.cornerlight_color_status', 'video') %}
+#             script.corner_light_video
+#           {% elif is_state('sensor.cornerlight_color_status', 'music') %}
+#             script.corner_light_music
+#           {% elif is_state('sensor.cornerlight_color_status', 'main') %}
+#             script.corner_light_main
+#           {% endif %}
 
 
- - alias: Turn off living light motion evening
-   trigger:
-     - platform: state
-       entity_id: media_player.entertainment_area
-       from: 'playing'
-       to: 'paused'
-     - platform: state
-       entity_id: media_player.entertainment_area
-       from: 'paused'
-       to: 'off'
- #    - platform: state
- #      entity_id: switch.motion_kaku_living
- #      to: 'off'
- #      for:
- #        minutes: 40
-     - platform: time
-       at: '23:30:00'
-     - platform: time
-       at: '09:00:00'
-   condition:
-     - condition: state
-       entity_id: media_player.entertainment_area
-       state: 'off'
-   action:
-     - service: homeassistant.turn_off
-       entity_id: switch.kerstboom_pw
-     - service: homeassistant.turn_on
-       entity_id: switch.overig_pw
-     - service: script.turn_on
-       entity_id: script.corner_light_off
+# - alias: Turn off living light motion evening
+#   trigger:
+#     - platform: state
+#       entity_id: media_player.entertainment_area
+#       from: 'playing'
+#       to: 'paused'
+#     - platform: state
+#       entity_id: media_player.entertainment_area
+#       from: 'paused'
+#       to: 'off'
+#     - platform: time
+#       at: '23:30:00'
+#     - platform: time
+#       at: '09:00:00'
+#   condition:
+#     - condition: state
+#       entity_id: media_player.entertainment_area
+#       state: 'off'
+#   action:
+#     - service: homeassistant.turn_off
+#       entity_id: switch.kerstboom_pw
+#     - service: homeassistant.turn_on
+#       entity_id: switch.overig_pw
+#     - service: script.turn_on
+#       entity_id: script.corner_light_off
 
