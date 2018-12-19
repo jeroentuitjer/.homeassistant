@@ -7,7 +7,7 @@
     light.cornerlight:
       state: on
       rgb_color: [0, 255, 0]
-      brightness_pct: 70
+      brightness_pct: 50
 
 - name: Living Main
   entities:
