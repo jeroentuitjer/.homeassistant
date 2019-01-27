@@ -132,7 +132,7 @@ input_number:
     max: 100
     step: 1
 
-group: !include_dir_merge_named group/
+#group: !include_dir_merge_named group/
 sensor: !include_dir_merge_list sensor/
 automation: !include_dir_merge_list automation/
 scene: !include_dir_merge_list scene/
