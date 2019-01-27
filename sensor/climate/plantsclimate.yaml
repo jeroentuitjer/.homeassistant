@@ -64,7 +64,7 @@
 
 - platform: miflora
   mac: 'C4:7C:8D:65:D2:21'
-  name: Aeschynanthus
+  name: Peperomia Tetraphylla
   force_update: true
   median: 3
   monitored_conditions:
