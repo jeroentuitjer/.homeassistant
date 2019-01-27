@@ -10,7 +10,7 @@ living_plants_group:
     - sensor.yukka_eliphantipes_moisture
     - sensor.musa_banana_moisture
     - sensor.ficus_elastica_moisture
-    - sensor.peperomia_tetraphylla
+    - sensor.peperomia_tetraphylla_moisture
     - sensor.croton_moisture
     - sensor.ficus_benjamina_moisture
 
