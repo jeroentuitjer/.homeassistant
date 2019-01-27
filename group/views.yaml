@@ -2,19 +2,6 @@
 ## Views
 #################################################################
 
-  lights_view:
-    name: Lights
-    view: yes
-    entities:
-      - group.living_light_group
-      - group.living_automation_group
-      - group.hallway_light_group
-      - group.toilet_light_group
-      - group.keuken_light_group
-      - group.keuken_automation_group
-      - group.badkamer_light_group
-      - group.waskamer_light_group
-
   climate_view:
     name: Climate
     view: yes
@@ -23,10 +10,3 @@
       - group.bathroom_humidity_group
       - group.living_plants_group_temperature
       - group.living_plants_group_conductivity
-
-  entertainment_view:
-    name: Entertainment
-    view: yes
-    entities:
-      - group.entertainment_light_group
-

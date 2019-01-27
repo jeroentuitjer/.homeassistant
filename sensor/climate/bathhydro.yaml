@@ -2,9 +2,6 @@
 ## Sensors Bath Temperature and Hydro
 #################################################################
 
-- platform: season
-  type: astronomical
-
 - platform: rfxtrx
   devices:
     0a520701720e00ba390159:

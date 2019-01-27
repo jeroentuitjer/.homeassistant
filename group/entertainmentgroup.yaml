@@ -1,8 +1,0 @@
-#################################################################
-## Groups Entertainment
-#################################################################   
-
-entertainment_light_group:
-  name: Entertainment Light
-  entities:
-    - automation.entertainment_area_playing_video
