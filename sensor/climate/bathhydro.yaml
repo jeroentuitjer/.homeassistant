@@ -12,11 +12,3 @@
         - Sensor Status
     0b1100030155861a02010f70:
       name: Douche_Ventilatie
-
-- platform: statistics
-  name: Humidity_stats
-  entity_id: sensor.bathhydro_humidity
-  data_type:
-    - min_value
-  max_age:
-    minutes: 90
