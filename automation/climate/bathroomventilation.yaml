@@ -33,3 +33,19 @@
   action:
     - service: homeassistant.turn_off
       entity_id: switch.douche_ventilatie
+
+- alias: Mosquito bedroom on
+  trigger:
+    - platform: time
+      at: '22:00:00'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: switch.cornerlight_pw
+
+- alias: BedMosquito bedroom off
+  trigger:
+    - platform: time
+      at: '06:00:00'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: switch.cornerlight_pw
