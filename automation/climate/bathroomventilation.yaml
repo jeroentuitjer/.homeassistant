@@ -6,14 +6,14 @@
   trigger:
     - platform: numeric_state
       entity_id: 'sensor.bathhydro_humidity'
-      above: 70
+      above: 65
     - platform: state
       to: 'on'
       entity_id: light.badkamer
   condition:
     condition: time
     after: '07:00:00'
-    before: '22:30:00'
+    before: '18:30:00'
   action:
     - service: homeassistant.turn_on
       entity_id: switch.douche_ventilatie
@@ -22,14 +22,14 @@
   trigger:
     - platform: numeric_state
       entity_id: 'sensor.bathhydro_humidity'
-      below: 70
+      below: 75
     - platform: state
       entity_id: light.badkamer
       to: 'off'
   condition:
     - condition: numeric_state
       entity_id: 'sensor.bathhydro_humidity'
-      below: 70
+      below: 75
   action:
     - service: homeassistant.turn_off
       entity_id: switch.douche_ventilatie
