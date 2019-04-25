@@ -19,7 +19,9 @@
 - name: Living Corneroff
   entities:
     light.cornerlight:
-      state: off
+      state: on
+      rgb_color: [0, 0, 0]
+      brightness_pct: 0
 
 - name: Living Red
   entities:
