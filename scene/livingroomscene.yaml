@@ -20,7 +20,7 @@
   entities:
     light.cornerlight:
       state: on
-      brightness_pct: 0
+      brightness_pct: 5
 
 - name: Living Red
   entities:
